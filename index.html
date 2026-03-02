@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivi Nutritionnel · Mieux manger</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ----- Variables & reset ----- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #f0ede8;
+            --card: #ffffff;
+            --border: #e2ddd6;
+            --text: #1a1814;
+            --muted: #8a8480;
+            --accent: #2d2926;
+            --green: #1a6b3c;
+            --green-bg: #e8f5ee;
+            --orange: #b85c00;
+            --orange-bg: #fff1e6;
+            --red: #b83232;
+            --red-bg: #fdecea;
+            --blue: #1a4a8a;
+            --blue-bg: #e8eef8;
+            --radius: 14px;
+            --shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 24px 16px;
+            color: var(--text);
+            line-height: 1.4;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        /* ----- Header ----- */
+        .app-header {
+            text-align: center;
+            padding: 4px 0 8px;
+        }
+
+        .app-header h1 {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .app-header .date {
+            font-size: 13px;
+            color: var(--muted);
+            font-family: 'DM Mono', monospace;
+            margin-top: 2px;
+        }
+
+        /* ----- Cartes ----- */
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 16px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 6px;
+        }
+
+        .btn-small {
+            padding: 5px 10px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg);
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--text);
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            transition: all 0.15s;
+        }
+
+        .btn-small:hover {
+            background: var(--border);
+        }
+
+        /* ----- Grilles de nutriments ----- */
+        .nutrient-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+
+        .nutrient-box {
+            background: var(--bg);
+            border-radius: 10px;
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        .nutrient-label {
+            font-size: 10px;
+            color: var(--muted);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        .nutrient-value {
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 4px;
+            font-family: 'DM Mono', monospace;
+            letter-spacing: -0.5px;
+        }
+
+        .nutrient-value.small {
+            font-size: 13px;
+        }
+
+        /* Couleurs pour la section "Reste" */
+        .remaining .nutrient-box:nth-child(1) {
+            background: var(--green-bg);
+            border-color: #b8dfc8;
+        }
+        .remaining .nutrient-box:nth-child(1) .nutrient-value { color: var(--green); }
+        .remaining .nutrient-box:nth-child(2) {
+            background: var(--orange-bg);
+            border-color: #f5d0a8;
+        }
+        .remaining .nutrient-box:nth-child(2) .nutrient-value { color: var(--orange); }
+        .remaining .nutrient-box:nth-child(3) {
+            background: var(--blue-bg);
+            border-color: #b8cce8;
+        }
+        .remaining .nutrient-box:nth-child(3) .nutrient-value { color: var(--blue); }
+        .remaining .nutrient-box:nth-child(4) {
+            background: var(--red-bg);
+            border-color: #f0b8b8;
+        }
+        .remaining .nutrient-box:nth-child(4) .nutrient-value { color: var(--red); }
+
+        /* Alerte dépassement */
+        .nutrient-box.over {
+            background: #fdecea !important;
+            border-color: #f0b8b8 !important;
+        }
+        .nutrient-box.over .nutrient-value { color: var(--red) !important; }
+
+        /* ----- Barres de progression ----- */
+        .progress-section { margin-top: 4px; }
+        .progress-bar-wrap { margin-bottom: 8px; }
+        .progress-label-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: var(--muted);
+            margin-bottom: 4px;
+            font-family: 'DM Mono', monospace;
+        }
+        .progress-track {
+            height: 6px;
+            background: var(--bg);
+            border-radius: 99px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        .progress-fill {
+            height: 100%;
+            border-radius: 99px;
+            transition: width 0.4s ease;
+        }
+        .fill-cal { background: #2d8a5e; }
+        .fill-prot { background: #d4700a; }
+        .fill-lip { background: #2563b8; }
+        .fill-gluc { background: #c0392b; }
+        .fill-over { background: #e74c3c; }
+
+        /* ----- Historique ----- */
+        .history-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .history-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 10px;
+            background: var(--bg);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            font-size: 12px;
+            animation: slideIn 0.2s ease;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .history-name { font-weight: 600; }
+        .history-sub { color: var(--muted); font-size: 11px; margin-top: 1px; }
+        .history-cals { font-family: 'DM Mono', monospace; font-weight: 600; font-size: 13px; }
+        .history-delete {
+            background: none; border: none; cursor: pointer;
+            color: var(--muted); font-size: 16px; padding: 0 4px;
+            transition: color 0.15s;
+        }
+        .history-delete:hover { color: var(--red); }
+        .empty-state { text-align: center; padding: 16px; color: var(--muted); font-size: 13px; }
+
+        /* ----- Aperçu avant ajout (amélioré) ----- */
+        .preview-card {
+            background: var(--bg);
+            border-radius: 10px;
+            padding: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 12px;
+            min-height: 52px;
+            transition: all 0.2s;
+        }
+        .preview-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .preview-name { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+        .preview-weight {
+            font-size: 11px;
+            color: var(--muted);
+            margin-bottom: 8px;
+            font-family: 'DM Mono', monospace;
+        }
+        .preview-empty { font-size: 13px; color: var(--muted); }
+
+        /* ----- Champs de saisie ----- */
+        .input-field {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            margin-bottom: 8px;
+            transition: border-color 0.15s, background 0.15s;
+            outline: none;
+        }
+        .input-field:focus {
+            border-color: var(--accent);
+            background: white;
+        }
+        .input-field::placeholder { color: #b0aca6; }
+
+        .input-row { display: flex; gap: 8px; }
+        .input-row .input-field { margin-bottom: 0; }
+
+        .btn-add {
+            width: 100%;
+            padding: 13px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            margin-top: 8px;
+            transition: all 0.15s;
+            letter-spacing: -0.2px;
+        }
+        .btn-add:hover { background: #000; transform: translateY(-1px); }
+        .btn-add:active { transform: translateY(0); }
+        .btn-add:disabled { background: #b0aca6; cursor: not-allowed; transform: none; }
+
+        /* ----- Suggestions automatiques ----- */
+        .suggestions {
+            position: relative;
+        }
+        .suggestions-list {
+            position: absolute;
+            top: calc(100% - 8px);
+            left: 0; right: 0;
+            background: white;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            z-index: 100;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            overflow: hidden;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .suggestion-item {
+            padding: 10px 14px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.1s;
+        }
+        .suggestion-item:hover { background: var(--bg); }
+        .suggestion-item .sug-name { font-weight: 500; }
+        .suggestion-item .sug-info { font-size: 11px; color: var(--muted); font-family: 'DM Mono', monospace; }
+
+        /* ----- Modal d'édition des besoins ----- */
+        .modal-overlay {
+            display: none;
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.4);
+            z-index: 200;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal-overlay.open { display: flex; }
+        .modal {
+            background: white;
+            border-radius: var(--radius);
+            padding: 20px;
+            width: 100%;
+            max-width: 380px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        .modal h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+        .modal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+        .modal-field label { font-size: 12px; color: var(--muted); font-weight: 600; display: block; margin-bottom: 4px; }
+        .modal-field input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: 'DM Mono', monospace;
+            font-weight: 600;
+            outline: none;
+        }
+        .modal-field input:focus { border-color: var(--accent); }
+        .modal-buttons { display: flex; gap: 8px; }
+        .btn-save {
+            flex: 1; padding: 11px;
+            background: var(--accent); color: white;
+            border: none; border-radius: 8px;
+            font-size: 14px; font-weight: 600;
+            cursor: pointer;
+        }
+        .btn-cancel {
+            flex: 1; padding: 11px;
+            background: var(--bg); color: var(--text);
+            border: 1px solid var(--border); border-radius: 8px;
+            font-size: 14px; font-weight: 500;
+            cursor: pointer;
+        }
+
+        /* ----- Toast (notification) ----- */
+        .toast {
+            position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+            background: var(--accent); color: white;
+            padding: 10px 20px; border-radius: 99px;
+            font-size: 13px; font-weight: 500;
+            opacity: 0; transition: opacity 0.2s;
+            pointer-events: none; white-space: nowrap;
+            z-index: 300;
+        }
+        .toast.show { opacity: 1; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- En‑tête -->
+        <div class="app-header">
+            <h1>🥗 Suivi Nutritionnel</h1>
+            <div class="date" id="todayDate"></div>
+        </div>
+
+        <!-- Besoins Quotidiens -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-title">Besoins Quotidiens</span>
+                <div class="btn-group">
+                    <button class="btn-small" id="editNeedsBtn" aria-label="Modifier les besoins">✏️ Éditer</button>
+                    <button class="btn-small" id="resetDayBtn" aria-label="Réinitialiser la journée">🔄 Reset</button>
+                </div>
+            </div>
+            <div class="nutrient-grid" id="grid-needs">
+                <div class="nutrient-box"><div class="nutrient-label">Calories</div><div class="nutrient-value" id="need-cal">2000</div></div>
+                <div class="nutrient-box"><div class="nutrient-label">Protéines</div><div class="nutrient-value" id="need-prot">75g</div></div>
+                <div class="nutrient-box"><div class="nutrient-label">Lipides</div><div class="nutrient-value" id="need-lip">70g</div></div>
+                <div class="nutrient-box"><div class="nutrient-label">Glucides</div><div class="nutrient-value" id="need-gluc">250g</div></div>
+            </div>
+        </div>
+
+        <!-- Progression du jour -->
+        <div class="card">
+            <div class="card-header"><span class="card-title">Progression du jour</span></div>
+            <div class="progress-section">
+                <div class="progress-bar-wrap">
+                    <div class="progress-label-row"><span>Calories</span><span id="prog-cal-txt">0 / 2000 kcal</span></div>
+                    <div class="progress-track"><div class="progress-fill fill-cal" id="prog-cal" style="width:0%"></div></div>
+                </div>
+                <div class="progress-bar-wrap">
+                    <div class="progress-label-row"><span>Protéines</span><span id="prog-prot-txt">0 / 75 g</span></div>
+                    <div class="progress-track"><div class="progress-fill fill-prot" id="prog-prot" style="width:0%"></div></div>
+                </div>
+                <div class="progress-bar-wrap">
+                    <div class="progress-label-row"><span>Lipides</span><span id="prog-lip-txt">0 / 70 g</span></div>
+                    <div class="progress-track"><div class="progress-fill fill-lip" id="prog-lip" style="width:0%"></div></div>
+                </div>
+                <div class="progress-bar-wrap" style="margin-bottom:0">
+                    <div class="progress-label-row"><span>Glucides</span><span id="prog-gluc-txt">0 / 250 g</span></div>
+                    <div class="progress-track"><div class="progress-fill fill-gluc" id="prog-gluc" style="width:0%"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reste à consommer -->
+        <div class="card">
+            <div class="card-header"><span class="card-title">Reste à consommer</span></div>
+            <div class="nutrient-grid remaining" id="grid-remaining">
+                <div class="nutrient-box"><div class="nutrient-label">Calories</div><div class="nutrient-value" id="rem-cal">2000</div></div>
+                <div class="nutrient-box"><div class="nutrient-label">Protéines</div><div class="nutrient-value" id="rem-prot">75g</div></div>
+                <div class="nutrient-box"><div class="nutrient-label">Lipides</div><div class="nutrient-value" id="rem-lip">70g</div></div>
+                <div class="nutrient-box"><div class="nutrient-label">Glucides</div><div class="nutrient-value" id="rem-gluc">250g</div></div>
+            </div>
+        </div>
+
+        <!-- Cumul consommé -->
+        <div class="card">
+            <div class="card-header"><span class="card-title">Cumul consommé</span></div>
+            <div class="nutrient-grid" id="grid-total">
+                <div class="nutrient-box"><div class="nutrient-label">Calories</div><div class="nutrient-value" id="tot-cal">0</div></div>
+                <div class="nutrient-box"><div class="nutrient-label">Protéines</div><div class="nutrient-value" id="tot-prot">0g</div></div>
+                <div class="nutrient-box"><div class="nutrient-label">Lipides</div><div class="nutrient-value" id="tot-lip">0g</div></div>
+                <div class="nutrient-box"><div class="nutrient-label">Glucides</div><div class="nutrient-value" id="tot-gluc">0g</div></div>
+            </div>
+        </div>
+
+        <!-- Historique des aliments -->
+        <div class="card">
+            <div class="card-header"><span class="card-title">Aliments du jour</span></div>
+            <div class="history-list" id="historyList">
+                <div class="empty-state" id="emptyState">Aucun aliment ajouté</div>
+            </div>
+        </div>
+
+        <!-- Zone d'ajout d'aliment (avec aperçu amélioré) -->
+        <div class="card">
+            <div class="card-header"><span class="card-title">Ajouter un aliment</span></div>
+
+            <!-- Aperçu dynamique -->
+            <div class="preview-card" id="previewCard">
+                <div class="preview-title">Aperçu</div>
+                <div class="preview-empty" id="previewEmpty">Saisissez un aliment et un poids…</div>
+                <div id="previewContent" style="display:none">
+                    <div class="preview-name" id="previewName"></div>
+                    <div class="preview-weight" id="previewWeightLabel"></div>
+                    <div class="nutrient-grid">
+                        <div class="nutrient-box"><div class="nutrient-label">Calories</div><div class="nutrient-value small" id="prev-cal">—</div></div>
+                        <div class="nutrient-box"><div class="nutrient-label">Protéines</div><div class="nutrient-value small" id="prev-prot">—</div></div>
+                        <div class="nutrient-box"><div class="nutrient-label">Lipides</div><div class="nutrient-value small" id="prev-lip">—</div></div>
+                        <div class="nutrient-box"><div class="nutrient-label">Glucides</div><div class="nutrient-value small" id="prev-gluc">—</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Champ de recherche avec suggestions -->
+            <div class="suggestions">
+                <input type="text" class="input-field" id="foodInput" placeholder="🔍 Aliment (ex: jambon, poulet, riz…)" autocomplete="off" aria-label="Nom de l'aliment">
+                <div class="suggestions-list" id="suggestionsList" style="display:none"></div>
+            </div>
+            <!-- Poids -->
+            <div class="input-row">
+                <input type="number" class="input-field" id="weightInput" placeholder="Poids (g)" min="1" max="2000" step="1" aria-label="Poids en grammes">
+            </div>
+            <button class="btn-add" id="addBtn">Ajouter</button>
+        </div>
+    </div>
+
+    <!-- Modal d'édition des besoins -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <h2>🎯 Besoins Quotidiens</h2>
+            <div class="modal-grid">
+                <div class="modal-field">
+                    <label for="edit-cal">Calories (kcal)</label>
+                    <input type="number" id="edit-cal" placeholder="2000" min="0" step="10">
+                </div>
+                <div class="modal-field">
+                    <label for="edit-prot">Protéines (g)</label>
+                    <input type="number" id="edit-prot" placeholder="75" min="0" step="1">
+                </div>
+                <div class="modal-field">
+                    <label for="edit-lip">Lipides (g)</label>
+                    <input type="number" id="edit-lip" placeholder="70" min="0" step="1">
+                </div>
+                <div class="modal-field">
+                    <label for="edit-gluc">Glucides (g)</label>
+                    <input type="number" id="edit-gluc" placeholder="250" min="0" step="1">
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn-cancel" id="cancelModalBtn">Annuler</button>
+                <button class="btn-save" id="saveNeedsBtn">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification toast -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        (function() {
+            // ---------- BASE DE DONNÉES ENRICHIE (avec les aliments évidents) ----------
+            const foodDB = {
+                // === VIANDES & VOLAILLES ===
+                "poulet": {cal:165, prot:31, lip:3.6, gluc:0, label:"Poulet (blanc)"},
+                "dinde": {cal:135, prot:30, lip:1, gluc:0, label:"Dinde"},
+                "escalope dinde": {cal:135, prot:30, lip:1, gluc:0, label:"Escalope de dinde"},
+                "boeuf": {cal:250, prot:26, lip:15, gluc:0, label:"Bœuf (steak)"},
+                "steak haché": {cal:240, prot:26, lip:15, gluc:0, label:"Steak haché 5%"},
+                "steak haché 15%": {cal:270, prot:24, lip:18, gluc:0, label:"Steak haché 15%"},
+                "porc": {cal:242, prot:27, lip:14, gluc:0, label:"Porc"},
+                "rôti de porc": {cal:220, prot:26, lip:12, gluc:0, label:"Rôti de porc"},
+                "côte de porc": {cal:260, prot:25, lip:18, gluc:0, label:"Côte de porc"},
+                "agneau": {cal:294, prot:25, lip:21, gluc:0, label:"Agneau"},
+                "veau": {cal:175, prot:26, lip:7, gluc:0, label:"Veau"},
+                "canard": {cal:337, prot:19, lip:29, gluc:0, label:"Canard"},
+                "lapin": {cal:173, prot:25, lip:8, gluc:0, label:"Lapin"},
+
+                // === CHARCUTERIES ===
+                "jambon blanc": {cal:145, prot:20, lip:7, gluc:0.5, label:"Jambon blanc"},
+                "jambon cru": {cal:210, prot:27, lip:11, gluc:0, label:"Jambon cru"},
+                "jambon sec": {cal:210, prot:27, lip:11, gluc:0, label:"Jambon sec"},
+                "jambon de poulet": {cal:115, prot:20, lip:3, gluc:1, label:"Jambon de poulet"},
+                "blanc de dinde": {cal:110, prot:22, lip:2, gluc:1, label:"Blanc de dinde"},
+                "saucisson": {cal:380, prot:25, lip:30, gluc:2, label:"Saucisson"},
+                "saucisse": {cal:320, prot:15, lip:28, gluc:2, label:"Saucisse"},
+                "merguez": {cal:330, prot:16, lip:29, gluc:2, label:"Merguez"},
+                "bacon": {cal:540, prot:12, lip:50, gluc:1, label:"Bacon"},
+                "lardons": {cal:420, prot:16, lip:40, gluc:1, label:"Lardons"},
+
+                // === POISSONS & FRUITS DE MER ===
+                "saumon": {cal:208, prot:20, lip:13, gluc:0, label:"Saumon"},
+                "thon": {cal:116, prot:26, lip:1, gluc:0, label:"Thon (conserve)"},
+                "thon frais": {cal:144, prot:23, lip:5, gluc:0, label:"Thon frais"},
+                "cabillaud": {cal:82, prot:18, lip:0.7, gluc:0, label:"Cabillaud"},
+                "sardine": {cal:208, prot:25, lip:11, gluc:0, label:"Sardine"},
+                "maquereau": {cal:205, prot:19, lip:14, gluc:0, label:"Maquereau"},
+                "crevettes": {cal:99, prot:24, lip:0.3, gluc:0, label:"Crevettes"},
+                "calamar": {cal:92, prot:15, lip:1.4, gluc:3, label:"Calamar"},
+                "moules": {cal:86, prot:12, lip:2.3, gluc:3, label:"Moules"},
+                "huîtres": {cal:66, prot:9, lip:2.5, gluc:4, label:"Huîtres"},
+
+                // === ŒUFS & LAITIERS ===
+                "oeuf": {cal:155, prot:13, lip:11, gluc:1.1, label:"Œuf entier"},
+                "blanc d'oeuf": {cal:52, prot:11, lip:0.2, gluc:0.7, label:"Blanc d'œuf"},
+                "fromage blanc": {cal:73, prot:8, lip:3, gluc:4, label:"Fromage blanc 3%"},
+                "yaourt nature": {cal:59, prot:5, lip:2, gluc:5, label:"Yaourt nature"},
+                "lait entier": {cal:61, prot:3.2, lip:3.3, gluc:4.8, label:"Lait entier"},
+                "lait demi-écrémé": {cal:46, prot:3.2, lip:1.6, gluc:4.8, label:"Lait demi-écrémé"},
+                "lait écrémé": {cal:34, prot:3.3, lip:0.1, gluc:5, label:"Lait écrémé"},
+                "beurre": {cal:717, prot:0.9, lip:81, gluc:0.1, label:"Beurre"},
+                "gruyère": {cal:413, prot:29, lip:33, gluc:0, label:"Gruyère"},
+                "emmental": {cal:382, prot:29, lip:29, gluc:0.5, label:"Emmental"},
+                "mozzarella": {cal:280, prot:28, lip:17, gluc:2.2, label:"Mozzarella"},
+                "ricotta": {cal:174, prot:11, lip:13, gluc:3, label:"Ricotta"},
+                "parmesan": {cal:431, prot:38, lip:29, gluc:0, label:"Parmesan"},
+                "camembert": {cal:300, prot:20, lip:24, gluc:0.5, label:"Camembert"},
+                "brie": {cal:334, prot:21, lip:28, gluc:0.5, label:"Brie"},
+                "chèvre": {cal:260, prot:19, lip:20, gluc:1, label:"Chèvre"},
+
+                // === FÉCULENTS & CÉRÉALES ===
+                "riz cuit": {cal:130, prot:2.7, lip:0.3, gluc:28, label:"Riz cuit"},
+                "riz basmati cuit": {cal:121, prot:2.4, lip:0.4, gluc:26, label:"Riz basmati cuit"},
+                "pâtes cuites": {cal:131, prot:5, lip:1, gluc:25, label:"Pâtes cuites"},
+                "quinoa cuit": {cal:120, prot:4.4, lip:1.9, gluc:21, label:"Quinoa cuit"},
+                "pain de mie": {cal:265, prot:9, lip:3.2, gluc:49, label:"Pain de mie"},
+                "pain complet": {cal:247, prot:13, lip:4, gluc:41, label:"Pain complet"},
+                "baguette": {cal:270, prot:9, lip:1, gluc:58, label:"Baguette"},
+                "pomme de terre cuite": {cal:77, prot:2, lip:0.1, gluc:17, label:"Pomme de terre cuite"},
+                "patate douce cuite": {cal:86, prot:1.6, lip:0.1, gluc:20, label:"Patate douce cuite"},
+                "flocons d'avoine": {cal:389, prot:17, lip:7, gluc:66, label:"Flocons d'avoine"},
+                "semoule cuite": {cal:112, prot:3.5, lip:0.2, gluc:24, label:"Semoule cuite"},
+                "boulgour cuit": {cal:83, prot:3, lip:0.2, gluc:18, label:"Boulgour cuit"},
+
+                // === LÉGUMES ===
+                "brocoli": {cal:34, prot:2.8, lip:0.4, gluc:6.6, label:"Brocoli"},
+                "épinards": {cal:23, prot:2.9, lip:0.4, gluc:3.6, label:"Épinards"},
+                "tomate": {cal:18, prot:0.9, lip:0.2, gluc:3.9, label:"Tomate"},
+                "concombre": {cal:15, prot:0.7, lip:0.1, gluc:3.6, label:"Concombre"},
+                "carotte": {cal:41, prot:0.9, lip:0.2, gluc:9.6, label:"Carotte"},
+                "courgette": {cal:17, prot:1.2, lip:0.3, gluc:3.1, label:"Courgette"},
+                "poivron": {cal:31, prot:1, lip:0.3, gluc:6, label:"Poivron"},
+                "champignon": {cal:22, prot:3.1, lip:0.3, gluc:3.3, label:"Champignon"},
+                "haricots verts": {cal:35, prot:2, lip:0.1, gluc:7.9, label:"Haricots verts"},
+                "salade": {cal:15, prot:1.4, lip:0.2, gluc:2.8, label:"Salade verte"},
+                "avocat": {cal:160, prot:2, lip:15, gluc:8.5, label:"Avocat"},
+                "oignon": {cal:40, prot:1.1, lip:0.1, gluc:9.3, label:"Oignon"},
+                "ail": {cal:149, prot:6.4, lip:0.5, gluc:33, label:"Ail"},
+                "chou vert": {cal:25, prot:1.3, lip:0.1, gluc:5.8, label:"Chou vert"},
+                "chou-fleur": {cal:25, prot:2, lip:0.3, gluc:5, label:"Chou-fleur"},
+                "aubergine": {cal:25, prot:1, lip:0.2, gluc:6, label:"Aubergine"},
+                "betterave": {cal:43, prot:1.6, lip:0.2, gluc:10, label:"Betterave"},
+
+                // === LÉGUMINEUSES ===
+                "lentilles cuites": {cal:116, prot:9, lip:0.4, gluc:20, label:"Lentilles cuites"},
+                "pois chiches cuits": {cal:164, prot:8.9, lip:2.6, gluc:27, label:"Pois chiches cuits"},
+                "haricots rouges cuits": {cal:127, prot:8.7, lip:0.5, gluc:22, label:"Haricots rouges cuits"},
+                "edamame": {cal:121, prot:11, lip:5.2, gluc:8.9, label:"Edamame"},
+
+                // === FRUITS ===
+                "banane": {cal:89, prot:1.1, lip:0.3, gluc:23, label:"Banane"},
+                "pomme": {cal:52, prot:0.3, lip:0.2, gluc:14, label:"Pomme"},
+                "orange": {cal:47, prot:0.9, lip:0.1, gluc:12, label:"Orange"},
+                "fraise": {cal:32, prot:0.7, lip:0.3, gluc:7.7, label:"Fraises"},
+                "raisin": {cal:69, prot:0.7, lip:0.2, gluc:18, label:"Raisin"},
+                "ananas": {cal:50, prot:0.5, lip:0.1, gluc:13, label:"Ananas"},
+                "mangue": {cal:60, prot:0.8, lip:0.4, gluc:15, label:"Mangue"},
+                "kiwi": {cal:61, prot:1.1, lip:0.5, gluc:15, label:"Kiwi"},
+                "myrtilles": {cal:57, prot:0.7, lip:0.3, gluc:14, label:"Myrtilles"},
+                "poire": {cal:57, prot:0.4, lip:0.1, gluc:15, label:"Poire"},
+                "pastèque": {cal:30, prot:0.6, lip:0.2, gluc:7.6, label:"Pastèque"},
+                "cerise": {cal:63, prot:1.1, lip:0.2, gluc:16, label:"Cerises"},
+
+                // === OLÉAGINEUX ===
+                "amandes": {cal:579, prot:21, lip:50, gluc:22, label:"Amandes"},
+                "noix": {cal:654, prot:15, lip:65, gluc:14, label:"Noix"},
+                "cacahuètes": {cal:567, prot:26, lip:49, gluc:16, label:"Cacahuètes"},
+                "noisettes": {cal:628, prot:15, lip:61, gluc:17, label:"Noisettes"},
+                "noix de cajou": {cal:553, prot:18, lip:44, gluc:30, label:"Noix de cajou"},
+
+                // === MATIÈRES GRASSES ===
+                "huile d'olive": {cal:884, prot:0, lip:100, gluc:0, label:"Huile d'olive"},
+                "huile de colza": {cal:884, prot:0, lip:100, gluc:0, label:"Huile de colza"},
+                "huile de tournesol": {cal:884, prot:0, lip:100, gluc:0, label:"Huile de tournesol"},
+
+                // === SUCRE & DOUCEURS ===
+                "chocolat noir 70%": {cal:546, prot:5, lip:31, gluc:60, label:"Chocolat noir 70%"},
+                "chocolat au lait": {cal:540, prot:7, lip:30, gluc:57, label:"Chocolat au lait"},
+                "miel": {cal:304, prot:0.3, lip:0, gluc:82, label:"Miel"},
+                "confiture": {cal:278, prot:0.4, lip:0.1, gluc:69, label:"Confiture"},
+                "sucre": {cal:387, prot:0, lip:0, gluc:100, label:"Sucre blanc"},
+
+                // === PROTÉINES SPORT ===
+                "whey": {cal:382, prot:80, lip:5, gluc:7, label:"Whey protéine"},
+                "caséine": {cal:370, prot:80, lip:2, gluc:10, label:"Caséine"},
+
+                // === CÉRÉALES PETIT-DÉJ ===
+                "granola": {cal:471, prot:10, lip:20, gluc:64, label:"Granola"},
+                "cornflakes": {cal:357, prot:7.5, lip:1, gluc:84, label:"Cornflakes"},
+                "muesli": {cal:380, prot:9, lip:7, gluc:70, label:"Muesli"},
+
+                // === BOISSONS ===
+                "café": {cal:1, prot:0.1, lip:0, gluc:0, label:"Café noir"},
+                "thé": {cal:1, prot:0, lip:0, gluc:0, label:"Thé sans sucre"},
+                "coca cola": {cal:42, prot:0, lip:0, gluc:10.6, label:"Coca-Cola (33cl)"},
+                "coca light": {cal:0.3, prot:0, lip:0, gluc:0, label:"Coca Light"},
+                "jus d'orange": {cal:45, prot:0.7, lip:0.2, gluc:10, label:"Jus d'orange"},
+                "jus de pomme": {cal:46, prot:0.1, lip:0.1, gluc:11, label:"Jus de pomme"},
+                "bière": {cal:43, prot:0.5, lip:0, gluc:3.6, label:"Bière (pils)"},
+                "vin rouge": {cal:85, prot:0.1, lip:0, gluc:2.6, label:"Vin rouge"},
+            };
+
+            // ---------- État de l'application ----------
+            let state = {
+                needs: { cal: 2000, prot: 75, lip: 70, gluc: 250 },
+                consumed: { cal: 0, prot: 0, lip: 0, gluc: 0 },
+                history: [],
+                selectedFood: null,
+            };
+
+            let currentSuggestions = [];
+
+            // ---------- Éléments DOM fréquemment utilisés ----------
+            const foodInput = document.getElementById('foodInput');
+            const weightInput = document.getElementById('weightInput');
+            const suggestionsList = document.getElementById('suggestionsList');
+            const previewEmpty = document.getElementById('previewEmpty');
+            const previewContent = document.getElementById('previewContent');
+            const previewName = document.getElementById('previewName');
+            const previewWeightLabel = document.getElementById('previewWeightLabel');
+            const prevCal = document.getElementById('prev-cal');
+            const prevProt = document.getElementById('prev-prot');
+            const prevLip = document.getElementById('prev-lip');
+            const prevGluc = document.getElementById('prev-gluc');
+            const addBtn = document.getElementById('addBtn');
+            const modalOverlay = document.getElementById('modalOverlay');
+            const toast = document.getElementById('toast');
+
+            // ---------- Initialisation ----------
+            function init() {
+                const saved = localStorage.getItem('nutri-state');
+                const savedDate = localStorage.getItem('nutri-date');
+                const today = new Date().toDateString();
+
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    state.needs = parsed.needs;
+                    if (savedDate === today) {
+                        state.consumed = parsed.consumed;
+                        state.history = parsed.history;
+                    }
+                }
+
+                document.getElementById('todayDate').textContent = new Date().toLocaleDateString('fr-FR', {
+                    weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+                });
+
+                localStorage.setItem('nutri-date', today);
+                updateUI();
+            }
+
+            function saveState() {
+                localStorage.setItem('nutri-state', JSON.stringify(state));
+            }
+
+            // ---------- Mise à jour de l'interface ----------
+            function updateUI() {
+                const { needs, consumed } = state;
+
+                document.getElementById('need-cal').textContent = needs.cal;
+                document.getElementById('need-prot').textContent = needs.prot + 'g';
+                document.getElementById('need-lip').textContent = needs.lip + 'g';
+                document.getElementById('need-gluc').textContent = needs.gluc + 'g';
+
+                document.getElementById('tot-cal').textContent = Math.round(consumed.cal);
+                document.getElementById('tot-prot').textContent = Math.round(consumed.prot) + 'g';
+                document.getElementById('tot-lip').textContent = Math.round(consumed.lip) + 'g';
+                document.getElementById('tot-gluc').textContent = Math.round(consumed.gluc) + 'g';
+
+                const remCal = needs.cal - consumed.cal;
+                const remProt = needs.prot - consumed.prot;
+                const remLip = needs.lip - consumed.lip;
+                const remGluc = needs.gluc - consumed.gluc;
+
+                document.getElementById('rem-cal').textContent = Math.round(remCal);
+                document.getElementById('rem-prot').textContent = Math.round(remProt) + 'g';
+                document.getElementById('rem-lip').textContent = Math.round(remLip) + 'g';
+                document.getElementById('rem-gluc').textContent = Math.round(remGluc) + 'g';
+
+                const remBoxes = document.querySelectorAll('#grid-remaining .nutrient-box');
+                [remCal, remProt, remLip, remGluc].forEach((val, i) => {
+                    remBoxes[i].classList.toggle('over', val < 0);
+                });
+
+                const setBar = (id, val, max, txtId, unit) => {
+                    const percent = Math.min(100, Math.max(0, (val / max) * 100));
+                    const bar = document.getElementById(id);
+                    bar.style.width = percent + '%';
+                    const over = val > max;
+                    bar.className = 'progress-fill ' + (over ? 'fill-over' : bar.dataset.color);
+                    document.getElementById(txtId).textContent = `${Math.round(val)} / ${max} ${unit}${over ? ' ⚠️' : ''}`;
+                };
+
+                document.getElementById('prog-cal').dataset.color = 'fill-cal';
+                document.getElementById('prog-prot').dataset.color = 'fill-prot';
+                document.getElementById('prog-lip').dataset.color = 'fill-lip';
+                document.getElementById('prog-gluc').dataset.color = 'fill-gluc';
+
+                setBar('prog-cal', consumed.cal, needs.cal, 'prog-cal-txt', 'kcal');
+                setBar('prog-prot', consumed.prot, needs.prot, 'prog-prot-txt', 'g');
+                setBar('prog-lip', consumed.lip, needs.lip, 'prog-lip-txt', 'g');
+                setBar('prog-gluc', consumed.gluc, needs.gluc, 'prog-gluc-txt', 'g');
+
+                renderHistory();
+            }
+
+            function renderHistory() {
+                const list = document.getElementById('historyList');
+                const empty = document.getElementById('emptyState');
+                list.innerHTML = '';
+
+                if (state.history.length === 0) {
+                    list.appendChild(empty);
+                    empty.style.display = '';
+                    return;
+                }
+
+                empty.style.display = 'none';
+
+                [...state.history].reverse().forEach((item, index) => {
+                    const originalIndex = state.history.length - 1 - index;
+                    const el = document.createElement('div');
+                    el.className = 'history-item';
+                    el.innerHTML = `
+                        <div>
+                            <div class="history-name">${item.label} <span style="font-weight:400;color:var(--muted);font-size:11px">${item.weight}g</span></div>
+                            <div class="history-sub">${Math.round(item.prot)}g prot · ${Math.round(item.lip)}g lip · ${Math.round(item.gluc)}g gluc</div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:8px">
+                            <div class="history-cals">${Math.round(item.cal)} kcal</div>
+                            <button class="history-delete" data-index="${originalIndex}" aria-label="Supprimer">×</button>
+                        </div>`;
+                    list.appendChild(el);
+                });
+
+                document.querySelectorAll('.history-delete').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const idx = e.target.getAttribute('data-index');
+                        if (idx !== null) deleteItem(parseInt(idx));
+                    });
+                });
+            }
+
+            // ---------- Suggestions et sélection ----------
+            foodInput.addEventListener('input', function() {
+                const query = this.value.toLowerCase().trim();
+                state.selectedFood = null;
+                updatePreview();
+
+                if (query.length < 2) {
+                    hideSuggestions();
+                    return;
+                }
+
+                const matches = Object.entries(foodDB)
+                    .filter(([key, data]) => key.includes(query) || data.label.toLowerCase().includes(query))
+                    .slice(0, 6);
+
+                currentSuggestions = matches;
+
+                if (matches.length === 0) {
+                    hideSuggestions();
+                    return;
+                }
+
+                suggestionsList.innerHTML = '';
+                matches.forEach(([key, data]) => {
+                    const item = document.createElement('div');
+                    item.className = 'suggestion-item';
+                    item.innerHTML = `<span class="sug-name">${data.label}</span><span class="sug-info">${data.cal} kcal · ${data.prot}g P</span>`;
+                    item.addEventListener('mousedown', (e) => {
+                        e.preventDefault();
+                        selectFood(key, data);
+                    });
+                    suggestionsList.appendChild(item);
+                });
+                suggestionsList.style.display = 'block';
+            });
+
+            function selectFood(key, data) {
+                foodInput.value = data.label;
+                state.selectedFood = data;
+                hideSuggestions();
+                updatePreview();
+                weightInput.focus();
+            }
+
+            function hideSuggestions() {
+                suggestionsList.style.display = 'none';
+            }
+
+            document.addEventListener('click', (e) => {
+                if (!foodInput.contains(e.target) && !suggestionsList.contains(e.target)) {
+                    hideSuggestions();
+                }
+            });
+
+            // ---------- Aperçu dynamique (amélioré) ----------
+            function updatePreview() {
+                const food = state.selectedFood;
+                const weight = parseFloat(weightInput.value);
+
+                if (!food || isNaN(weight) || weight <= 0) {
+                    previewEmpty.style.display = '';
+                    previewContent.style.display = 'none';
+                    return;
+                }
+
+                const factor = weight / 100;
+                previewEmpty.style.display = 'none';
+                previewContent.style.display = '';
+                previewName.textContent = food.label;
+                previewWeightLabel.textContent = `Valeurs pour ${weight}g`;
+                prevCal.textContent = Math.round(food.cal * factor);
+                prevProt.textContent = Math.round(food.prot * factor) + 'g';
+                prevLip.textContent = Math.round(food.lip * factor) + 'g';
+                prevGluc.textContent = Math.round(food.gluc * factor) + 'g';
+            }
+
+            weightInput.addEventListener('input', updatePreview);
+
+            // ---------- Ajout d'un aliment ----------
+            function addFood() {
+                const food = state.selectedFood;
+                const weight = parseFloat(weightInput.value);
+
+                if (!food) {
+                    showToast('⚠️ Sélectionnez un aliment dans la liste');
+                    return;
+                }
+                if (isNaN(weight) || weight <= 0) {
+                    showToast('⚠️ Entrez un poids valide (en grammes)');
+                    return;
+                }
+
+                const factor = weight / 100;
+                const entry = {
+                    label: food.label,
+                    weight: weight,
+                    cal: food.cal * factor,
+                    prot: food.prot * factor,
+                    lip: food.lip * factor,
+                    gluc: food.gluc * factor,
+                };
+
+                state.history.push(entry);
+                state.consumed.cal += entry.cal;
+                state.consumed.prot += entry.prot;
+                state.consumed.lip += entry.lip;
+                state.consumed.gluc += entry.gluc;
+
+                foodInput.value = '';
+                weightInput.value = '';
+                state.selectedFood = null;
+                previewEmpty.style.display = '';
+                previewContent.style.display = 'none';
+
+                saveState();
+                updateUI();
+                showToast(`✅ ${food.label} ajouté (${Math.round(entry.cal)} kcal)`);
+            }
+
+            addBtn.addEventListener('click', addFood);
+
+            // ---------- Supprimer un élément de l'historique ----------
+            function deleteItem(index) {
+                const item = state.history[index];
+                if (!item) return;
+
+                state.consumed.cal -= item.cal;
+                state.consumed.prot -= item.prot;
+                state.consumed.lip -= item.lip;
+                state.consumed.gluc -= item.gluc;
+                state.history.splice(index, 1);
+
+                saveState();
+                updateUI();
+                showToast('🗑️ Aliment supprimé');
+            }
+
+            // ---------- Réinitialiser la journée ----------
+            function resetDay() {
+                if (!confirm('Réinitialiser toute la journée ?')) return;
+                state.consumed = { cal: 0, prot: 0, lip: 0, gluc: 0 };
+                state.history = [];
+                saveState();
+                updateUI();
+                showToast('🔄 Journée réinitialisée');
+            }
+
+            document.getElementById('resetDayBtn').addEventListener('click', resetDay);
+
+            // ---------- Modal d'édition des besoins ----------
+            function openModal() {
+                document.getElementById('edit-cal').value = state.needs.cal;
+                document.getElementById('edit-prot').value = state.needs.prot;
+                document.getElementById('edit-lip').value = state.needs.lip;
+                document.getElementById('edit-gluc').value = state.needs.gluc;
+                modalOverlay.classList.add('open');
+            }
+
+            function closeModal() {
+                modalOverlay.classList.remove('open');
+            }
+
+            function saveNeeds() {
+                const cal = parseInt(document.getElementById('edit-cal').value, 10);
+                const prot = parseInt(document.getElementById('edit-prot').value, 10);
+                const lip = parseInt(document.getElementById('edit-lip').value, 10);
+                const gluc = parseInt(document.getElementById('edit-gluc').value, 10);
+
+                if ([cal, prot, lip, gluc].some(v => isNaN(v) || v < 0)) {
+                    showToast('⚠️ Valeurs invalides (doivent être des nombres positifs)');
+                    return;
+                }
+
+                state.needs = { cal, prot, lip, gluc };
+                saveState();
+                updateUI();
+                closeModal();
+                showToast('✅ Besoins mis à jour');
+            }
+
+            document.getElementById('editNeedsBtn').addEventListener('click', openModal);
+            document.getElementById('cancelModalBtn').addEventListener('click', closeModal);
+            document.getElementById('saveNeedsBtn').addEventListener('click', saveNeeds);
+
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) closeModal();
+            });
+
+            // ---------- Toast (notification) ----------
+            function showToast(message) {
+                toast.textContent = message;
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 2500);
+            }
+
+            // ---------- Lancement ----------
+            init();
+
+            // Permettre l'ajout avec la touche Entrée depuis le champ poids
+            weightInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    addFood();
+                } 
+              });
+        })();
+    </script>
+</body>
+</html>
+       

@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suivi Nutritionnel · Mieux manger</title>
-    <!-- favicon -->
-    <link rel="apple-touch-icon" href="favicon.jpg">
-<link rel="icon" type="image/jpeg" href="favicon.jpg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
@@ -551,159 +550,12 @@
     <!-- Notification toast -->
     <div class="toast" id="toast"></div>
 
+    <!-- Chargement de la base de données externe -->
+    <script src="aliments.js"></script>
+
+    <!-- Script principal de l'application -->
     <script>
         (function() {
-            // ---------- BASE DE DONNÉES ENRICHIE (avec les aliments évidents) ----------
-            const foodDB = {
-                // === VIANDES & VOLAILLES ===
-                "poulet": {cal:165, prot:31, lip:3.6, gluc:0, label:"Poulet (blanc)"},
-                "dinde": {cal:135, prot:30, lip:1, gluc:0, label:"Dinde"},
-                "escalope dinde": {cal:135, prot:30, lip:1, gluc:0, label:"Escalope de dinde"},
-                "boeuf": {cal:250, prot:26, lip:15, gluc:0, label:"Bœuf (steak)"},
-                "steak haché": {cal:240, prot:26, lip:15, gluc:0, label:"Steak haché 5%"},
-                "steak haché 15%": {cal:270, prot:24, lip:18, gluc:0, label:"Steak haché 15%"},
-                "porc": {cal:242, prot:27, lip:14, gluc:0, label:"Porc"},
-                "rôti de porc": {cal:220, prot:26, lip:12, gluc:0, label:"Rôti de porc"},
-                "côte de porc": {cal:260, prot:25, lip:18, gluc:0, label:"Côte de porc"},
-                "agneau": {cal:294, prot:25, lip:21, gluc:0, label:"Agneau"},
-                "veau": {cal:175, prot:26, lip:7, gluc:0, label:"Veau"},
-                "canard": {cal:337, prot:19, lip:29, gluc:0, label:"Canard"},
-                "lapin": {cal:173, prot:25, lip:8, gluc:0, label:"Lapin"},
-
-                // === CHARCUTERIES ===
-                "jambon blanc": {cal:145, prot:20, lip:7, gluc:0.5, label:"Jambon blanc"},
-                "jambon cru": {cal:210, prot:27, lip:11, gluc:0, label:"Jambon cru"},
-                "jambon sec": {cal:210, prot:27, lip:11, gluc:0, label:"Jambon sec"},
-                "jambon de poulet": {cal:115, prot:20, lip:3, gluc:1, label:"Jambon de poulet"},
-                "blanc de dinde": {cal:110, prot:22, lip:2, gluc:1, label:"Blanc de dinde"},
-                "saucisson": {cal:380, prot:25, lip:30, gluc:2, label:"Saucisson"},
-                "saucisse": {cal:320, prot:15, lip:28, gluc:2, label:"Saucisse"},
-                "merguez": {cal:330, prot:16, lip:29, gluc:2, label:"Merguez"},
-                "bacon": {cal:540, prot:12, lip:50, gluc:1, label:"Bacon"},
-                "lardons": {cal:420, prot:16, lip:40, gluc:1, label:"Lardons"},
-
-                // === POISSONS & FRUITS DE MER ===
-                "saumon": {cal:208, prot:20, lip:13, gluc:0, label:"Saumon"},
-                "thon": {cal:116, prot:26, lip:1, gluc:0, label:"Thon (conserve)"},
-                "thon frais": {cal:144, prot:23, lip:5, gluc:0, label:"Thon frais"},
-                "cabillaud": {cal:82, prot:18, lip:0.7, gluc:0, label:"Cabillaud"},
-                "sardine": {cal:208, prot:25, lip:11, gluc:0, label:"Sardine"},
-                "maquereau": {cal:205, prot:19, lip:14, gluc:0, label:"Maquereau"},
-                "crevettes": {cal:99, prot:24, lip:0.3, gluc:0, label:"Crevettes"},
-                "calamar": {cal:92, prot:15, lip:1.4, gluc:3, label:"Calamar"},
-                "moules": {cal:86, prot:12, lip:2.3, gluc:3, label:"Moules"},
-                "huîtres": {cal:66, prot:9, lip:2.5, gluc:4, label:"Huîtres"},
-
-                // === ŒUFS & LAITIERS ===
-                "oeuf": {cal:155, prot:13, lip:11, gluc:1.1, label:"Œuf entier"},
-                "blanc d'oeuf": {cal:52, prot:11, lip:0.2, gluc:0.7, label:"Blanc d'œuf"},
-                "fromage blanc": {cal:73, prot:8, lip:3, gluc:4, label:"Fromage blanc 3%"},
-                "yaourt nature": {cal:59, prot:5, lip:2, gluc:5, label:"Yaourt nature"},
-                "lait entier": {cal:61, prot:3.2, lip:3.3, gluc:4.8, label:"Lait entier"},
-                "lait demi-écrémé": {cal:46, prot:3.2, lip:1.6, gluc:4.8, label:"Lait demi-écrémé"},
-                "lait écrémé": {cal:34, prot:3.3, lip:0.1, gluc:5, label:"Lait écrémé"},
-                "beurre": {cal:717, prot:0.9, lip:81, gluc:0.1, label:"Beurre"},
-                "gruyère": {cal:413, prot:29, lip:33, gluc:0, label:"Gruyère"},
-                "emmental": {cal:382, prot:29, lip:29, gluc:0.5, label:"Emmental"},
-                "mozzarella": {cal:280, prot:28, lip:17, gluc:2.2, label:"Mozzarella"},
-                "ricotta": {cal:174, prot:11, lip:13, gluc:3, label:"Ricotta"},
-                "parmesan": {cal:431, prot:38, lip:29, gluc:0, label:"Parmesan"},
-                "camembert": {cal:300, prot:20, lip:24, gluc:0.5, label:"Camembert"},
-                "brie": {cal:334, prot:21, lip:28, gluc:0.5, label:"Brie"},
-                "chèvre": {cal:260, prot:19, lip:20, gluc:1, label:"Chèvre"},
-
-                // === FÉCULENTS & CÉRÉALES ===
-                "riz cuit": {cal:130, prot:2.7, lip:0.3, gluc:28, label:"Riz cuit"},
-                "riz basmati cuit": {cal:121, prot:2.4, lip:0.4, gluc:26, label:"Riz basmati cuit"},
-                "pâtes cuites": {cal:131, prot:5, lip:1, gluc:25, label:"Pâtes cuites"},
-                "quinoa cuit": {cal:120, prot:4.4, lip:1.9, gluc:21, label:"Quinoa cuit"},
-                "pain de mie": {cal:265, prot:9, lip:3.2, gluc:49, label:"Pain de mie"},
-                "pain complet": {cal:247, prot:13, lip:4, gluc:41, label:"Pain complet"},
-                "baguette": {cal:270, prot:9, lip:1, gluc:58, label:"Baguette"},
-                "pomme de terre cuite": {cal:77, prot:2, lip:0.1, gluc:17, label:"Pomme de terre cuite"},
-                "patate douce cuite": {cal:86, prot:1.6, lip:0.1, gluc:20, label:"Patate douce cuite"},
-                "flocons d'avoine": {cal:389, prot:17, lip:7, gluc:66, label:"Flocons d'avoine"},
-                "semoule cuite": {cal:112, prot:3.5, lip:0.2, gluc:24, label:"Semoule cuite"},
-                "boulgour cuit": {cal:83, prot:3, lip:0.2, gluc:18, label:"Boulgour cuit"},
-
-                // === LÉGUMES ===
-                "brocoli": {cal:34, prot:2.8, lip:0.4, gluc:6.6, label:"Brocoli"},
-                "épinards": {cal:23, prot:2.9, lip:0.4, gluc:3.6, label:"Épinards"},
-                "tomate": {cal:18, prot:0.9, lip:0.2, gluc:3.9, label:"Tomate"},
-                "concombre": {cal:15, prot:0.7, lip:0.1, gluc:3.6, label:"Concombre"},
-                "carotte": {cal:41, prot:0.9, lip:0.2, gluc:9.6, label:"Carotte"},
-                "courgette": {cal:17, prot:1.2, lip:0.3, gluc:3.1, label:"Courgette"},
-                "poivron": {cal:31, prot:1, lip:0.3, gluc:6, label:"Poivron"},
-                "champignon": {cal:22, prot:3.1, lip:0.3, gluc:3.3, label:"Champignon"},
-                "haricots verts": {cal:35, prot:2, lip:0.1, gluc:7.9, label:"Haricots verts"},
-                "salade": {cal:15, prot:1.4, lip:0.2, gluc:2.8, label:"Salade verte"},
-                "avocat": {cal:160, prot:2, lip:15, gluc:8.5, label:"Avocat"},
-                "oignon": {cal:40, prot:1.1, lip:0.1, gluc:9.3, label:"Oignon"},
-                "ail": {cal:149, prot:6.4, lip:0.5, gluc:33, label:"Ail"},
-                "chou vert": {cal:25, prot:1.3, lip:0.1, gluc:5.8, label:"Chou vert"},
-                "chou-fleur": {cal:25, prot:2, lip:0.3, gluc:5, label:"Chou-fleur"},
-                "aubergine": {cal:25, prot:1, lip:0.2, gluc:6, label:"Aubergine"},
-                "betterave": {cal:43, prot:1.6, lip:0.2, gluc:10, label:"Betterave"},
-
-                // === LÉGUMINEUSES ===
-                "lentilles cuites": {cal:116, prot:9, lip:0.4, gluc:20, label:"Lentilles cuites"},
-                "pois chiches cuits": {cal:164, prot:8.9, lip:2.6, gluc:27, label:"Pois chiches cuits"},
-                "haricots rouges cuits": {cal:127, prot:8.7, lip:0.5, gluc:22, label:"Haricots rouges cuits"},
-                "edamame": {cal:121, prot:11, lip:5.2, gluc:8.9, label:"Edamame"},
-
-                // === FRUITS ===
-                "banane": {cal:89, prot:1.1, lip:0.3, gluc:23, label:"Banane"},
-                "pomme": {cal:52, prot:0.3, lip:0.2, gluc:14, label:"Pomme"},
-                "orange": {cal:47, prot:0.9, lip:0.1, gluc:12, label:"Orange"},
-                "fraise": {cal:32, prot:0.7, lip:0.3, gluc:7.7, label:"Fraises"},
-                "raisin": {cal:69, prot:0.7, lip:0.2, gluc:18, label:"Raisin"},
-                "ananas": {cal:50, prot:0.5, lip:0.1, gluc:13, label:"Ananas"},
-                "mangue": {cal:60, prot:0.8, lip:0.4, gluc:15, label:"Mangue"},
-                "kiwi": {cal:61, prot:1.1, lip:0.5, gluc:15, label:"Kiwi"},
-                "myrtilles": {cal:57, prot:0.7, lip:0.3, gluc:14, label:"Myrtilles"},
-                "poire": {cal:57, prot:0.4, lip:0.1, gluc:15, label:"Poire"},
-                "pastèque": {cal:30, prot:0.6, lip:0.2, gluc:7.6, label:"Pastèque"},
-                "cerise": {cal:63, prot:1.1, lip:0.2, gluc:16, label:"Cerises"},
-
-                // === OLÉAGINEUX ===
-                "amandes": {cal:579, prot:21, lip:50, gluc:22, label:"Amandes"},
-                "noix": {cal:654, prot:15, lip:65, gluc:14, label:"Noix"},
-                "cacahuètes": {cal:567, prot:26, lip:49, gluc:16, label:"Cacahuètes"},
-                "noisettes": {cal:628, prot:15, lip:61, gluc:17, label:"Noisettes"},
-                "noix de cajou": {cal:553, prot:18, lip:44, gluc:30, label:"Noix de cajou"},
-
-                // === MATIÈRES GRASSES ===
-                "huile d'olive": {cal:884, prot:0, lip:100, gluc:0, label:"Huile d'olive"},
-                "huile de colza": {cal:884, prot:0, lip:100, gluc:0, label:"Huile de colza"},
-                "huile de tournesol": {cal:884, prot:0, lip:100, gluc:0, label:"Huile de tournesol"},
-
-                // === SUCRE & DOUCEURS ===
-                "chocolat noir 70%": {cal:546, prot:5, lip:31, gluc:60, label:"Chocolat noir 70%"},
-                "chocolat au lait": {cal:540, prot:7, lip:30, gluc:57, label:"Chocolat au lait"},
-                "miel": {cal:304, prot:0.3, lip:0, gluc:82, label:"Miel"},
-                "confiture": {cal:278, prot:0.4, lip:0.1, gluc:69, label:"Confiture"},
-                "sucre": {cal:387, prot:0, lip:0, gluc:100, label:"Sucre blanc"},
-
-                // === PROTÉINES SPORT ===
-                "whey": {cal:382, prot:80, lip:5, gluc:7, label:"Whey protéine"},
-                "caséine": {cal:370, prot:80, lip:2, gluc:10, label:"Caséine"},
-
-                // === CÉRÉALES PETIT-DÉJ ===
-                "granola": {cal:471, prot:10, lip:20, gluc:64, label:"Granola"},
-                "cornflakes": {cal:357, prot:7.5, lip:1, gluc:84, label:"Cornflakes"},
-                "muesli": {cal:380, prot:9, lip:7, gluc:70, label:"Muesli"},
-
-                // === BOISSONS ===
-                "café": {cal:1, prot:0.1, lip:0, gluc:0, label:"Café noir"},
-                "thé": {cal:1, prot:0, lip:0, gluc:0, label:"Thé sans sucre"},
-                "coca cola": {cal:42, prot:0, lip:0, gluc:10.6, label:"Coca-Cola (33cl)"},
-                "coca light": {cal:0.3, prot:0, lip:0, gluc:0, label:"Coca Light"},
-                "jus d'orange": {cal:45, prot:0.7, lip:0.2, gluc:10, label:"Jus d'orange"},
-                "jus de pomme": {cal:46, prot:0.1, lip:0.1, gluc:11, label:"Jus de pomme"},
-                "bière": {cal:43, prot:0.5, lip:0, gluc:3.6, label:"Bière (pils)"},
-                "vin rouge": {cal:85, prot:0.1, lip:0, gluc:2.6, label:"Vin rouge"},
-            };
-
             // ---------- État de l'application ----------
             let state = {
                 needs: { cal: 2000, prot: 75, lip: 70, gluc: 250 },
@@ -899,7 +751,7 @@
                 }
             });
 
-            // ---------- Aperçu dynamique (amélioré) ----------
+            // ---------- Aperçu dynamique ----------
             function updatePreview() {
                 const food = state.selectedFood;
                 const weight = parseFloat(weightInput.value);
@@ -1053,4 +905,4 @@
         })();
     </script>
 </body>
-</html> 
+</html>

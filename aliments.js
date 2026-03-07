@@ -507,4 +507,126 @@ const foodDB = {
     "saumon conserve": {cal:170, prot:22, lip:9, gluc:0, label:"Saumon en conserve"},
     "crabe conserve": {cal:85, prot:18, lip:1.5, gluc:0, label:"Crabe en conserve"},
     "moules conserve": {cal:86, prot:12, lip:2.3, gluc:3, label:"Moules en conserve"},
-};
+// === SNACKING GRANDES SURFACES (LIDL, INTERMARCHÉ, ETC.) ===
+
+// --- LIDL ---
+"sandwich triangle lidl jambon": {cal:240, prot:11, lip:8, gluc:29, label:"Sandwich triangle jambon Lidl (100g)"},
+"sandwich triangle lidl poulet": {cal:235, prot:12, lip:7, gluc:28, label:"Sandwich triangle poulet Lidl (100g)"},
+"sandwich triangle lidl thon": {cal:250, prot:10, lip:9, gluc:30, label:"Sandwich triangle thon Lidl (100g)"},
+"sandwich triangle lidl oeuf": {cal:245, prot:9, lip:10, gluc:28, label:"Sandwich triangle oeuf Lidl (100g)"},
+"sandwich triangle lidl saumon": {cal:255, prot:11, lip:10, gluc:27, label:"Sandwich triangle saumon Lidl (100g)"},
+"sandwich lidl baguette jambon": {cal:260, prot:12, lip:9, gluc:30, label:"Sandwich baguette jambon Lidl (100g)"},
+"sandwich lidl baguette poulet": {cal:255, prot:13, lip:8, gluc:29, label:"Sandwich baguette poulet Lidl (100g)"},
+"sandwich lidl baguette thon": {cal:270, prot:11, lip:11, gluc:30, label:"Sandwich baguette thon Lidl (100g)"},
+"sandwich lidl wrap poulet": {cal:230, prot:12, lip:8, gluc:26, label:"Wrap poulet Lidl (100g)"},
+"sandwich lidl wrap veggie": {cal:210, prot:6, lip:9, gluc:25, label:"Wrap végétarien Lidl (100g)"},
+
+// --- Salades Lidl ---
+"salade lidl piémontaise": {cal:149, prot:3.7, lip:11, gluc:7.9, label:"Salade Piémontaise Lidl (100g)"},
+"salade lidl asiatique": {cal:150, prot:3, lip:10, gluc:13, label:"Salade asiatique Lidl (100g)"},
+"salade lidl césar": {cal:160, prot:6, lip:12, gluc:5, label:"Salade César Lidl (100g)"},
+"salade lidl pâtes": {cal:180, prot:5, lip:8, gluc:22, label:"Salade de pâtes Lidl (100g)"},
+"salade lidl quinoa": {cal:165, prot:4, lip:9, gluc:16, label:"Salade quinoa Lidl (100g)"},
+"salade lidl niçoise": {cal:140, prot:6, lip:8, gluc:10, label:"Salade niçoise Lidl (100g)"},
+"salade lidl grecque": {cal:155, prot:4, lip:12, gluc:6, label:"Salade grecque Lidl (100g)"},
+"salade lidl taboulé": {cal:130, prot:3, lip:5, gluc:18, label:"Taboulé Lidl (100g)"},
+"salade lidl coleslaw": {cal:180, prot:1.5, lip:15, gluc:10, label:"Coleslaw Lidl (100g)"},
+
+// --- Snacks Lidl ---
+"snack day teddy hit": {cal:508, prot:3.1, lip:27.1, gluc:61.9, label:"Snack Day Teddy Hit (Lidl)"},
+"snack day chips paprika": {cal:530, prot:6, lip:32, gluc:52, label:"Snack Day Chips Paprika"},
+"snack day sticks": {cal:490, prot:5, lip:25, gluc:60, label:"Snack Day Sticks"},
+"snack day tortillas nature": {cal:500, prot:6, lip:28, gluc:58, label:"Snack Day Tortillas Nature"},
+"snack day tortillas fromage": {cal:510, prot:7, lip:29, gluc:56, label:"Snack Day Tortillas Fromage"},
+"snack day pop corn salé": {cal:450, prot:8, lip:20, gluc:60, label:"Snack Day Pop Corn Salé"},
+"snack day pop corn sucré": {cal:480, prot:5, lip:22, gluc:65, label:"Snack Day Pop Corn Sucré"},
+"snack day cacahuètes": {cal:570, prot:26, lip:49, gluc:16, label:"Snack Day Cacahuètes"},
+"snack day noix de cajou": {cal:550, prot:18, lip:44, gluc:30, label:"Snack Day Noix de Cajou"},
+
+// --- INTERMARCHÉ / MONIQUE RANOU ---
+"salade surimi monique ranou": {cal:79.2, prot:4, lip:4.96, gluc:3.96, label:"Salade Surimi Monique Ranou (100g)"},
+"salade monique ranou piémontaise": {cal:152, prot:4, lip:11, gluc:8, label:"Salade Piémontaise Monique Ranou (100g)"},
+"salade monique ranou taboulé": {cal:135, prot:3, lip:5, gluc:19, label:"Taboulé Monique Ranou (100g)"},
+"salade monique ranou pates": {cal:185, prot:5, lip:9, gluc:22, label:"Salade de pâtes Monique Ranou (100g)"},
+"salade monique ranou quinoa": {cal:170, prot:4, lip:10, gluc:17, label:"Salade quinoa Monique Ranou (100g)"},
+"salade monique ranou lentilles": {cal:140, prot:6, lip:7, gluc:13, label:"Salade lentilles Monique Ranou (100g)"},
+"salade monique ranou césar": {cal:165, prot:7, lip:12, gluc:6, label:"Salade César Monique Ranou (100g)"},
+"salade monique ranou niçoise": {cal:145, prot:6, lip:9, gluc:10, label:"Salade niçoise Monique Ranou (100g)"},
+
+// --- SANDWICHES INTERMARCHÉ ---
+"sandwich inter triangle jambon": {cal:245, prot:11, lip:9, gluc:28, label:"Sandwich triangle jambon Intermarché (100g)"},
+"sandwich inter triangle poulet": {cal:240, prot:12, lip:8, gluc:27, label:"Sandwich triangle poulet Intermarché (100g)"},
+"sandwich inter triangle thon": {cal:255, prot:10, lip:10, gluc:29, label:"Sandwich triangle thon Intermarché (100g)"},
+"sandwich inter triangle oeuf": {cal:250, prot:9, lip:11, gluc:28, label:"Sandwich triangle oeuf Intermarché (100g)"},
+"sandwich inter baguette jambon": {cal:265, prot:12, lip:10, gluc:30, label:"Sandwich baguette jambon Intermarché (100g)"},
+"sandwich inter baguette poulet": {cal:260, prot:13, lip:9, gluc:29, label:"Sandwich baguette poulet Intermarché (100g)"},
+"sandwich inter baguette thon": {cal:275, prot:11, lip:12, gluc:30, label:"Sandwich baguette thon Intermarché (100g)"},
+"sandwich inter wrap poulet": {cal:235, prot:12, lip:9, gluc:25, label:"Wrap poulet Intermarché (100g)"},
+"sandwich inter wrap veggie": {cal:215, prot:6, lip:10, gluc:24, label:"Wrap végétarien Intermarché (100g)"},
+
+// --- CARREFOUR ---
+"sandwich carrefour triangle jambon": {cal:240, prot:11, lip:8, gluc:29, label:"Sandwich triangle jambon Carrefour (100g)"},
+"sandwich carrefour triangle poulet": {cal:235, prot:12, lip:7, gluc:28, label:"Sandwich triangle poulet Carrefour (100g)"},
+"sandwich carrefour triangle thon": {cal:250, prot:10, lip:9, gluc:30, label:"Sandwich triangle thon Carrefour (100g)"},
+"sandwich carrefour baguette jambon": {cal:260, prot:12, lip:9, gluc:30, label:"Sandwich baguette jambon Carrefour (100g)"},
+"salade carrefour piémontaise": {cal:149, prot:3.7, lip:11, gluc:7.9, label:"Salade Piémontaise Carrefour (100g)"},
+"salade carrefour césar": {cal:160, prot:6, lip:12, gluc:5, label:"Salade César Carrefour (100g)"},
+"salade carrefour pâtes": {cal:180, prot:5, lip:8, gluc:22, label:"Salade de pâtes Carrefour (100g)"},
+
+// --- AUCHAN ---
+"sandwich auchan triangle jambon": {cal:240, prot:11, lip:8, gluc:29, label:"Sandwich triangle jambon Auchan (100g)"},
+"sandwich auchan triangle poulet": {cal:235, prot:12, lip:7, gluc:28, label:"Sandwich triangle poulet Auchan (100g)"},
+"sandwich auchan triangle thon": {cal:250, prot:10, lip:9, gluc:30, label:"Sandwich triangle thon Auchan (100g)"},
+"salade auchan piémontaise": {cal:149, prot:3.7, lip:11, gluc:7.9, label:"Salade Piémontaise Auchan (100g)"},
+"salade auchan asiatique": {cal:150, prot:3, lip:10, gluc:13, label:"Salade asiatique Auchan (100g)"},
+"salade auchan quinoa": {cal:165, prot:4, lip:9, gluc:16, label:"Salade quinoa Auchan (100g)"},
+
+// --- LECLERC ---
+"sandwich leclerc triangle jambon": {cal:240, prot:11, lip:8, gluc:29, label:"Sandwich triangle jambon Leclerc (100g)"},
+"sandwich leclerc triangle poulet": {cal:235, prot:12, lip:7, gluc:28, label:"Sandwich triangle poulet Leclerc (100g)"},
+"sandwich leclerc triangle thon": {cal:250, prot:10, lip:9, gluc:30, label:"Sandwich triangle thon Leclerc (100g)"},
+"salade leclerc piémontaise": {cal:149, prot:3.7, lip:11, gluc:7.9, label:"Salade Piémontaise Leclerc (100g)"},
+"salade leclerc taboulé": {cal:130, prot:3, lip:5, gluc:18, label:"Taboulé Leclerc (100g)"},
+"salade leclerc coleslaw": {cal:180, prot:1.5, lip:15, gluc:10, label:"Coleslaw Leclerc (100g)"},
+
+// --- CASINO ---
+"sandwich casino triangle jambon": {cal:240, prot:11, lip:8, gluc:29, label:"Sandwich triangle jambon Casino (100g)"},
+"sandwich casino triangle poulet": {cal:235, prot:12, lip:7, gluc:28, label:"Sandwich triangle poulet Casino (100g)"},
+"sandwich casino triangle thon": {cal:250, prot:10, lip:9, gluc:30, label:"Sandwich triangle thon Casino (100g)"},
+"salade casino piémontaise": {cal:149, prot:3.7, lip:11, gluc:7.9, label:"Salade Piémontaise Casino (100g)"},
+"salade casino niçoise": {cal:140, prot:6, lip:8, gluc:10, label:"Salade niçoise Casino (100g)"},
+
+// --- MONOPRIX ---
+"sandwich monoprix triangle jambon": {cal:240, prot:11, lip:8, gluc:29, label:"Sandwich triangle jambon Monoprix (100g)"},
+"sandwich monoprix triangle poulet": {cal:235, prot:12, lip:7, gluc:28, label:"Sandwich triangle poulet Monoprix (100g)"},
+"sandwich monoprix triangle thon": {cal:250, prot:10, lip:9, gluc:30, label:"Sandwich triangle thon Monoprix (100g)"},
+"salade monoprix piémontaise": {cal:149, prot:3.7, lip:11, gluc:7.9, label:"Salade Piémontaise Monoprix (100g)"},
+"salade monoprix césar": {cal:160, prot:6, lip:12, gluc:5, label:"Salade César Monoprix (100g)"},
+
+// --- SANDWICHES GÉNÉRIQUES ---
+"sandwich triangle jambon": {cal:240, prot:11, lip:8, gluc:29, label:"Sandwich triangle jambon (générique 100g)"},
+"sandwich triangle poulet": {cal:235, prot:12, lip:7, gluc:28, label:"Sandwich triangle poulet (générique 100g)"},
+"sandwich triangle thon": {cal:250, prot:10, lip:9, gluc:30, label:"Sandwich triangle thon (générique 100g)"},
+"sandwich triangle oeuf": {cal:245, prot:9, lip:10, gluc:28, label:"Sandwich triangle oeuf (générique 100g)"},
+"sandwich triangle saumon": {cal:255, prot:11, lip:10, gluc:27, label:"Sandwich triangle saumon (générique 100g)"},
+"sandwich triangle végé": {cal:220, prot:6, lip:9, gluc:28, label:"Sandwich triangle végétarien (générique 100g)"},
+"sandwich baguette jambon beurre": {cal:280, prot:10, lip:12, gluc:32, label:"Sandwich baguette jambon-beurre (100g)"},
+"sandwich baguette poulet crudités": {cal:250, prot:12, lip:8, gluc:30, label:"Sandwich baguette poulet crudités (100g)"},
+"sandwich baguette thon mayo": {cal:290, prot:10, lip:14, gluc:28, label:"Sandwich baguette thon mayonnaise (100g)"},
+"wrap poulet crudités": {cal:230, prot:12, lip:8, gluc:26, label:"Wrap poulet crudités (100g)"},
+"wrap végétarien": {cal:210, prot:6, lip:9, gluc:25, label:"Wrap végétarien (100g)"},
+"panini jambon fromage": {cal:280, prot:12, lip:12, gluc:30, label:"Panini jambon fromage (100g)"},
+"panini poulet": {cal:260, prot:13, lip:10, gluc:28, label:"Panini poulet (100g)"},
+
+// --- SALADES GÉNÉRIQUES ---
+"salade piémontaise": {cal:150, prot:4, lip:11, gluc:8, label:"Salade Piémontaise (100g)"},
+"salade césar": {cal:160, prot:6, lip:12, gluc:5, label:"Salade César (100g)"},
+"salade niçoise": {cal:140, prot:6, lip:8, gluc:10, label:"Salade niçoise (100g)"},
+"salade grecque": {cal:155, prot:4, lip:12, gluc:6, label:"Salade grecque (100g)"},
+"salade asiatique": {cal:150, prot:3, lip:10, gluc:13, label:"Salade asiatique (100g)"},
+"salade de pâtes": {cal:180, prot:5, lip:8, gluc:22, label:"Salade de pâtes (100g)"},
+"salade de riz": {cal:160, prot:4, lip:7, gluc:20, label:"Salade de riz (100g)"},
+"salade quinoa": {cal:165, prot:4, lip:9, gluc:16, label:"Salade quinoa (100g)"},
+"salade lentilles": {cal:140, prot:6, lip:7, gluc:13, label:"Salade lentilles (100g)"},
+"taboulé": {cal:130, prot:3, lip:5, gluc:18, label:"Taboulé (100g)"},
+"coleslaw": {cal:180, prot:1.5, lip:15, gluc:10, label:"Coleslaw (100g)"},};

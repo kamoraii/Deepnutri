@@ -629,4 +629,91 @@ const foodDB = {
 "salade quinoa": {cal:165, prot:4, lip:9, gluc:16, label:"Salade quinoa (100g)"},
 "salade lentilles": {cal:140, prot:6, lip:7, gluc:13, label:"Salade lentilles (100g)"},
 "taboulé": {cal:130, prot:3, lip:5, gluc:18, label:"Taboulé (100g)"},
-"coleslaw": {cal:180, prot:1.5, lip:15, gluc:10, label:"Coleslaw (100g)"},};
+"coleslaw": {cal:180, prot:1.5, lip:15, gluc:10, label:"Coleslaw (100g)"}, // === GAMME SOBEDO (SANDWICHES & SNACKING) ===
+"sobedo sandwich triangle jambon": {cal:240, prot:11, lip:8, gluc:29, label:"SoBedo Sandwich triangle jambon (100g)"},
+"sobedo sandwich triangle poulet": {cal:235, prot:12, lip:7, gluc:28, label:"SoBedo Sandwich triangle poulet (100g)"},
+"sobedo sandwich triangle thon": {cal:250, prot:10, lip:9, gluc:30, label:"SoBedo Sandwich triangle thon (100g)"},
+"sobedo sandwich triangle oeuf": {cal:245, prot:9, lip:10, gluc:28, label:"SoBedo Sandwich triangle oeuf (100g)"},
+"sobedo sandwich triangle saumon": {cal:255, prot:11, lip:10, gluc:27, label:"SoBedo Sandwich triangle saumon (100g)"},
+"sobedo sandwich triangle veggie": {cal:220, prot:6, lip:9, gluc:28, label:"SoBedo Sandwich triangle végétarien (100g)"},
+"sobedo sandwich baguette jambon": {cal:260, prot:12, lip:9, gluc:30, label:"SoBedo Baguette jambon (100g)"},
+"sobedo sandwich baguette poulet": {cal:255, prot:13, lip:8, gluc:29, label:"SoBedo Baguette poulet (100g)"},
+"sobedo sandwich baguette thon": {cal:270, prot:11, lip:11, gluc:30, label:"SoBedo Baguette thon (100g)"},
+"sobedo wrap poulet": {cal:230, prot:12, lip:8, gluc:26, label:"SoBedo Wrap poulet (100g)"},
+"sobedo wrap veggie": {cal:210, prot:6, lip:9, gluc:25, label:"SoBedo Wrap végétarien (100g)"},
+"sobedo panini jambon": {cal:280, prot:12, lip:12, gluc:30, label:"SoBedo Panini jambon (100g)"},
+"sobedo panini poulet": {cal:260, prot:13, lip:10, gluc:28, label:"SoBedo Panini poulet (100g)"},
+"sobedo salade piémontaise": {cal:149, prot:3.7, lip:11, gluc:7.9, label:"SoBedo Salade Piémontaise (100g)"},
+"sobedo salade césar": {cal:160, prot:6, lip:12, gluc:5, label:"SoBedo Salade César (100g)"},
+"sobedo salade niçoise": {cal:140, prot:6, lip:8, gluc:10, label:"SoBedo Salade Niçoise (100g)"},
+"sobedo salade pâtes": {cal:180, prot:5, lip:8, gluc:22, label:"SoBedo Salade de pâtes (100g)"},
+"sobedo salade quinoa": {cal:165, prot:4, lip:9, gluc:16, label:"SoBedo Salade quinoa (100g)"},
+"sobedo taboulé": {cal:130, prot:3, lip:5, gluc:18, label:"SoBedo Taboulé (100g)"},
+
+// === PLATS EN CONSERVE (FORMAT 800g) ===
+// Cassoulet [citation:2][citation:10]
+"cassoulet conserve": {cal:136, prot:8.6, lip:6.8, gluc:8.4, label:"Cassoulet en conserve (100g)"},
+"cassoulet porc": {cal:138, prot:9.5, lip:7, gluc:7, label:"Cassoulet au porc (100g)"},
+"cassoulet toulousain": {cal:140, prot:9, lip:7.5, gluc:8, label:"Cassoulet toulousain (100g)"},
+"cassoulet confit": {cal:145, prot:8, lip:8, gluc:7.5, label:"Cassoulet au confit (100g)"},
+
+// Raviolis [citation:1][citation:9]
+"ravioli boeuf conserve": {cal:86, prot:2.4, lip:2.2, gluc:13, label:"Ravioli bœuf sauce tomate (100g)"},
+"ravioli tomate": {cal:85, prot:2.3, lip:2, gluc:13, label:"Ravioli sauce tomate (100g)"},
+"ravioli légumes": {cal:80, prot:2, lip:1.8, gluc:12.2, label:"Ravioli aux légumes (100g)"},
+"ravioli pur boeuf": {cal:90, prot:3, lip:2.5, gluc:13.5, label:"Ravioli pur bœuf (100g)"},
+"ravioli poulet": {cal:88, prot:2.8, lip:2.3, gluc:13, label:"Ravioli poulet (100g)"},
+
+// Lentilles préparées [citation:3]
+"lentilles preparees": {cal:106, prot:6.8, lip:4.7, gluc:7.9, label:"Lentilles préparées (100g)"},
+"lentilles saucisses": {cal:106, prot:6.8, lip:4.7, gluc:7.9, label:"Lentilles aux saucisses (100g)" [citation:4]},
+"lentilles lardons": {cal:110, prot:7, lip:5, gluc:8, label:"Lentilles aux lardons (100g)"},
+"lentilles carottes": {cal:95, prot:5, lip:3.5, gluc:10, label:"Lentilles aux carottes (100g)"},
+"petit salé lentilles": {cal:120, prot:8, lip:6, gluc:8, label:"Petit salé aux lentilles (100g)"},
+
+// Saucisses lentilles [citation:4]
+"saucisses lentilles": {cal:106, prot:6.8, lip:4.7, gluc:7.9, label:"Saucisses aux lentilles (100g)"},
+"saucisses lentilles superieur": {cal:110, prot:7, lip:5, gluc:8, label:"Saucisses aux lentilles supérieur (100g)"},
+
+// === LÉGUMINEUSES EN CONSERVE (TOUS FORMATS) ===
+// Pois chiches [citation:5]
+"pois chiches conserve": {cal:139, prot:7, lip:2.6, gluc:20, label:"Pois chiches en conserve (100g)"},
+"pois chiches egouttes": {cal:120, prot:6.5, lip:2, gluc:18, label:"Pois chiches égouttés (100g)"},
+
+// Flageolets [citation:6]
+"flageolets conserve": {cal:87, prot:5.5, lip:0.7, gluc:12, label:"Flageolets verts (100g)"},
+"flageolets extra fins": {cal:87, prot:5.5, lip:0.7, gluc:12, label:"Flageolets extra fins (100g)"},
+"flageolets nature": {cal:85, prot:5, lip:0.5, gluc:12, label:"Flageolets nature (100g)"},
+
+// Haricots blancs
+"haricots blancs conserve": {cal:90, prot:5.5, lip:0.5, gluc:15, label:"Haricots blancs (100g)"},
+"haricots blancs tomate": {cal:95, prot:5, lip:1, gluc:16, label:"Haricots blancs sauce tomate (100g)"},
+
+// Haricots rouges
+"haricots rouges conserve": {cal:90, prot:6, lip:0.5, gluc:14, label:"Haricots rouges (100g)"},
+
+// Pois cassés
+"pois cassés conserve": {cal:95, prot:6, lip:0.5, gluc:16, label:"Pois cassés (100g)"},
+
+// Fèves
+"fèves conserve": {cal:70, prot:5, lip:0.5, gluc:10, label:"Fèves (100g)"},
+
+// Lentilles nature
+"lentilles vertes conserve": {cal:85, prot:6, lip:0.5, gluc:12, label:"Lentilles vertes (100g)"},
+"lentilles corail conserve": {cal:85, prot:6, lip:0.5, gluc:12, label:"Lentilles corail (100g)"},
+
+// === RILLETTES (SI PAS DÉJÀ PRÉSENTES) ===
+"rillettes porc": {cal:420, prot:16, lip:38, gluc:0.5, label:"Rillettes de porc (100g)"},
+"rillettes oie": {cal:450, prot:18, lip:42, gluc:0.5, label:"Rillettes d'oie (100g)"},
+"rillettes canard": {cal:440, prot:17, lip:41, gluc:0.5, label:"Rillettes de canard (100g)"},
+"rillettes saumon": {cal:380, prot:14, lip:35, gluc:1, label:"Rillettes de saumon (100g)"},
+"rillettes thon": {cal:350, prot:13, lip:32, gluc:1, label:"Rillettes de thon (100g)"},
+"rillettes sardine": {cal:360, prot:15, lip:33, gluc:0.5, label:"Rillettes de sardine (100g)"},
+
+// === AUTRES CONSERVES COURANTES ===
+"choucroute garnie": {cal:130, prot:6, lip:8, gluc:4, label:"Choucroute garnie (100g)"},
+"petits pois carottes": {cal:60, prot:3, lip:0.5, gluc:9, label:"Petits pois carottes (100g)"},
+"petits pois nature": {cal:70, prot:4, lip:0.5, gluc:10, label:"Petits pois (100g)"},
+"carottes rondelles": {cal:30, prot:0.8, lip:0.3, gluc:5, label:"Carottes en rondelles (100g)"},
+"ratatouille conserve": {cal:45, prot:1.2, lip:2.5, gluc:4.5, label:"Ratatouille (100g)"},
+"piperade": {cal:40, prot:1, lip:2, gluc:4, label:"Piperade (100g)"},};

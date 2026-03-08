@@ -716,4 +716,4 @@ const foodDB = {
 "petits pois nature": {cal:70, prot:4, lip:0.5, gluc:10, label:"Petits pois (100g)"},
 "carottes rondelles": {cal:30, prot:0.8, lip:0.3, gluc:5, label:"Carottes en rondelles (100g)"},
 "ratatouille conserve": {cal:45, prot:1.2, lip:2.5, gluc:4.5, label:"Ratatouille (100g)"},
-"piperade": {cal:40, prot:1, lip:2, gluc:4, label:"Piperade (100g)"} };
+"piperade": {cal:40, prot:1, lip:2, gluc:4, label:"Piperade (100g)"},

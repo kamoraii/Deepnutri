@@ -55,7 +55,6 @@
             gap: 14px;
         }
 
-        /* ----- Header ----- */
         .app-header {
             text-align: center;
             padding: 4px 0 8px;
@@ -74,7 +73,6 @@
             margin-top: 2px;
         }
 
-        /* ----- Cartes ----- */
         .card {
             background: var(--card);
             border-radius: var(--radius);
@@ -118,7 +116,6 @@
             background: var(--border);
         }
 
-        /* ----- Grilles de nutriments ----- */
         .nutrient-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -154,7 +151,6 @@
             font-size: 13px;
         }
 
-        /* Couleurs pour la section "Reste" */
         .remaining .nutrient-box:nth-child(1) {
             background: var(--green-bg);
             border-color: #b8dfc8;
@@ -176,14 +172,12 @@
         }
         .remaining .nutrient-box:nth-child(4) .nutrient-value { color: var(--red); }
 
-        /* Alerte dépassement */
         .nutrient-box.over {
             background: #fdecea !important;
             border-color: #f0b8b8 !important;
         }
         .nutrient-box.over .nutrient-value { color: var(--red) !important; }
 
-        /* ----- Barres de progression ----- */
         .progress-section { margin-top: 4px; }
         .progress-bar-wrap { margin-bottom: 8px; }
         .progress-label-row {
@@ -212,7 +206,6 @@
         .fill-gluc { background: #c0392b; }
         .fill-over { background: #e74c3c; }
 
-        /* ----- Historique ----- */
         .history-list {
             display: flex;
             flex-direction: column;
@@ -246,7 +239,6 @@
         .history-delete:hover { color: var(--red); }
         .empty-state { text-align: center; padding: 16px; color: var(--muted); font-size: 13px; }
 
-        /* ----- Aperçu avant ajout (amélioré) ----- */
         .preview-card {
             background: var(--bg);
             border-radius: 10px;
@@ -273,7 +265,6 @@
         }
         .preview-empty { font-size: 13px; color: var(--muted); }
 
-        /* ----- Champs de saisie ----- */
         .input-field {
             width: 100%;
             padding: 12px 14px;
@@ -315,7 +306,6 @@
         .btn-add:active { transform: translateY(0); }
         .btn-add:disabled { background: #b0aca6; cursor: not-allowed; transform: none; }
 
-        /* ----- Suggestions automatiques ----- */
         .suggestions {
             position: relative;
         }
@@ -345,7 +335,6 @@
         .suggestion-item .sug-name { font-weight: 500; }
         .suggestion-item .sug-info { font-size: 11px; color: var(--muted); font-family: 'DM Mono', monospace; }
 
-        /* ----- Modal d'édition des besoins ----- */
         .modal-overlay {
             display: none;
             position: fixed; inset: 0;
@@ -394,7 +383,6 @@
             cursor: pointer;
         }
 
-        /* ----- Toast (notification) ----- */
         .toast {
             position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
             background: var(--accent); color: white;
@@ -409,19 +397,17 @@
 </head>
 <body>
     <div class="container">
-        <!-- En‑tête -->
         <div class="app-header">
             <h1>🥗 Suivi Nutritionnel</h1>
             <div class="date" id="todayDate"></div>
         </div>
 
-        <!-- Besoins Quotidiens -->
         <div class="card">
             <div class="card-header">
                 <span class="card-title">Besoins Quotidiens</span>
                 <div class="btn-group">
-                    <button class="btn-small" id="editNeedsBtn" aria-label="Modifier les besoins">✏️ Éditer</button>
-                    <button class="btn-small" id="resetDayBtn" aria-label="Réinitialiser la journée">🔄 Reset</button>
+                    <button class="btn-small" id="editNeedsBtn">✏️ Éditer</button>
+                    <button class="btn-small" id="resetDayBtn">🔄 Reset</button>
                 </div>
             </div>
             <div class="nutrient-grid" id="grid-needs">
@@ -432,7 +418,6 @@
             </div>
         </div>
 
-        <!-- Progression du jour -->
         <div class="card">
             <div class="card-header"><span class="card-title">Progression du jour</span></div>
             <div class="progress-section">
@@ -455,7 +440,6 @@
             </div>
         </div>
 
-        <!-- Reste à consommer -->
         <div class="card">
             <div class="card-header"><span class="card-title">Reste à consommer</span></div>
             <div class="nutrient-grid remaining" id="grid-remaining">
@@ -466,7 +450,6 @@
             </div>
         </div>
 
-        <!-- Cumul consommé -->
         <div class="card">
             <div class="card-header"><span class="card-title">Cumul consommé</span></div>
             <div class="nutrient-grid" id="grid-total">
@@ -477,7 +460,6 @@
             </div>
         </div>
 
-        <!-- Historique des aliments -->
         <div class="card">
             <div class="card-header"><span class="card-title">Aliments du jour</span></div>
             <div class="history-list" id="historyList">
@@ -485,11 +467,9 @@
             </div>
         </div>
 
-        <!-- Zone d'ajout d'aliment (avec aperçu amélioré) -->
         <div class="card">
             <div class="card-header"><span class="card-title">Ajouter un aliment</span></div>
 
-            <!-- Aperçu dynamique -->
             <div class="preview-card" id="previewCard">
                 <div class="preview-title">Aperçu</div>
                 <div class="preview-empty" id="previewEmpty">Saisissez un aliment et un poids…</div>
@@ -505,12 +485,10 @@
                 </div>
             </div>
 
-            <!-- Champ de recherche avec suggestions -->
             <div class="suggestions">
                 <input type="text" class="input-field" id="foodInput" placeholder="🔍 Aliment (ex: jambon, poulet, riz…)" autocomplete="off" aria-label="Nom de l'aliment">
                 <div class="suggestions-list" id="suggestionsList" style="display:none"></div>
             </div>
-            <!-- Poids -->
             <div class="input-row">
                 <input type="number" class="input-field" id="weightInput" placeholder="Poids (g)" min="1" max="2000" step="1" aria-label="Poids en grammes">
             </div>
@@ -518,7 +496,6 @@
         </div>
     </div>
 
-    <!-- Modal d'édition des besoins -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal">
             <h2>🎯 Besoins Quotidiens</h2>
@@ -547,12 +524,11 @@
         </div>
     </div>
 
-    <!-- Notification toast -->
     <div class="toast" id="toast"></div>
 
     <!-- Chargement de la base de données externe -->
     <script src="aliments.js"></script>
-<script>alert("aliments.js est bien chargé !");</script>
+
     <!-- Script principal de l'application -->
     <script>
         (function() {
@@ -609,7 +585,6 @@
                 localStorage.setItem('nutri-state', JSON.stringify(state));
             }
 
-            // ---------- Mise à jour de l'interface ----------
             function updateUI() {
                 const { needs, consumed } = state;
 
@@ -751,7 +726,6 @@
                 }
             });
 
-            // ---------- Aperçu dynamique ----------
             function updatePreview() {
                 const food = state.selectedFood;
                 const weight = parseFloat(weightInput.value);
@@ -775,7 +749,6 @@
 
             weightInput.addEventListener('input', updatePreview);
 
-            // ---------- Ajout d'un aliment ----------
             function addFood() {
                 const food = state.selectedFood;
                 const weight = parseFloat(weightInput.value);
@@ -818,7 +791,6 @@
 
             addBtn.addEventListener('click', addFood);
 
-            // ---------- Supprimer un élément de l'historique ----------
             function deleteItem(index) {
                 const item = state.history[index];
                 if (!item) return;
@@ -834,7 +806,6 @@
                 showToast('🗑️ Aliment supprimé');
             }
 
-            // ---------- Réinitialiser la journée ----------
             function resetDay() {
                 if (!confirm('Réinitialiser toute la journée ?')) return;
                 state.consumed = { cal: 0, prot: 0, lip: 0, gluc: 0 };
@@ -846,7 +817,6 @@
 
             document.getElementById('resetDayBtn').addEventListener('click', resetDay);
 
-            // ---------- Modal d'édition des besoins ----------
             function openModal() {
                 document.getElementById('edit-cal').value = state.needs.cal;
                 document.getElementById('edit-prot').value = state.needs.prot;
@@ -885,17 +855,14 @@
                 if (e.target === modalOverlay) closeModal();
             });
 
-            // ---------- Toast (notification) ----------
             function showToast(message) {
                 toast.textContent = message;
                 toast.classList.add('show');
                 setTimeout(() => toast.classList.remove('show'), 2500);
             }
 
-            // ---------- Lancement ----------
             init();
 
-            // Permettre l'ajout avec la touche Entrée depuis le champ poids
             weightInput.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') {
                     e.preventDefault();

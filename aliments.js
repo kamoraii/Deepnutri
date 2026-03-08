@@ -709,8 +709,6 @@ const foodDB = {
 "rillettes saumon": {cal:380, prot:14, lip:35, gluc:1, label:"Rillettes de saumon (100g)"},
 "rillettes thon": {cal:350, prot:13, lip:32, gluc:1, label:"Rillettes de thon (100g)"},
 "rillettes sardine": {cal:360, prot:15, lip:33, gluc:0.5, label:"Rillettes de sardine (100g)"},
-
-// === AUTRES CONSERVES COURANTES ===
 // === AUTRES CONSERVES COURANTES ===
 "choucroute garnie": {cal:130, prot:6, lip:8, gluc:4, label:"Choucroute garnie (100g)"},
 "petits pois carottes": {cal:60, prot:3, lip:0.5, gluc:9, label:"Petits pois carottes (100g)"},

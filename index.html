@@ -405,7 +405,6 @@
             <a href="aide-poids.html" class="help-link">⚖️ Aide poids</a>
         </div>
 
-        <!-- Besoins -->
         <div class="card">
             <div class="card-header">
                 <span class="card-title">Besoins Quotidiens</span>
@@ -422,7 +421,6 @@
             </div>
         </div>
 
-        <!-- Progression -->
         <div class="card">
             <div class="card-header"><span class="card-title">Progression du jour</span></div>
             <div class="progress-section">
@@ -433,7 +431,6 @@
             </div>
         </div>
 
-        <!-- Reste -->
         <div class="card">
             <div class="card-header"><span class="card-title">Reste à consommer</span></div>
             <div class="nutrient-grid remaining" id="grid-remaining">
@@ -444,7 +441,6 @@
             </div>
         </div>
 
-        <!-- Cumul -->
         <div class="card">
             <div class="card-header"><span class="card-title">Cumul consommé</span></div>
             <div class="nutrient-grid" id="grid-total">
@@ -455,13 +451,11 @@
             </div>
         </div>
 
-        <!-- Historique -->
         <div class="card">
             <div class="card-header"><span class="card-title">Aliments du jour</span></div>
-            <div class="history-list" id="historyList"><div class="empty-state" id="emptyState">Aucun aliment ajouté</div></div>
+            <div id="historyList" class="history-list"></div>
         </div>
 
-        <!-- Ajout -->
         <div class="card">
             <div class="card-header"><span class="card-title">Ajouter un aliment</span></div>
             <div class="preview-card" id="previewCard">
@@ -527,12 +521,13 @@
             const modalOverlay = document.getElementById('modalOverlay');
             const toast = document.getElementById('toast');
             const historyList = document.getElementById('historyList');
-            const emptyState = document.getElementById('emptyState');
 
+            // ---------- Initialisation ----------
             function init() {
                 const saved = localStorage.getItem('nutri-state');
                 const savedDate = localStorage.getItem('nutri-date');
                 const today = new Date().toDateString();
+
                 if (saved) {
                     const parsed = JSON.parse(saved);
                     state.needs = parsed.needs;
@@ -541,26 +536,35 @@
                         state.history = parsed.history;
                     }
                 }
-                document.getElementById('todayDate').textContent = new Date().toLocaleDateString('fr-FR', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
+
+                document.getElementById('todayDate').textContent = new Date().toLocaleDateString('fr-FR', {
+                    weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+                });
                 localStorage.setItem('nutri-date', today);
                 updateUI();
             }
 
-            function saveState() { localStorage.setItem('nutri-state', JSON.stringify(state)); }
+            function saveState() {
+                localStorage.setItem('nutri-state', JSON.stringify(state));
+            }
 
+            // ---------- Mise à jour globale ----------
             function updateUI() {
                 const { needs, consumed } = state;
 
+                // Besoins
                 document.getElementById('need-cal').textContent = needs.cal;
                 document.getElementById('need-prot').textContent = needs.prot + 'g';
                 document.getElementById('need-lip').textContent = needs.lip + 'g';
                 document.getElementById('need-gluc').textContent = needs.gluc + 'g';
 
+                // Cumul
                 document.getElementById('tot-cal').textContent = Math.round(consumed.cal);
                 document.getElementById('tot-prot').textContent = Math.round(consumed.prot) + 'g';
                 document.getElementById('tot-lip').textContent = Math.round(consumed.lip) + 'g';
                 document.getElementById('tot-gluc').textContent = Math.round(consumed.gluc) + 'g';
 
+                // Reste
                 const remCal = needs.cal - consumed.cal;
                 const remProt = needs.prot - consumed.prot;
                 const remLip = needs.lip - consumed.lip;
@@ -571,9 +575,13 @@
                 document.getElementById('rem-lip').textContent = Math.round(remLip) + 'g';
                 document.getElementById('rem-gluc').textContent = Math.round(remGluc) + 'g';
 
+                // Alertes "over"
                 const remBoxes = document.querySelectorAll('#grid-remaining .nutrient-box');
-                [remCal, remProt, remLip, remGluc].forEach((val, i) => remBoxes[i].classList.toggle('over', val < 0));
+                [remCal, remProt, remLip, remGluc].forEach((val, i) => {
+                    remBoxes[i].classList.toggle('over', val < 0);
+                });
 
+                // Barres
                 const setBar = (id, val, max, txtId, unit) => {
                     const percent = Math.min(100, Math.max(0, (val / max) * 100));
                     const bar = document.getElementById(id);
@@ -586,45 +594,54 @@
                 document.getElementById('prog-prot').dataset.color = 'fill-prot';
                 document.getElementById('prog-lip').dataset.color = 'fill-lip';
                 document.getElementById('prog-gluc').dataset.color = 'fill-gluc';
+
                 setBar('prog-cal', consumed.cal, needs.cal, 'prog-cal-txt', 'kcal');
                 setBar('prog-prot', consumed.prot, needs.prot, 'prog-prot-txt', 'g');
                 setBar('prog-lip', consumed.lip, needs.lip, 'prog-lip-txt', 'g');
                 setBar('prog-gluc', consumed.gluc, needs.gluc, 'prog-gluc-txt', 'g');
 
+                // ***** MISE À JOUR DE LA LISTE *****
                 renderHistory();
             }
 
+            // ---------- Affichage de l'historique ----------
             function renderHistory() {
-                historyList.innerHTML = '';
+                historyList.innerHTML = '';  // vide le conteneur
                 if (state.history.length === 0) {
-                    historyList.appendChild(emptyState);
-                    emptyState.style.display = '';
-                } else {
-                    emptyState.style.display = 'none';
-                    [...state.history].reverse().forEach((item, idx) => {
-                        const originalIndex = state.history.length - 1 - idx;
-                        const el = document.createElement('div');
-                        el.className = 'history-item';
-                        el.innerHTML = `
-                            <div>
-                                <div class="history-name">${item.label} <span style="font-weight:400;color:var(--muted);font-size:11px">${item.weight}g</span></div>
-                                <div class="history-sub">${Math.round(item.prot)}g prot · ${Math.round(item.lip)}g lip · ${Math.round(item.gluc)}g gluc</div>
-                            </div>
-                            <div style="display:flex;align-items:center;gap:8px">
-                                <div class="history-cals">${Math.round(item.cal)} kcal</div>
-                                <button class="history-delete" data-index="${originalIndex}" aria-label="Supprimer">×</button>
-                            </div>`;
-                        historyList.appendChild(el);
-                    });
-                    document.querySelectorAll('.history-delete').forEach(btn => {
-                        btn.addEventListener('click', (e) => {
-                            const idx = e.target.getAttribute('data-index');
-                            if (idx !== null) deleteItem(parseInt(idx));
-                        });
-                    });
+                    const emptyDiv = document.createElement('div');
+                    emptyDiv.className = 'empty-state';
+                    emptyDiv.textContent = 'Aucun aliment ajouté';
+                    historyList.appendChild(emptyDiv);
+                    return;
                 }
+
+                // Affichage du plus récent en haut
+                [...state.history].reverse().forEach((item, idx) => {
+                    const originalIndex = state.history.length - 1 - idx;
+                    const el = document.createElement('div');
+                    el.className = 'history-item';
+                    el.innerHTML = `
+                        <div>
+                            <div class="history-name">${item.label} <span style="font-weight:400;color:var(--muted);font-size:11px">${item.weight}g</span></div>
+                            <div class="history-sub">${Math.round(item.prot)}g prot · ${Math.round(item.lip)}g lip · ${Math.round(item.gluc)}g gluc</div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:8px">
+                            <div class="history-cals">${Math.round(item.cal)} kcal</div>
+                            <button class="history-delete" data-index="${originalIndex}" aria-label="Supprimer">×</button>
+                        </div>`;
+                    historyList.appendChild(el);
+                });
+
+                // Attacher les écouteurs de suppression
+                document.querySelectorAll('.history-delete').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const idx = e.currentTarget.getAttribute('data-index');
+                        if (idx !== null) deleteItem(parseInt(idx));
+                    });
+                });
             }
 
+            // ---------- Suppression ----------
             function deleteItem(index) {
                 const item = state.history[index];
                 if (!item) return;
@@ -638,11 +655,12 @@
                 showToast('🗑️ Aliment supprimé');
             }
 
+            // ---------- Ajout d'un aliment ----------
             function addFood() {
                 const food = state.selectedFood;
                 const weight = parseFloat(weightInput.value);
                 if (!food) { showToast('⚠️ Sélectionnez un aliment'); return; }
-                if (isNaN(weight) || weight <= 0) { showToast('⚠️ Poids valide'); return; }
+                if (isNaN(weight) || weight <= 0) { showToast('⚠️ Entrez un poids valide'); return; }
 
                 const factor = weight / 100;
                 const entry = {
@@ -660,6 +678,7 @@
                 state.consumed.lip += entry.lip;
                 state.consumed.gluc += entry.gluc;
 
+                // Réinitialiser les champs
                 foodInput.value = '';
                 weightInput.value = '';
                 state.selectedFood = null;
@@ -667,36 +686,64 @@
                 previewContent.style.display = 'none';
 
                 saveState();
-                updateUI();
+                updateUI();   // ← ici on rafraîchit TOUS les affichages, y compris l'historique
                 showToast(`✅ ${food.label} ajouté (${Math.round(entry.cal)} kcal)`);
             }
 
-            // suggestions
+            // ---------- Suggestions ----------
             foodInput.addEventListener('input', function() {
                 const query = this.value.toLowerCase().trim();
                 state.selectedFood = null;
                 updatePreview();
                 if (query.length < 2) { hideSuggestions(); return; }
-                const matches = Object.entries(foodDB).filter(([key, data]) => key.includes(query) || data.label.toLowerCase().includes(query)).slice(0,6);
+
+                const matches = Object.entries(foodDB)
+                    .filter(([key, data]) => key.includes(query) || data.label.toLowerCase().includes(query))
+                    .slice(0, 6);
                 if (matches.length === 0) { hideSuggestions(); return; }
+
                 suggestionsList.innerHTML = '';
                 matches.forEach(([key, data]) => {
                     const item = document.createElement('div');
                     item.className = 'suggestion-item';
                     item.innerHTML = `<span class="sug-name">${data.label}</span><span class="sug-info">${data.cal} kcal · ${data.prot}g P</span>`;
-                    item.addEventListener('mousedown', (e) => { e.preventDefault(); selectFood(key, data); });
+                    item.addEventListener('mousedown', (e) => {
+                        e.preventDefault();
+                        selectFood(key, data);
+                    });
                     suggestionsList.appendChild(item);
                 });
                 suggestionsList.style.display = 'block';
             });
-            function selectFood(key, data) { foodInput.value = data.label; state.selectedFood = data; hideSuggestions(); updatePreview(); weightInput.focus(); }
-            function hideSuggestions() { suggestionsList.style.display = 'none'; }
-            document.addEventListener('click', (e) => { if (!foodInput.contains(e.target) && !suggestionsList.contains(e.target)) hideSuggestions(); });
 
+            function selectFood(key, data) {
+                foodInput.value = data.label;
+                state.selectedFood = data;
+                hideSuggestions();
+                updatePreview();
+                weightInput.focus();
+            }
+
+            function hideSuggestions() {
+                suggestionsList.style.display = 'none';
+            }
+
+            document.addEventListener('click', (e) => {
+                if (!foodInput.contains(e.target) && !suggestionsList.contains(e.target)) {
+                    hideSuggestions();
+                }
+            });
+
+            // ---------- Aperçu ----------
             function updatePreview() {
                 const food = state.selectedFood;
                 const weight = parseFloat(weightInput.value);
-                if (!food || isNaN(weight) || weight <= 0) { previewEmpty.style.display = ''; previewContent.style.display = 'none'; return; }
+                if (!food || isNaN(weight) || weight <= 0) {
+                    previewEmpty.style.display = '';
+                    previewContent.style.display = 'none';
+                    return;
+                }
+
                 const factor = weight / 100;
                 previewEmpty.style.display = 'none';
                 previewContent.style.display = '';
@@ -708,14 +755,30 @@
                 prevGluc.textContent = Math.round(food.gluc * factor) + 'g';
             }
             weightInput.addEventListener('input', updatePreview);
-            addBtn.addEventListener('click', addFood);
 
-            function resetDay() { if (confirm('Réinitialiser toute la journée ?')) { state.consumed = { cal:0, prot:0, lip:0, gluc:0 }; state.history = []; saveState(); updateUI(); showToast('🔄 Journée réinitialisée'); } }
+            // ---------- Bouton Ajouter ----------
+            addBtn.addEventListener('click', addFood);
+            weightInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') { e.preventDefault(); addFood(); }
+            });
+
+            // ---------- Reset ----------
+            function resetDay() {
+                if (!confirm('Réinitialiser toute la journée ?')) return;
+                state.consumed = { cal: 0, prot: 0, lip: 0, gluc: 0 };
+                state.history = [];
+                saveState();
+                updateUI();
+                showToast('🔄 Journée réinitialisée');
+            }
             document.getElementById('resetDayBtn').addEventListener('click', resetDay);
 
+            // ---------- Modal besoins ----------
             function openModal() {
-                document.getElementById('edit-cal').value = state.needs.cal; document.getElementById('edit-prot').value = state.needs.prot;
-                document.getElementById('edit-lip').value = state.needs.lip; document.getElementById('edit-gluc').value = state.needs.gluc;
+                document.getElementById('edit-cal').value = state.needs.cal;
+                document.getElementById('edit-prot').value = state.needs.prot;
+                document.getElementById('edit-lip').value = state.needs.lip;
+                document.getElementById('edit-gluc').value = state.needs.gluc;
                 modalOverlay.classList.add('open');
             }
             function closeModal() { modalOverlay.classList.remove('open'); }
@@ -724,16 +787,30 @@
                 const prot = parseInt(document.getElementById('edit-prot').value, 10);
                 const lip = parseInt(document.getElementById('edit-lip').value, 10);
                 const gluc = parseInt(document.getElementById('edit-gluc').value, 10);
-                if ([cal,prot,lip,gluc].some(v => isNaN(v) || v<0)) { showToast('⚠️ Valeurs invalides'); return; }
-                state.needs = { cal, prot, lip, gluc }; saveState(); updateUI(); closeModal(); showToast('✅ Besoins mis à jour');
+                if ([cal, prot, lip, gluc].some(v => isNaN(v) || v < 0)) {
+                    showToast('⚠️ Valeurs invalides');
+                    return;
+                }
+                state.needs = { cal, prot, lip, gluc };
+                saveState();
+                updateUI();
+                closeModal();
+                showToast('✅ Besoins mis à jour');
             }
             document.getElementById('editNeedsBtn').addEventListener('click', openModal);
             document.getElementById('cancelModalBtn').addEventListener('click', closeModal);
             document.getElementById('saveNeedsBtn').addEventListener('click', saveNeeds);
-            modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) closeModal();
+            });
 
-            function showToast(msg) { toast.textContent = msg; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2500); }
-            weightInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') { e.preventDefault(); addFood(); } });
+            // ---------- Toast ----------
+            function showToast(msg) {
+                toast.textContent = msg;
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 2500);
+            }
+
             init();
         })();
     </script>

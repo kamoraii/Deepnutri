@@ -7,102 +7,394 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         :root {
-            --bg: #f0ede8; --card: #ffffff; --border: #e2ddd6; --text: #1a1814; --muted: #8a8480;
-            --accent: #2d2926; --green: #1a6b3c; --green-bg: #e8f5ee; --orange: #b85c00; --orange-bg: #fff1e6;
-            --red: #b83232; --red-bg: #fdecea; --blue: #1a4a8a; --blue-bg: #e8eef8;
-            --radius: 14px; --shadow: 0 2px 12px rgba(0,0,0,0.07);
+            --bg: #f0ede8;
+            --card: #ffffff;
+            --border: #e2ddd6;
+            --text: #1a1814;
+            --muted: #8a8480;
+            --accent: #2d2926;
+            --green: #1a6b3c;
+            --green-bg: #e8f5ee;
+            --orange: #b85c00;
+            --orange-bg: #fff1e6;
+            --red: #b83232;
+            --red-bg: #fdecea;
+            --blue: #1a4a8a;
+            --blue-bg: #e8eef8;
+            --radius: 14px;
+            --shadow: 0 2px 12px rgba(0,0,0,0.07);
         }
+
         body {
-            font-family: 'DM Sans', sans-serif; background: var(--bg);
-            min-height: 100vh; display: flex; justify-content: center; align-items: flex-start;
-            padding: 20px 12px; color: var(--text); line-height: 1.4;
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px 12px;
+            color: var(--text);
+            line-height: 1.4;
         }
-        .container { width: 100%; max-width: 420px; display: flex; flex-direction: column; gap: 14px; }
-        .app-header { text-align: center; padding: 4px 0 8px; position: relative; }
-        .app-header h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
-        .app-header .date { font-size: 13px; color: var(--muted); font-family: 'DM Mono', monospace; margin-top: 2px; }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .app-header {
+            text-align: center;
+            padding: 4px 0 8px;
+            position: relative;
+        }
+        .app-header h1 {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .app-header .date {
+            font-size: 13px;
+            color: var(--muted);
+            font-family: 'DM Mono', monospace;
+            margin-top: 2px;
+        }
         .help-link {
-            position: absolute; right: 0; top: 8px;
-            font-size: 12px; color: var(--muted); text-decoration: none;
-            background: var(--bg); padding: 4px 8px; border-radius: 20px;
+            position: absolute;
+            right: 0;
+            top: 8px;
+            font-size: 12px;
+            color: var(--muted);
+            text-decoration: none;
+            background: var(--bg);
+            padding: 4px 8px;
+            border-radius: 20px;
             border: 1px solid var(--border);
         }
+
         .card {
-            background: var(--card); border-radius: var(--radius); padding: 16px;
-            box-shadow: var(--shadow); border: 1px solid var(--border);
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 16px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
         }
-        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-        .card-title { font-size: 14px; font-weight: 600; letter-spacing: -0.2px; }
-        .btn-group { display: flex; gap: 6px; }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .card-title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+        }
+        .btn-group {
+            display: flex;
+            gap: 6px;
+        }
         .btn-small {
-            padding: 5px 10px; border: 1px solid var(--border); border-radius: 8px;
-            background: var(--bg); font-size: 11px; font-weight: 500; cursor: pointer; transition: 0.15s;
+            padding: 5px 10px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg);
+            font-size: 11px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.15s;
         }
         .btn-small:hover { background: var(--border); }
-        .nutrient-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-        .nutrient-box {
-            background: var(--bg); border-radius: 10px; padding: 8px 4px; text-align: center;
-            border: 1px solid var(--border); min-width: 0;
+
+        .nutrient-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
         }
-        .nutrient-label { font-size: 10px; color: var(--muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.4px; }
-        .nutrient-value { font-size: 15px; font-weight: 700; margin-top: 4px; font-family: 'DM Mono', monospace; letter-spacing: -0.3px; word-break: break-word; }
+        .nutrient-box {
+            background: var(--bg);
+            border-radius: 10px;
+            padding: 8px 4px;
+            text-align: center;
+            border: 1px solid var(--border);
+            min-width: 0;
+        }
+        .nutrient-label {
+            font-size: 10px;
+            color: var(--muted);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+        .nutrient-value {
+            font-size: 15px;
+            font-weight: 700;
+            margin-top: 4px;
+            font-family: 'DM Mono', monospace;
+            letter-spacing: -0.3px;
+            word-break: break-word;
+        }
         .nutrient-value.small { font-size: 12px; }
-        .remaining .nutrient-box:nth-child(1) { background: var(--green-bg); border-color: #b8dfc8; }
+
+        .remaining .nutrient-box:nth-child(1) {
+            background: var(--green-bg);
+            border-color: #b8dfc8;
+        }
         .remaining .nutrient-box:nth-child(1) .nutrient-value { color: var(--green); }
-        .remaining .nutrient-box:nth-child(2) { background: var(--orange-bg); border-color: #f5d0a8; }
+        .remaining .nutrient-box:nth-child(2) {
+            background: var(--orange-bg);
+            border-color: #f5d0a8;
+        }
         .remaining .nutrient-box:nth-child(2) .nutrient-value { color: var(--orange); }
-        .remaining .nutrient-box:nth-child(3) { background: var(--blue-bg); border-color: #b8cce8; }
+        .remaining .nutrient-box:nth-child(3) {
+            background: var(--blue-bg);
+            border-color: #b8cce8;
+        }
         .remaining .nutrient-box:nth-child(3) .nutrient-value { color: var(--blue); }
-        .remaining .nutrient-box:nth-child(4) { background: var(--red-bg); border-color: #f0b8b8; }
+        .remaining .nutrient-box:nth-child(4) {
+            background: var(--red-bg);
+            border-color: #f0b8b8;
+        }
         .remaining .nutrient-box:nth-child(4) .nutrient-value { color: var(--red); }
-        .nutrient-box.over { background: #fdecea !important; border-color: #f0b8b8 !important; }
+        .nutrient-box.over {
+            background: #fdecea !important;
+            border-color: #f0b8b8 !important;
+        }
         .nutrient-box.over .nutrient-value { color: var(--red) !important; }
+
         .progress-section { margin-top: 4px; }
         .progress-bar-wrap { margin-bottom: 8px; }
-        .progress-label-row { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-bottom: 4px; font-family: 'DM Mono', monospace; }
-        .progress-track { height: 6px; background: var(--bg); border-radius: 99px; overflow: hidden; border: 1px solid var(--border); }
-        .progress-fill { height: 100%; border-radius: 99px; transition: width 0.4s ease; }
-        .fill-cal { background: #2d8a5e; } .fill-prot { background: #d4700a; } .fill-lip { background: #2563b8; } .fill-gluc { background: #c0392b; } .fill-over { background: #e74c3c; }
-        .history-list { display: flex; flex-direction: column; gap: 6px; max-height: 220px; overflow-y: auto; }
-        .history-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; background: var(--bg); border-radius: 8px; border: 1px solid var(--border); font-size: 12px; }
+        .progress-label-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: var(--muted);
+            margin-bottom: 4px;
+            font-family: 'DM Mono', monospace;
+        }
+        .progress-track {
+            height: 6px;
+            background: var(--bg);
+            border-radius: 99px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        .progress-fill {
+            height: 100%;
+            border-radius: 99px;
+            transition: width 0.4s ease;
+        }
+        .fill-cal { background: #2d8a5e; }
+        .fill-prot { background: #d4700a; }
+        .fill-lip { background: #2563b8; }
+        .fill-gluc { background: #c0392b; }
+        .fill-over { background: #e74c3c; }
+
+        .history-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            max-height: 220px;
+            overflow-y: auto;
+        }
+        .history-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 10px;
+            background: var(--bg);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            font-size: 12px;
+        }
         .history-name { font-weight: 600; }
         .history-sub { color: var(--muted); font-size: 11px; margin-top: 1px; }
         .history-cals { font-family: 'DM Mono', monospace; font-weight: 600; font-size: 13px; }
-        .history-delete { background: none; border: none; cursor: pointer; color: var(--muted); font-size: 16px; padding: 0 4px; }
+        .history-delete {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--muted);
+            font-size: 16px;
+            padding: 0 4px;
+        }
         .history-delete:hover { color: var(--red); }
         .empty-state { text-align: center; padding: 16px; color: var(--muted); font-size: 13px; }
-        .preview-card { background: var(--bg); border-radius: 10px; padding: 12px; border: 1px solid var(--border); margin-bottom: 12px; }
-        .preview-title { font-size: 12px; font-weight: 600; color: var(--muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        .preview-card {
+            background: var(--bg);
+            border-radius: 10px;
+            padding: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 12px;
+        }
+        .preview-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
         .preview-name { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
-        .preview-weight { font-size: 11px; color: var(--muted); margin-bottom: 8px; font-family: 'DM Mono', monospace; }
+        .preview-weight {
+            font-size: 11px;
+            color: var(--muted);
+            margin-bottom: 8px;
+            font-family: 'DM Mono', monospace;
+        }
         .preview-empty { font-size: 13px; color: var(--muted); }
-        .input-field { width: 100%; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 10px; font-size: 15px; font-family: 'DM Sans', sans-serif; background: var(--bg); margin-bottom: 8px; outline: none; }
-        .input-field:focus { border-color: var(--accent); background: white; }
+
+        .input-field {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            margin-bottom: 8px;
+            outline: none;
+        }
+        .input-field:focus {
+            border-color: var(--accent);
+            background: white;
+        }
         .input-row { display: flex; gap: 8px; }
         .input-row .input-field { margin-bottom: 0; }
-        .btn-add { width: 100%; padding: 13px; background: var(--accent); color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; margin-top: 8px; transition: 0.15s; }
+
+        .btn-add {
+            width: 100%;
+            padding: 13px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: 0.15s;
+        }
         .btn-add:hover { background: #000; transform: translateY(-1px); }
+
         .suggestions { position: relative; }
-        .suggestions-list { position: absolute; top: calc(100% - 8px); left: 0; right: 0; background: white; border: 1.5px solid var(--border); border-radius: 10px; z-index: 100; box-shadow: 0 8px 24px rgba(0,0,0,0.12); max-height: 200px; overflow-y: auto; }
-        .suggestion-item { padding: 10px 14px; cursor: pointer; font-size: 14px; display: flex; justify-content: space-between; align-items: center; }
+        .suggestions-list {
+            position: absolute;
+            top: calc(100% - 8px);
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            z-index: 100;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .suggestion-item {
+            padding: 10px 14px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
         .suggestion-item:hover { background: var(--bg); }
         .suggestion-item .sug-name { font-weight: 500; }
         .suggestion-item .sug-info { font-size: 11px; color: var(--muted); font-family: 'DM Mono', monospace; }
-        .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 200; justify-content: center; align-items: center; padding: 20px; }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+            z-index: 200;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
         .modal-overlay.open { display: flex; }
-        .modal { background: white; border-radius: var(--radius); padding: 20px; width: 100%; max-width: 380px; box-shadow: 0 20px 60px rgba(0,0,0,0.2); }
+        .modal {
+            background: white;
+            border-radius: var(--radius);
+            padding: 20px;
+            width: 100%;
+            max-width: 380px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
         .modal h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
-        .modal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+        .modal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
         .modal-field label { font-size: 12px; color: var(--muted); font-weight: 600; display: block; margin-bottom: 4px; }
-        .modal-field input { width: 100%; padding: 10px 12px; border: 1.5px solid var(--border); border-radius: 8px; font-family: 'DM Mono', monospace; font-weight: 600; outline: none; }
+        .modal-field input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            font-family: 'DM Mono', monospace;
+            font-weight: 600;
+            outline: none;
+        }
         .modal-buttons { display: flex; gap: 8px; }
-        .btn-save { flex: 1; padding: 11px; background: var(--accent); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; }
-        .btn-cancel { flex: 1; padding: 11px; background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 8px; font-weight: 500; cursor: pointer; }
-        .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--accent); color: white; padding: 10px 20px; border-radius: 99px; font-size: 13px; font-weight: 500; opacity: 0; transition: opacity 0.2s; pointer-events: none; z-index: 300; }
+        .btn-save {
+            flex: 1;
+            padding: 11px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .btn-cancel {
+            flex: 1;
+            padding: 11px;
+            background: var(--bg);
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 99px;
+            font-size: 13px;
+            font-weight: 500;
+            opacity: 0;
+            transition: opacity 0.2s;
+            pointer-events: none;
+            z-index: 300;
+        }
         .toast.show { opacity: 1; }
-        @media (max-width: 420px) { .nutrient-value { font-size: 13px; } .nutrient-box { padding: 6px 2px; } .card { padding: 12px; } }
+
+        @media (max-width: 420px) {
+            .nutrient-value { font-size: 13px; }
+            .nutrient-box { padding: 6px 2px; }
+            .card { padding: 12px; }
+        }
     </style>
 </head>
 <body>
@@ -113,7 +405,7 @@
             <a href="aide-poids.html" class="help-link">⚖️ Aide poids</a>
         </div>
 
-        <!-- Cartes identiques à la version précédente -->
+        <!-- Besoins -->
         <div class="card">
             <div class="card-header">
                 <span class="card-title">Besoins Quotidiens</span>
@@ -130,6 +422,7 @@
             </div>
         </div>
 
+        <!-- Progression -->
         <div class="card">
             <div class="card-header"><span class="card-title">Progression du jour</span></div>
             <div class="progress-section">
@@ -140,6 +433,7 @@
             </div>
         </div>
 
+        <!-- Reste -->
         <div class="card">
             <div class="card-header"><span class="card-title">Reste à consommer</span></div>
             <div class="nutrient-grid remaining" id="grid-remaining">
@@ -150,6 +444,7 @@
             </div>
         </div>
 
+        <!-- Cumul -->
         <div class="card">
             <div class="card-header"><span class="card-title">Cumul consommé</span></div>
             <div class="nutrient-grid" id="grid-total">
@@ -160,11 +455,13 @@
             </div>
         </div>
 
+        <!-- Historique -->
         <div class="card">
             <div class="card-header"><span class="card-title">Aliments du jour</span></div>
             <div class="history-list" id="historyList"><div class="empty-state" id="emptyState">Aucun aliment ajouté</div></div>
         </div>
 
+        <!-- Ajout -->
         <div class="card">
             <div class="card-header"><span class="card-title">Ajouter un aliment</span></div>
             <div class="preview-card" id="previewCard">
@@ -229,6 +526,8 @@
             const addBtn = document.getElementById('addBtn');
             const modalOverlay = document.getElementById('modalOverlay');
             const toast = document.getElementById('toast');
+            const historyList = document.getElementById('historyList');
+            const emptyState = document.getElementById('emptyState');
 
             function init() {
                 const saved = localStorage.getItem('nutri-state');
@@ -237,7 +536,10 @@
                 if (saved) {
                     const parsed = JSON.parse(saved);
                     state.needs = parsed.needs;
-                    if (savedDate === today) { state.consumed = parsed.consumed; state.history = parsed.history; }
+                    if (savedDate === today) {
+                        state.consumed = parsed.consumed;
+                        state.history = parsed.history;
+                    }
                 }
                 document.getElementById('todayDate').textContent = new Date().toLocaleDateString('fr-FR', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
                 localStorage.setItem('nutri-date', today);
@@ -248,6 +550,7 @@
 
             function updateUI() {
                 const { needs, consumed } = state;
+
                 document.getElementById('need-cal').textContent = needs.cal;
                 document.getElementById('need-prot').textContent = needs.prot + 'g';
                 document.getElementById('need-lip').textContent = needs.lip + 'g';
@@ -262,6 +565,7 @@
                 const remProt = needs.prot - consumed.prot;
                 const remLip = needs.lip - consumed.lip;
                 const remGluc = needs.gluc - consumed.gluc;
+
                 document.getElementById('rem-cal').textContent = Math.round(remCal);
                 document.getElementById('rem-prot').textContent = Math.round(remProt) + 'g';
                 document.getElementById('rem-lip').textContent = Math.round(remLip) + 'g';
@@ -291,32 +595,83 @@
             }
 
             function renderHistory() {
-                const list = document.getElementById('historyList');
-                const empty = document.getElementById('emptyState');
-                list.innerHTML = '';
-                if (state.history.length === 0) { list.appendChild(empty); empty.style.display = ''; return; }
-                empty.style.display = 'none';
-                [...state.history].reverse().forEach((item, index) => {
-                    const originalIndex = state.history.length - 1 - index;
-                    const el = document.createElement('div');
-                    el.className = 'history-item';
-                    el.innerHTML = `
-                        <div>
-                            <div class="history-name">${item.label} <span style="font-weight:400;color:var(--muted);font-size:11px">${item.weight}g</span></div>
-                            <div class="history-sub">${Math.round(item.prot)}g prot · ${Math.round(item.lip)}g lip · ${Math.round(item.gluc)}g gluc</div>
-                        </div>
-                        <div style="display:flex;align-items:center;gap:8px">
-                            <div class="history-cals">${Math.round(item.cal)} kcal</div>
-                            <button class="history-delete" data-index="${originalIndex}" aria-label="Supprimer">×</button>
-                        </div>`;
-                    list.appendChild(el);
-                });
-                document.querySelectorAll('.history-delete').forEach(btn => {
-                    btn.addEventListener('click', (e) => { const idx = e.target.getAttribute('data-index'); if (idx !== null) deleteItem(parseInt(idx)); });
-                });
+                historyList.innerHTML = '';
+                if (state.history.length === 0) {
+                    historyList.appendChild(emptyState);
+                    emptyState.style.display = '';
+                } else {
+                    emptyState.style.display = 'none';
+                    [...state.history].reverse().forEach((item, idx) => {
+                        const originalIndex = state.history.length - 1 - idx;
+                        const el = document.createElement('div');
+                        el.className = 'history-item';
+                        el.innerHTML = `
+                            <div>
+                                <div class="history-name">${item.label} <span style="font-weight:400;color:var(--muted);font-size:11px">${item.weight}g</span></div>
+                                <div class="history-sub">${Math.round(item.prot)}g prot · ${Math.round(item.lip)}g lip · ${Math.round(item.gluc)}g gluc</div>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:8px">
+                                <div class="history-cals">${Math.round(item.cal)} kcal</div>
+                                <button class="history-delete" data-index="${originalIndex}" aria-label="Supprimer">×</button>
+                            </div>`;
+                        historyList.appendChild(el);
+                    });
+                    document.querySelectorAll('.history-delete').forEach(btn => {
+                        btn.addEventListener('click', (e) => {
+                            const idx = e.target.getAttribute('data-index');
+                            if (idx !== null) deleteItem(parseInt(idx));
+                        });
+                    });
+                }
             }
 
-            // --- suggestions ---
+            function deleteItem(index) {
+                const item = state.history[index];
+                if (!item) return;
+                state.consumed.cal -= item.cal;
+                state.consumed.prot -= item.prot;
+                state.consumed.lip -= item.lip;
+                state.consumed.gluc -= item.gluc;
+                state.history.splice(index, 1);
+                saveState();
+                updateUI();
+                showToast('🗑️ Aliment supprimé');
+            }
+
+            function addFood() {
+                const food = state.selectedFood;
+                const weight = parseFloat(weightInput.value);
+                if (!food) { showToast('⚠️ Sélectionnez un aliment'); return; }
+                if (isNaN(weight) || weight <= 0) { showToast('⚠️ Poids valide'); return; }
+
+                const factor = weight / 100;
+                const entry = {
+                    label: food.label,
+                    weight: weight,
+                    cal: food.cal * factor,
+                    prot: food.prot * factor,
+                    lip: food.lip * factor,
+                    gluc: food.gluc * factor,
+                };
+
+                state.history.push(entry);
+                state.consumed.cal += entry.cal;
+                state.consumed.prot += entry.prot;
+                state.consumed.lip += entry.lip;
+                state.consumed.gluc += entry.gluc;
+
+                foodInput.value = '';
+                weightInput.value = '';
+                state.selectedFood = null;
+                previewEmpty.style.display = '';
+                previewContent.style.display = 'none';
+
+                saveState();
+                updateUI();
+                showToast(`✅ ${food.label} ajouté (${Math.round(entry.cal)} kcal)`);
+            }
+
+            // suggestions
             foodInput.addEventListener('input', function() {
                 const query = this.value.toLowerCase().trim();
                 state.selectedFood = null;
@@ -353,43 +708,7 @@
                 prevGluc.textContent = Math.round(food.gluc * factor) + 'g';
             }
             weightInput.addEventListener('input', updatePreview);
-
-            function addFood() {
-                const food = state.selectedFood;
-                const weight = parseFloat(weightInput.value);
-                if (!food) { showToast('⚠️ Sélectionnez un aliment'); return; }
-                if (isNaN(weight) || weight <= 0) { showToast('⚠️ Poids valide'); return; }
-                const factor = weight / 100;
-                const entry = {
-                    label: food.label, weight: weight,
-                    cal: food.cal * factor, prot: food.prot * factor, lip: food.lip * factor, gluc: food.gluc * factor,
-                };
-                state.history.push(entry);
-                state.consumed.cal += entry.cal;
-                state.consumed.prot += entry.prot;
-                state.consumed.lip += entry.lip;
-                state.consumed.gluc += entry.gluc;
-
-                foodInput.value = '';
-                weightInput.value = '';
-                state.selectedFood = null;
-                previewEmpty.style.display = '';
-                previewContent.style.display = 'none';
-
-                saveState();
-                updateUI();    // ← rafraîchit immédiatement la liste et les totaux
-                showToast(`✅ ${food.label} ajouté (${Math.round(entry.cal)} kcal)`);
-            }
             addBtn.addEventListener('click', addFood);
-
-            function deleteItem(index) {
-                const item = state.history[index];
-                if (!item) return;
-                state.consumed.cal -= item.cal; state.consumed.prot -= item.prot;
-                state.consumed.lip -= item.lip; state.consumed.gluc -= item.gluc;
-                state.history.splice(index, 1);
-                saveState(); updateUI(); showToast('🗑️ Supprimé');
-            }
 
             function resetDay() { if (confirm('Réinitialiser toute la journée ?')) { state.consumed = { cal:0, prot:0, lip:0, gluc:0 }; state.history = []; saveState(); updateUI(); showToast('🔄 Journée réinitialisée'); } }
             document.getElementById('resetDayBtn').addEventListener('click', resetDay);

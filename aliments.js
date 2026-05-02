@@ -126,7 +126,7 @@ const foodDB = {
     "rillettes oie": {cal:450, prot:18, lip:42, gluc:0.5, label:"Rillettes d'oie"},
     "rillettes canard": {cal:440, prot:17, lip:41, gluc:0.5, label:"Rillettes de canard"},
     "rillettes saumon": {cal:380, prot:14, lip:35, gluc:1, label:"Rillettes de saumon"},
-    "rillettes thon": {cal:350, prot:13, lip:32, gluc:1, label:"Rillettes de thon"},,
+    "rillettes thon": {cal:350, prot:13, lip:32, gluc:1, label:"Rillettes de thon"},
     // === POISSONS ET FRUITS DE MER ===
     "cabillaud": {cal:82, prot:18, lip:0.7, gluc:0, label:"Cabillaud"},
     "cabillaud surgelé": {cal:82, prot:18, lip:0.7, gluc:0, label:"Cabillaud surgelé"},

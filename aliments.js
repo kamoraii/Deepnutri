@@ -869,4 +869,235 @@
 "clou de girofle": {cal:330, prot:6, lip:13, gluc:65, label:"Clou de girofle"},
 "badiane (anis étoilé)": {cal:340, prot:0, lip:0, gluc:80, label:"Anis étoilé"},
 "cannelle en bâton": {cal:250, prot:3.5, lip:1.2, gluc:70, label:"Cannelle bâton"},
-"grain de moutarde": {cal:120, prot:7, lip:7, gluc:8, label:"Graines de moutarde"},
+"grain de moutarde": {cal:120, prot:7, lip:7, gluc:8, label:"Graines de moutarde"},// === CHARCUTERIES SUPPLEMENTAIRES ===
+"rillettes de porc aux épices": {cal:430, prot:16, lip:39, gluc:0.5, label:"Rillettes de porc aux épices"},
+"rillettes de canard au poivre": {cal:445, prot:17, lip:42, gluc:0.5, label:"Rillettes de canard au poivre"},
+"paté en croute (grand)": {cal:370, prot:14, lip:30, gluc:6, label:"Pâté en croûte (portion)"},
+"paté de foie de volaille": {cal:380, prot:14, lip:35, gluc:2, label:"Pâté de foie de volaille"},
+"mousse de canard": {cal:400, prot:12, lip:38, gluc:1, label:"Mousse de canard"},
+"cervelas truffé": {cal:310, prot:14, lip:27, gluc:2, label:"Cervelas truffé"},
+"saucisse aux herbes": {cal:320, prot:15, lip:28, gluc:2, label:"Saucisse aux herbes"},
+"saucisse au curry": {cal:330, prot:16, lip:29, gluc:1, label:"Saucisse au curry"},
+
+// === POISSONS DE MER FRAIS ===
+"rouget barbet": {cal:148, prot:21, lip:7, gluc:0, label:"Rouget barbet"},
+"dorade grise": {cal:77, prot:17, lip:1.2, gluc:0, label:"Dorade grise"},
+"dorade rose": {cal:77, prot:17, lip:1.2, gluc:0, label:"Dorade rose"},
+"pageot": {cal:100, prot:19, lip:2.5, gluc:0, label:"Pageot"},
+"saupe": {cal:120, prot:20, lip:4, gluc:0, label:"Saupe"},
+"oblade": {cal:100, prot:18, lip:3, gluc:0, label:"Oblade"},
+"serran": {cal:90, prot:18, lip:1.5, gluc:0, label:"Serran"},
+"vive": {cal:80, prot:17, lip:1, gluc:0, label:"Vive"},
+
+// === LÉGUMES RACINES ===
+"panais": {cal:75, prot:1.2, lip:0.3, gluc:18, label:"Panais"},
+"crosne": {cal:80, prot:2, lip:0.2, gluc:17, label:"Crosne"},
+"salsifis": {cal:80, prot:3, lip:0.2, gluc:18, label:"Salsifis"},
+"scorsonère": {cal:80, prot:3, lip:0.2, gluc:18, label:"Scorsonère"},
+"topinambour": {cal:73, prot:2, lip:0.2, gluc:17.4, label:"Topinambour"},
+
+// === FRUITS D'AUTOMNE ===
+"coing": {cal:57, prot:0.4, lip:0.1, gluc:15, label:"Coing"},
+"nèfle": {cal:45, prot:0.5, lip:0.2, gluc:11, label:"Nèfle"},
+"kaki (plaqueminier)": {cal:70, prot:0.6, lip:0.2, gluc:18, label:"Kaki"},
+"grenade": {cal:83, prot:1.7, lip:1.2, gluc:19, label:"Grenade"},
+
+// === PLATS TRAITEUR (SUITE) ===
+"feuilleté aux champignons": {cal:320, prot:8, lip:22, gluc:26, label:"Feuilleté aux champignons"},
+"bouchée à la reine": {cal:330, prot:12, lip:21, gluc:25, label:"Bouchée à la reine"},
+"vol-au-vent": {cal:340, prot:13, lip:23, gluc:24, label:"Vol-au-vent"},
+"risotto aux fruits de mer": {cal:160, prot:8, lip:7, gluc:18, label:"Risotto aux fruits de mer"},
+"risotto aux champignons": {cal:150, prot:5, lip:6, gluc:19, label:"Risotto aux champignons"},
+
+// === SURGELÉS (SUITE) ===
+"poêlée campagnarde": {cal:70, prot:2, lip:4, gluc:7, label:"Poêlée campagnarde (pommes, lardons)"},
+"légumes à la provençale": {cal:50, prot:1.5, lip:2, gluc:6, label:"Légumes à la provençale surgelés"},
+"frites surgelées": {cal:312, prot:3.4, lip:15, gluc:41, label:"Frites surgelées"},
+"pommes noisettes": {cal:250, prot:2.5, lip:12, gluc:32, label:"Pommes noisettes"},
+"gratin de légumes surgelé": {cal:120, prot:4, lip:5, gluc:14, label:"Gratin de légumes surgelé"},
+"quiche lorraine surgelée": {cal:320, prot:10, lip:24, gluc:18, label:"Quiche lorraine surgelée"},
+
+// === DESSERTS SUPPLEMENTAIRES ===
+"mousse au chocolat": {cal:230, prot:5, lip:15, gluc:20, label:"Mousse au chocolat"},
+"mousse au citron": {cal:200, prot:3, lip:12, gluc:22, label:"Mousse au citron"},
+"croustillant aux pommes": {cal:300, prot:3, lip:15, gluc:40, label:"Croustillant aux pommes"},
+"fondant au chocolat": {cal:380, prot:5, lip:20, gluc:45, label:"Fondant au chocolat"},// === PLATS MÉDITERRANÉENS ===
+"moussaka": {cal:190, prot:12, lip:13, gluc:10, label:"Moussaka (aubergines, viande)"},
+"pastitsio": {cal:210, prot:14, lip:12, gluc:15, label:"Pastitsio (grec, pâtes, viande)"},
+"dolmades": {cal:150, prot:4, lip:10, gluc:12, label:"Dolmades (feuilles de vigne farcies)"},
+"tzatziki": {cal:90, prot:4, lip:7, gluc:3, label:"Tzatziki (concombre, yaourt)"},
+"feta rôtie": {cal:280, prot:16, lip:22, gluc:2, label:"Feta rôtie"},
+"pita": {cal:260, prot:8, lip:4, gluc:50, label:"Pita (pain grec)"},
+
+// === FRUITS À COQUE (SUITE) ===
+"noix de pécan": {cal:691, prot:9, lip:72, gluc:14, label:"Noix de pécan"},
+"noix du brésil": {cal:659, prot:14, lip:67, gluc:12, label:"Noix du Brésil"},
+"noix de macadamia": {cal:718, prot:8, lip:76, gluc:14, label:"Noix de macadamia"},
+"châtaigne (marrons)": {cal:213, prot:2, lip:1.5, gluc:45, label:"Châtaignes (marrons cuits)"},
+"châtaigne crue": {cal:200, prot:1.5, lip:1, gluc:44, label:"Châtaignes crues"},
+"noisettes entières": {cal:628, prot:15, lip:61, gluc:17, label:"Noisettes entières"},
+
+// === LÉGUMES OUBLIÉS ===
+"chervis": {cal:80, prot:2, lip:0.3, gluc:18, label:"Chervis"},
+"cardon": {cal:20, prot:0.8, lip:0.1, gluc:4, label:"Cardon"},
+"tétragone": {cal:20, prot:1.5, lip:0.2, gluc:3, label:"Tétragone (épinard de Nouvelle-Zélande)"},
+"arroche": {cal:20, prot:1.5, lip:0.2, gluc:3, label:"Arroche"},
+"poireau perpétuel": {cal:60, prot:1.5, lip:0.3, gluc:14, label:"Poireau perpétuel"},
+
+// === BOISSONS ARTISANALES ===
+"kombucha": {cal:15, prot:0, lip:0, gluc:4, label:"Kombucha (thé fermenté)"},
+"kvas": {cal:30, prot:0.3, lip:0, gluc:7, label:"Kvas (boisson slave)"},
+"chicha": {cal:40, prot:0, lip:0, gluc:10, label:"Chicha (boisson sud-américaine)"},
+"tepache": {cal:30, prot:0, lip:0, gluc:8, label:"Tepache (ananas fermenté)"},
+"pulque": {cal:35, prot:0.2, lip:0, gluc:9, label:"Pulque (maguey)"},
+"ginger beer": {cal:35, prot:0, lip:0, gluc:9, label:"Ginger beer (bière de gingembre)"},
+
+// === PRODUITS VÉGÉTALIENS (SUITE) ===
+"seitan au curry": {cal:130, prot:23, lip:2, gluc:5, label:"Seitan au curry"},
+"tempeh nature": {cal:193, prot:19, lip:11, gluc:9, label:"Tempeh nature"},
+"tofu nature": {cal:76, prot:8, lip:4.8, gluc:1.9, label:"Tofu nature"},
+"toffu soyeux": {cal:55, prot:5, lip:3, gluc:2, label:"Tofu soyeux"},
+"crème de soja": {cal:120, prot:3, lip:10, gluc:4, label:"Crème de soja (cuisine)"},
+"crème végétale (avoine)": {cal:100, prot:1, lip:8, gluc:6, label:"Crème d'avoine"},// === ÉPICES RARES ===
+"maniguette (graines de paradis)": {cal:300, prot:10, lip:5, gluc:60, label:"Maniguette (graines de paradis)"},
+"long poivre": {cal:250, prot:10, lip:3, gluc:64, label:"Long poivre"},
+"baies roses": {cal:250, prot:10, lip:3, gluc:64, label:"Baies roses"},
+"fleur de sel": {cal:0, prot:0, lip:0, gluc:0, label:"Fleur de sel"},
+"kawakawa (poivre maori)": {cal:250, prot:10, lip:3, gluc:64, label:"Kawakawa"},
+"grains d'acha (fonio)": {cal:350, prot:10, lip:2, gluc:75, label:"Fonio (céréale africaine)"},
+"grains de sésame noir": {cal:573, prot:17, lip:50, gluc:23, label:"Sésame noir"},
+
+// === FRUITS EXOTIQUES (SUITE) ===
+"cupuaçu": {cal:50, prot:1, lip:0.5, gluc:12, label:"Cupuaçu"},
+"bacupari": {cal:50, prot:0.5, lip:0.2, gluc:12, label:"Bacupari"},
+"cabeluda": {cal:45, prot:0.5, lip:0.2, gluc:11, label:"Cabeluda"},
+"ingá": {cal:45, prot:0.5, lip:0.2, gluc:11, label:"Ingá"},
+"pupunha": {cal:60, prot:1.2, lip:0.5, gluc:14, label:"Pupunha (pêche de palmier)"},
+
+// === PLATS DU MONDE ===
+"cari zourite (poulpe)": {cal:120, prot:15, lip:5, gluc:4, label:"Cari zourite (poulpe à la créole)"},
+"rougail saucisses": {cal:180, prot:12, lip:12, gluc:5, label:"Rougail saucisses (réunionnais)"},
+"achards de légumes": {cal:80, prot:1, lip:6, gluc:6, label:"Achards (légumes marinés)"},
+"poulet boucané": {cal:190, prot:22, lip:10, gluc:0, label:"Poulet boucané (fumé)"},
+"cassava (manioc)": {cal:160, prot:1, lip:0.3, gluc:38, label:"Manioc (cassava) cuit"},
+"foutou (banane plantain)": {cal:120, prot:1, lip:0.2, gluc:30, label:"Foutou (banane plantain pilée)"},
+"attiéké (semoule de manioc)": {cal:110, prot:1, lip:0.2, gluc:27, label:"Attiéké (semoule de manioc)"},
+
+// === BOISSONS ALCOOLISÉES (SUITE) ===
+"sake": {cal:134, prot:0.5, lip:0, gluc:5, label:"Sake (vin de riz)"},
+"shochu": {cal:180, prot:0, lip:0, gluc:0, label:"Shōchū (eau-de-vie japonaise)"},
+"soju": {cal:170, prot:0, lip:0, gluc:0, label:"Soju (coréen)"},
+"tequila": {cal:230, prot:0, lip:0, gluc:0, label:"Tequila (40°)"},
+"mezcal": {cal:230, prot:0, lip:0, gluc:0, label:"Mezcal"},
+"pisco": {cal:230, prot:0, lip:0, gluc:0, label:"Pisco"},
+
+// === DESSERTS RÉGIONAUX ===
+"kouign amann": {cal:450, prot:5, lip:28, gluc:48, label:"Kouign-amann (pâtisserie bretonne)"},
+"far breton": {cal:280, prot:7, lip:10, gluc:40, label:"Far breton"},
+"tarte au sucre (french sugar pie)": {cal:400, prot:4, lip:18, gluc:58, label:"Tarte au sucre"},
+"tarte à la rhubarbe": {cal:220, prot:3, lip:10, gluc:30, label:"Tarte à la rhubarbe"},
+"clafoutis aux cerises": {cal:180, prot:5, lip:7, gluc:25, label:"Clafoutis aux cerises"},
+"flan parisien": {cal:210, prot:5, lip:7, gluc:32, label:"Flan pâtissier"},// === PAINS DU MONDE ===
+"pita complet": {cal:250, prot:9, lip:3, gluc:48, label:"Pita complet"},
+"pumpernickel": {cal:200, prot:6, lip:1, gluc:42, label:"Pumpernickel (pain allemand)"},
+"ciabatta": {cal:270, prot:8, lip:3, gluc:54, label:"Ciabatta (pain italien)"},
+"focaccia": {cal:280, prot:8, lip:7, gluc:48, label:"Focaccia"},
+"tortilla de maïs": {cal:300, prot:7, lip:6, gluc:56, label:"Tortilla de maïs (galette)"},
+"roti (pain indien)": {cal:300, prot:9, lip:5, gluc:56, label:"Roti (chapati épais)"},
+
+// === FROMAGES BLEUS SUPPLEMENTAIRES ===
+"bleu de Gex": {cal:350, prot:20, lip:29, gluc:0.5, label:"Bleu de Gex"},
+"bleu d'Auvergne AOP": {cal:350, prot:20, lip:29, gluc:0.5, label:"Bleu d'Auvergne AOP"},
+"bleu des Causses": {cal:350, prot:20, lip:29, gluc:0.5, label:"Bleu des Causses"},
+"fourme de Montbrison": {cal:350, prot:20, lip:29, gluc:0.5, label:"Fourme de Montbrison"},
+"gorgonzola piccante": {cal:350, prot:20, lip:29, gluc:0.5, label:"Gorgonzola piccante"},
+"stilton": {cal:380, prot:22, lip:30, gluc:1, label:"Stilton (anglais)"},
+"danablu (danois)": {cal:350, prot:21, lip:29, gluc:0.5, label:"Danablu (bleu danois)"},
+
+// === POISSONS EXOTIQUES ===
+"poisson perroquet": {cal:110, prot:20, lip:3, gluc:0, label:"Poisson perroquet"},
+"poisson empereur": {cal:90, prot:19, lip:1.2, gluc:0, label:"Poisson empereur"},
+"vivaneau": {cal:100, prot:20, lip:1.5, gluc:0, label:"Vivaneau"},
+"mérou": {cal:90, prot:19, lip:1, gluc:0, label:"Mérou"},
+"rascasse rouge": {cal:98, prot:20, lip:1.8, gluc:0, label:"Rascasse rouge"},
+"congre": {cal:100, prot:18, lip:3, gluc:0, label:"Congre"},
+"lamproie": {cal:150, prot:17, lip:9, gluc:0, label:"Lamproie"},
+
+// === LÉGUMES VERTS ASIATIQUES ===
+"chou chinois (bok choy)": {cal:13, prot:1.5, lip:0.2, gluc:2.2, label:"Bok choy (chou chinois)"},
+"chou chinois (pak choi)": {cal:13, prot:1.5, lip:0.2, gluc:2.2, label:"Pak choi"},
+"chou chinois (chou de Shanghai)": {cal:13, prot:1.5, lip:0.2, gluc:2.2, label:"Chou de Shanghai"},
+"morning glory (liseron d'eau)": {cal:20, prot:2, lip:0.2, gluc:3, label:"Morning glory (liseron d'eau)"},
+"épinard d'eau (kangkung)": {cal:20, prot:2, lip:0.2, gluc:3, label:"Kangkung (épinard d'eau)"},
+
+// === FRUITS ASIATIQUES (SUITE) ===
+"jujube": {cal:79, prot:1.2, lip:0.2, gluc:20, label:"Jujube (datte chinoise)"},
+"kumquat": {cal:71, prot:1.9, lip:0.9, gluc:15.9, label:"Kumquat"},
+"yuzu": {cal:30, prot:0.8, lip:0.3, gluc:8, label:"Yuzu (agrume)"},
+"pomme de cajou (anacarde)": {cal:46, prot:0.8, lip:0.4, gluc:11, label:"Pomme de cajou"},
+"pitomba": {cal:50, prot:0.5, lip:0.2, gluc:12, label:"Pitomba"},// === LÉGUMES ASIATIQUES (SUITE) ===
+"chayote (christophine)": {cal:19, prot:0.8, lip:0.1, gluc:4.5, label:"Chayote (christophine)"},
+"courge amère (bitter gourd)": {cal:17, prot:1, lip:0.2, gluc:4, label:"Margose (courge amère)"},
+"longue courge (opo)": {cal:14, prot:0.6, lip:0.1, gluc:3, label:"Longue courge (opo)"},
+"concombre serpent": {cal:15, prot:0.7, lip:0.1, gluc:3.6, label:"Concombre serpent"},
+"feuilles de patate douce": {cal:33, prot:2.3, lip:0.3, gluc:7, label:"Feuilles de patate douce"},
+
+// === FRUITS TROPICAUX RARES ===
+"mamoncillo (quenette)": {cal:70, prot:1.5, lip:0.5, gluc:16, label:"Mamoncillo (quenette)"},
+"cainito (fruit étoilé)": {cal:70, prot:0.8, lip:0.2, gluc:17, label:"Cainito (fruit étoilé)"},
+"abiu": {cal:50, prot:0.8, lip:0.2, gluc:12, label:"Abiu"},
+"cabeluda": {cal:45, prot:0.5, lip:0.2, gluc:11, label:"Cabeluda"},
+"grinalda": {cal:45, prot:0.5, lip:0.2, gluc:11, label:"Grinalda"},
+
+// === PLATS INDIENS ===
+"chana masala": {cal:120, prot:6, lip:6, gluc:14, label:"Chana masala (pois chiches)"},
+"dal makhani": {cal:140, prot:7, lip:8, gluc:15, label:"Dal makhani (lentilles noires)"},
+"paneer tikka": {cal:180, prot:12, lip:13, gluc:6, label:"Paneer tikka"},
+"tandoori chicken": {cal:190, prot:22, lip:10, gluc:2, label:"Tandoori chicken"},
+"samosa": {cal:300, prot:5, lip:18, gluc:29, label:"Samosa (beignet farci)"},
+"pakora": {cal:250, prot:6, lip:15, gluc:22, label:"Pakora (beignet de légumes)"},
+
+// === SNACKS ASIATIQUES ===
+"senbei (cracker de riz)": {cal:350, prot:6, lip:1, gluc:80, label:"Senbei (cracker de riz japonais)"},
+"rice cake": {cal:80, prot:1, lip:0.5, gluc:17, label:"Rice cake (galette de riz soufflé)"},
+"onigiri au saumon": {cal:150, prot:5, lip:2, gluc:28, label:"Onigiri saumon (100g)"},
+"takoyaki": {cal:180, prot:6, lip:10, gluc:16, label:"Takoyaki (boulettes de poulpe)"},
+"okonomiyaki": {cal:200, prot:8, lip:12, gluc:18, label:"Okonomiyaki (pancake japonais)"},
+
+// === ÉPICES INDIENNES ===
+"curry feuilles": {cal:50, prot:2, lip:1, gluc:10, label:"Feuilles de curry"},
+"asafoetida": {cal:300, prot:0, lip:0, gluc:80, label:"Asafoetida (hing)"},
+"nigella (cumin noir)": {cal:375, prot:18, lip:15, gluc:45, label:"Nigella (cumin noir)"},
+"fleur de sel (indienne)": {cal:0, prot:0, lip:0, gluc:0, label:"Fleur de sel (kala namak)"},// === PLATS AFRICAINS ===
+"mafé (sauce arachide)": {cal:220, prot:12, lip:16, gluc:10, label:"Mafé (viande, sauce arachide)"},
+"thiéboudienne (riz au poisson)": {cal:180, prot:15, lip:8, gluc:18, label:"Thiéboudienne (riz poisson sénégalais)"},
+"poulet yassa": {cal:170, prot:18, lip:8, gluc:8, label:"Poulet yassa (oignons, citron)"},
+"alloco (banane plantain frite)": {cal:210, prot:1, lip:12, gluc:25, label:"Alloco (banane plantain frite)"},
+"foutou igname": {cal:150, prot:1, lip:0.2, gluc:35, label:"Foutou igname (pilé)"},
+"attiéké (semoule de manioc)": {cal:110, prot:1, lip:0.2, gluc:27, label:"Attiéké (semoule de manioc)"},
+
+// === BOISSONS FERMENTÉES AFRICAINES ===
+"bissap (jus de bissap)": {cal:35, prot:0.5, lip:0, gluc:8, label:"Bissap (jus d'hibiscus)"},
+"gingembre (boisson)": {cal:30, prot:0.2, lip:0, gluc:7, label:"Boisson gingembre"},
+"dolo (bière de mil)": {cal:50, prot:1, lip:0, gluc:10, label:"Dolo (bière traditionnelle)"},
+"tchapalo (bière de sorgho)": {cal:50, prot:1, lip:0, gluc:10, label:"Tchapalo (bière de sorgho)"},
+
+// === CONSERVES EXOTIQUES ===
+"nido (lait en poudre)": {cal:500, prot:26, lip:27, gluc:38, label:"Nido (lait en poudre)"},
+"lait concentré sucré (nestlé)": {cal:330, prot:8, lip:8, gluc:55, label:"Lait concentré sucré"},
+"coco râpé en boîte": {cal:660, prot:6, lip:65, gluc:24, label:"Noix de coco râpée en boîte"},
+"crème de coco en boîte": {cal:330, prot:3, lip:33, gluc:6, label:"Crème de coco (boîte)"},
+"lait de coco en boîte": {cal:230, prot:2, lip:23, gluc:5, label:"Lait de coco (boîte)"},
+
+// === LÉGUMES AFRICAINS ===
+"gombo (okra)": {cal:33, prot:2, lip:0.2, gluc:7, label:"Gombo (okra)"},
+"nigelle (feuilles)": {cal:20, prot:2, lip:0.5, gluc:3, label:"Feuilles de nigelle"},
+"feuilles de manioc": {cal:50, prot:3, lip:1, gluc:8, label:"Feuilles de manioc"},
+"feuilles de patate douce": {cal:33, prot:2.3, lip:0.3, gluc:7, label:"Feuilles de patate douce"},
+"morogo (légume sauvage)": {cal:30, prot:2.5, lip:0.5, gluc:5, label:"Morogo (légume africain)"},
+
+// === FRUITS DE LA PASSION VARIÉS ===
+"passion fruit jaune": {cal:97, prot:2.2, lip:0.7, gluc:23, label:"Passion fruit jaune"},
+"passion fruit violet": {cal:97, prot:2.2, lip:0.7, gluc:23, label:"Passion fruit violet"},
+"granadilla": {cal:70, prot:1.5, lip:0.5, gluc:16, label:"Granadilla (passion fruit doux)"},
+"curuba": {cal:60, prot:1, lip:0.5, gluc:14, label:"Curuba (banana passionfruit)"},

@@ -605,4 +605,114 @@
 "foie gras entier": {cal:480, prot:8, lip:45, gluc:2, label:"Foie gras entier de canard"},
 "bloc de foie gras": {cal:450, prot:9, lip:42, gluc:2, label:"Bloc de foie gras de canard"},
 "terrine de saumon": {cal:290, prot:14, lip:25, gluc:1, label:"Terrine de saumon"},
-"brandade de morue": {cal:164, prot:11, lip:9.6, gluc:7.4, label:"Brandade de morue"},
+"brandade de morue": {cal:164, prot:11, lip:9.6, gluc:7.4, label:"Brandade de morue"},// === FRUITS SECS ET OLEAGINEUX (SUITE) ===
+"raisins secs": {cal:299, prot:3.1, lip:0.5, gluc:79, label:"Raisins secs"},
+"abricots secs": {cal:241, prot:3.4, lip:0.5, gluc:63, label:"Abricots secs"},
+"pruneaux": {cal:240, prot:2.2, lip:0.4, gluc:64, label:"Pruneaux"},
+"figues sèches": {cal:250, prot:3.3, lip:1, gluc:64, label:"Figues sèches"},
+"dates": {cal:282, prot:2.5, lip:0.4, gluc:75, label:"Dattes"},
+"noix de coco râpée": {cal:660, prot:6, lip:65, gluc:24, label:"Noix de coco râpée"},
+
+// === LÉGUMES SECS (complément) ===
+"pois chiches secs": {cal:364, prot:19, lip:6, gluc:61, label:"Pois chiches secs"},
+"lentilles vertes sèches": {cal:350, prot:25, lip:1, gluc:60, label:"Lentilles vertes sèches"},
+"haricots rouges secs": {cal:330, prot:21, lip:1, gluc:60, label:"Haricots rouges secs"},
+"flageolets secs": {cal:330, prot:21, lip:1.5, gluc:58, label:"Flageolets secs"},
+"fèves sèches": {cal:341, prot:26, lip:1.5, gluc:58, label:"Fèves sèches"},
+
+// === HERBES AROMATIQUES FRAÎCHES ===
+"basilic frais": {cal:47, prot:3.2, lip:0.6, gluc:4, label:"Basilic frais (100g)"},
+"persil frais": {cal:36, prot:3, lip:0.8, gluc:6, label:"Persil frais"},
+"coriandre fraîche": {cal:23, prot:2.1, lip:0.5, gluc:3.7, label:"Coriandre fraîche"},
+"aneth frais": {cal:43, prot:3.5, lip:1.1, gluc:7, label:"Aneth frais"},
+"menthe fraîche": {cal:44, prot:3.8, lip:0.9, gluc:8, label:"Menthe fraîche"},
+"ciboulette fraîche": {cal:30, prot:3.3, lip:0.7, gluc:4, label:"Ciboulette fraîche"},
+"estragon frais": {cal:47, prot:2.5, lip:1, gluc:7, label:"Estragon frais"},
+
+// === PAINS SPÉCIAUX ===
+"pain noir": {cal:230, prot:9, lip:1.5, gluc:45, label:"Pain noir (seigle intégral)"},
+"pain aux noix": {cal:300, prot:10, lip:12, gluc:40, label:"Pain aux noix"},
+"pain aux olives": {cal:280, prot:9, lip:8, gluc:43, label:"Pain aux olives"},
+"pain aux graines": {cal:270, prot:10, lip:9, gluc:41, label:"Pain aux graines (lin, sésame)"},
+"chapati": {cal:260, prot:7, lip:4, gluc:48, label:"Chapati (galette indienne)"},
+"naan": {cal:280, prot:8, lip:6, gluc:50, label:"Naan (pain indien)"},
+"tortilla de blé": {cal:310, prot:7.5, lip:4.5, gluc:50, label:"Tortilla de blé"},
+
+// === BOISSONS CHAUDES (complément) ===
+"chocolat chaud": {cal:90, prot:3, lip:2.5, gluc:13, label:"Chocolat chaud (lait)"},
+"café latte": {cal:50, prot:3, lip:2, gluc:5, label:"Café latte"},
+"cappuccino": {cal:45, prot:2.5, lip:1.5, gluc:5, label:"Cappuccino"},
+"thé au lait": {cal:30, prot:1.5, lip:1, gluc:4, label:"Thé au lait"},
+"matcha": {cal:35, prot:3, lip:1, gluc:4, label:"Matcha (thé vert en poudre)"},
+"tisane camomille": {cal:1, prot:0, lip:0, gluc:0, label:"Tisane camomille"},
+"tisane verveine": {cal:1, prot:0, lip:0, gluc:0, label:"Tisane verveine"},// === POISSONS FUMÉS ET MARINÉS (SUITE) ===
+"saumon fumé": {cal:265, prot:22, lip:19, gluc:0, label:"Saumon fumé"},
+"truite fumée": {cal:180, prot:19, lip:11, gluc:0, label:"Truite fumée"},
+"anguille fumée": {cal:305, prot:16, lip:26, gluc:0, label:"Anguille fumée"},
+"maquereau fumé": {cal:250, prot:20, lip:19, gluc:0, label:"Maquereau fumé"},
+"hareng fumé": {cal:200, prot:18, lip:14, gluc:0, label:"Hareng fumé"},
+"espèce de poisson mariné": {cal:150, prot:18, lip:8, gluc:1, label:"Poisson mariné (type rollmops)"},
+
+// === FROMAGES ÉTRANGERS (SUITE) ===
+"parmesan râpé": {cal:431, prot:38, lip:29, gluc:0, label:"Parmesan râpé"},
+"grana padano": {cal:400, prot:33, lip:28, gluc:0, label:"Grana Padano"},
+"pecorino romano": {cal:420, prot:36, lip:29, gluc:0.5, label:"Pecorino Romano"},
+"asiago": {cal:350, prot:25, lip:26, gluc:1, label:"Asiago"},
+"fontina": {cal:360, prot:23, lip:29, gluc:0.5, label:"Fontina"},
+"gouda jeune": {cal:356, prot:25, lip:27, gluc:1, label:"Gouda jeune"},
+"edam jeune": {cal:357, prot:26, lip:26, gluc:1, label:"Edam jeune"},
+
+// === CHARCUTERIES ITALIENNES ===
+"pancetta": {cal:500, prot:15, lip:45, gluc:0, label:"Pancetta"},
+"guanciale": {cal:550, prot:12, lip:52, gluc:0, label:"Guanciale"},
+"speck": {cal:350, prot:27, lip:25, gluc:0, label:"Speck"},
+"prosciutto crudo": {cal:220, prot:28, lip:12, gluc:0, label:"Prosciutto crudo (jambon cru italien)"},
+"prosciutto cotto": {cal:145, prot:20, lip:7, gluc:0.5, label:"Prosciutto cotto (jambon cuit italien)"},
+"bresaola della valtellina": {cal:200, prot:33, lip:6, gluc:1, label:"Bresaola della Valtellina"},
+
+// === OLIVES, TAPENADES, LEGUMES MARINES ===
+"olives vertes dénoyautées": {cal:145, prot:1, lip:15, gluc:1.5, label:"Olives vertes dénoyautées"},
+"olives noires dénoyautées": {cal:115, prot:0.8, lip:12, gluc:1, label:"Olives noires dénoyautées"},
+"tapenade noire": {cal:350, prot:2, lip:35, gluc:5, label:"Tapenade noire (olives, câpres)"},
+"tapenade verte": {cal:330, prot:2, lip:33, gluc:5, label:"Tapenade verte"},
+"câpres": {cal:23, prot:2.4, lip:0.9, gluc:4.9, label:"Câpres"},
+"poivrons marinés": {cal:80, prot:1, lip:5, gluc:7, label:"Poivrons marinés (huile, herbes)"},
+"artichauts marinés": {cal:120, prot:2, lip:10, gluc:6, label:"Artichauts marinés"},
+"courgettes marinées": {cal:70, prot:1, lip:5, gluc:5, label:"Courgettes marinées"},
+"aubergines marinées": {cal:80, prot:1, lip:6, gluc:6, label:"Aubergines marinées"},
+"champignons marinés": {cal:70, prot:2, lip:5, gluc:5, label:"Champignons marinés à l'huile"},// === POISSONS FUMÉS ET MARINÉS (SUITE) ===
+"saumon fumé": {cal:265, prot:22, lip:19, gluc:0, label:"Saumon fumé"},
+"truite fumée": {cal:180, prot:19, lip:11, gluc:0, label:"Truite fumée"},
+"anguille fumée": {cal:305, prot:16, lip:26, gluc:0, label:"Anguille fumée"},
+"maquereau fumé": {cal:250, prot:20, lip:19, gluc:0, label:"Maquereau fumé"},
+"hareng fumé": {cal:200, prot:18, lip:14, gluc:0, label:"Hareng fumé"},
+"espèce de poisson mariné": {cal:150, prot:18, lip:8, gluc:1, label:"Poisson mariné (type rollmops)"},
+
+// === FROMAGES ÉTRANGERS (SUITE) ===
+"parmesan râpé": {cal:431, prot:38, lip:29, gluc:0, label:"Parmesan râpé"},
+"grana padano": {cal:400, prot:33, lip:28, gluc:0, label:"Grana Padano"},
+"pecorino romano": {cal:420, prot:36, lip:29, gluc:0.5, label:"Pecorino Romano"},
+"asiago": {cal:350, prot:25, lip:26, gluc:1, label:"Asiago"},
+"fontina": {cal:360, prot:23, lip:29, gluc:0.5, label:"Fontina"},
+"gouda jeune": {cal:356, prot:25, lip:27, gluc:1, label:"Gouda jeune"},
+"edam jeune": {cal:357, prot:26, lip:26, gluc:1, label:"Edam jeune"},
+
+// === CHARCUTERIES ITALIENNES ===
+"pancetta": {cal:500, prot:15, lip:45, gluc:0, label:"Pancetta"},
+"guanciale": {cal:550, prot:12, lip:52, gluc:0, label:"Guanciale"},
+"speck": {cal:350, prot:27, lip:25, gluc:0, label:"Speck"},
+"prosciutto crudo": {cal:220, prot:28, lip:12, gluc:0, label:"Prosciutto crudo (jambon cru italien)"},
+"prosciutto cotto": {cal:145, prot:20, lip:7, gluc:0.5, label:"Prosciutto cotto (jambon cuit italien)"},
+"bresaola della valtellina": {cal:200, prot:33, lip:6, gluc:1, label:"Bresaola della Valtellina"},
+
+// === OLIVES, TAPENADES, LEGUMES MARINES ===
+"olives vertes dénoyautées": {cal:145, prot:1, lip:15, gluc:1.5, label:"Olives vertes dénoyautées"},
+"olives noires dénoyautées": {cal:115, prot:0.8, lip:12, gluc:1, label:"Olives noires dénoyautées"},
+"tapenade noire": {cal:350, prot:2, lip:35, gluc:5, label:"Tapenade noire (olives, câpres)"},
+"tapenade verte": {cal:330, prot:2, lip:33, gluc:5, label:"Tapenade verte"},
+"câpres": {cal:23, prot:2.4, lip:0.9, gluc:4.9, label:"Câpres"},
+"poivrons marinés": {cal:80, prot:1, lip:5, gluc:7, label:"Poivrons marinés (huile, herbes)"},
+"artichauts marinés": {cal:120, prot:2, lip:10, gluc:6, label:"Artichauts marinés"},
+"courgettes marinées": {cal:70, prot:1, lip:5, gluc:5, label:"Courgettes marinées"},
+"aubergines marinées": {cal:80, prot:1, lip:6, gluc:6, label:"Aubergines marinées"},
+"champignons marinés": {cal:70, prot:2, lip:5, gluc:5, label:"Champignons marinés à l'huile"},

@@ -715,4 +715,158 @@
 "artichauts marinés": {cal:120, prot:2, lip:10, gluc:6, label:"Artichauts marinés"},
 "courgettes marinées": {cal:70, prot:1, lip:5, gluc:5, label:"Courgettes marinées"},
 "aubergines marinées": {cal:80, prot:1, lip:6, gluc:6, label:"Aubergines marinées"},
-"champignons marinés": {cal:70, prot:2, lip:5, gluc:5, label:"Champignons marinés à l'huile"},
+"champignons marinés": {cal:70, prot:2, lip:5, gluc:5, label:"Champignons marinés à l'huile"},// === FRUITS EXOTIQUES (SUITE) ===
+"longane": {cal:60, prot:1, lip:0.2, gluc:15, label:"Longane (œil de dragon)"},
+"salak": {cal:80, prot:1, lip:0.5, gluc:20, label:"Salak (fruit serpent)"},
+"cempedak": {cal:100, prot:1.5, lip:0.8, gluc:25, label:"Cempedak"},
+"pomme cannelle": {cal:100, prot:2, lip:0.5, gluc:25, label:"Pomme cannelle"},
+"corossol": {cal:66, prot:1, lip:0.3, gluc:16, label:"Corossol (graviola)"},
+"bacupari": {cal:50, prot:0.5, lip:0.2, gluc:12, label:"Bacupari"},
+"cacahuète fruit": {cal:46, prot:0.8, lip:0.4, gluc:11, label:"Fruit de cajou (anacarde)"},
+
+// === LÉGUMES ASIATIQUES (SUITE) ===
+"chou chinois (pe-tsai)": {cal:13, prot:1.5, lip:0.2, gluc:2, label:"Chou chinois (pe-tsai)"},
+"chou kale asiatique": {cal:49, prot:4.3, lip:0.9, gluc:8.8, label:"Chou kale asiatique"},
+"légumes amers (bitter melon)": {cal:17, prot:1, lip:0.2, gluc:4, label:"Margose (melon amer)"},
+"radis noir japonais (takuan)": {cal:18, prot:0.6, lip:0.1, gluc:4, label:"Takuan (radis mariné japonais)"},
+"pousse de soja (germes)": {cal:30, prot:3, lip:1, gluc:3, label:"Pousses de soja"},
+"légumes wok surgelés": {cal:40, prot:1.5, lip:0.5, gluc:7, label:"Mélange wok (carottes, choux, poivrons)"},
+
+// === PLATS CUISINÉS ASIATIQUES (SUITE) ===
+"chow mein": {cal:150, prot:6, lip:8, gluc:16, label:"Chow mein (nouilles sautées)"},
+"lo mein": {cal:160, prot:5, lip:7, gluc:20, label:"Lo mein (nouilles molles)"},
+"fried rice (riz sauté)": {cal:150, prot:4, lip:6, gluc:20, label:"Riz sauté cantonnais"},
+"ginger beef": {cal:190, prot:15, lip:10, gluc:12, label:"Bœuf gingembre"},
+"general tao chicken": {cal:220, prot:16, lip:12, gluc:18, label:"Poulet Général Tao"},
+"kung pao chicken": {cal:200, prot:18, lip:10, gluc:14, label:"Poulet Kung Pao"},
+"mapo tofu": {cal:120, prot:8, lip:8, gluc:6, label:"Mapo tofu (tofu sauce piquante)"},
+
+// === SAUCES ASIATIQUES (SUITE) ===
+"sauce hoisin": {cal:120, prot:1.5, lip:1, gluc:26, label:"Sauce hoisin"},
+"sauce teriyaki": {cal:85, prot:2, lip:0, gluc:20, label:"Sauce teriyaki"},
+"sauce ponzu": {cal:35, prot:1, lip:0, gluc:7, label:"Sauce ponzu (agrumes)"},
+"sauce sriracha": {cal:30, prot:1, lip:0.5, gluc:6, label:"Sriracha (sauce piquante)"},
+"sauce samouraï": {cal:600, prot:1, lip:65, gluc:5, label:"Sauce samouraï (piquante)"},
+"sauce algérienne": {cal:550, prot:1, lip:60, gluc:4, label:"Sauce algérienne (piquante)"},// === BOISSONS GAZEUSES ET SODAS (SUITE) ===
+"schweppes agrumes": {cal:40, prot:0, lip:0, gluc:10, label:"Schweppes Agrumes"},
+"schweppes indian tonic": {cal:40, prot:0, lip:0, gluc:10, label:"Schweppes Indian Tonic"},
+"schweppes lemon": {cal:40, prot:0, lip:0, gluc:10, label:"Schweppes Lemon"},
+"ice tea pêche": {cal:30, prot:0, lip:0, gluc:8, label:"Ice Tea pêche"},
+"ice tea citron": {cal:30, prot:0, lip:0, gluc:8, label:"Ice Tea citron"},
+"orangina rouge": {cal:45, prot:0, lip:0, gluc:11, label:"Orangina rouge"},
+"fraise tagada (soda)": {cal:42, prot:0, lip:0, gluc:10.5, label:"Soda fraise"},
+
+// === SNACKING AMÉRICAIN ===
+"popcorn caramel": {cal:450, prot:5, lip:20, gluc:65, label:"Popcorn au caramel"},
+"popcorn beurre": {cal:500, prot:8, lip:30, gluc:55, label:"Popcorn au beurre"},
+"cacahuètes grillées salées": {cal:567, prot:26, lip:49, gluc:16, label:"Cacahuètes grillées salées"},
+"cacahuètes sucrées": {cal:550, prot:20, lip:40, gluc:30, label:"Cacahuètes sucrées"},
+"mélange apéritif (cacahuètes, raisins secs)": {cal:480, prot:15, lip:30, gluc:45, label:"Mélange apéritif"},
+"pretzel au chocolat": {cal:450, prot:8, lip:18, gluc:65, label:"Pretzel au chocolat"},
+
+// === BISCUITS APÉRITIF ===
+"gâteaux apéritif fromage": {cal:500, prot:10, lip:27, gluc:55, label:"Gâteaux apéritif (fromage)"},
+"gâteaux apéritif paprika": {cal:500, prot:8, lip:28, gluc:56, label:"Gâteaux apéritif paprika"},
+"crackers nature": {cal:430, prot:10, lip:12, gluc:72, label:"Crackers nature"},
+"crackers complet": {cal:420, prot:11, lip:10, gluc:70, label:"Crackers complet"},
+"bâtonnets apéritif": {cal:490, prot:8, lip:24, gluc:62, label:"Bâtonnets apéritif"},
+
+// === ÉPICES DU MONDE ===
+"cari (poudre)": {cal:320, prot:14, lip:16, gluc:46, label:"Poudre de cari (curry)"},
+"garam masala": {cal:320, prot:12, lip:14, gluc:50, label:"Garam masala"},
+"ras el hanout": {cal:300, prot:10, lip:12, gluc:55, label:"Ras el hanout"},
+" sumac": {cal:250, prot:10, lip:5, gluc:60, label:"Sumac"},
+"zaatar": {cal:280, prot:9, lip:12, gluc:50, label:"Zaatar"},
+"harissa": {cal:80, prot:2, lip:5, gluc:8, label:"Harissa (pâte)"},
+"wasabi en poudre": {cal:80, prot:3, lip:1, gluc:15, label:"Wasabi (poudre)"},
+
+// === LÉGUMINEUSES EXOTIQUES ===
+"pois chiche noir": {cal:160, prot:9, lip:2.5, gluc:27, label:"Pois chiche noir"},
+"lentilles beluga": {cal:116, prot:9, lip:0.4, gluc:20, label:"Lentilles beluga (noires)"},
+"lentilles du puy": {cal:116, prot:9, lip:0.4, gluc:20, label:"Lentilles du Puy (AOP)"},
+"fève de soja (edamame)": {cal:121, prot:11, lip:5.2, gluc:8.9, label:"Edamame (soja frais)"},
+"pois chiche d'Espagne": {cal:160, prot:8, lip:2.6, gluc:27, label:"Pois chiche d'Espagne"},
+"haricot tarbais": {cal:140, prot:8.5, lip:0.5, gluc:25, label:"Haricot Tarbais"},// === SNACKS SUCRÉS (SUITE) ===
+"barre chocolatée (mars)": {cal:450, prot:4, lip:17, gluc:72, label:"Mars (barre)"},
+"barre chocolatée (snickers)": {cal:490, prot:7, lip:24, gluc:62, label:"Snickers (barre)"},
+"barre chocolatée (twix)": {cal:495, prot:5, lip:24, gluc:65, label:"Twix (barre)"},
+"bounty (noix de coco)": {cal:480, prot:4, lip:26, gluc:58, label:"Bounty"},
+"kinder délice": {cal:435, prot:5.5, lip:22, gluc:55, label:"Kinder Délice"},
+"kinder bueno": {cal:560, prot:9, lip:35, gluc:53, label:"Kinder Bueno"},
+"kitkat": {cal:520, prot:6, lip:27, gluc:64, label:"KitKat"},
+"milka": {cal:530, prot:7, lip:31, gluc:57, label:"Milka (tablette)"},
+"oreo": {cal:480, prot:5, lip:21, gluc:70, label:"Oreo (biscuit)"},
+
+// === CÉRÉALES PETIT-DÉJEUNER (SUITE) ===
+"frosties": {cal:370, prot:4, lip:1, gluc:85, label:"Frosties (sucrées)"},
+"cocoa pops": {cal:380, prot:5, lip:3, gluc:82, label:"Cocoa Pops"},
+"lucky charms": {cal:380, prot:6, lip:3, gluc:83, label:"Lucky Charms"},
+"smacks": {cal:370, prot:5, lip:1, gluc:85, label:"Smacks"},
+"fruit loops": {cal:380, prot:4, lip:2, gluc:85, label:"Froot Loops"},
+"miel pops": {cal:380, prot:5, lip:2, gluc:85, label:"Miel Pops"},
+
+// === YAOURTS SPÉCIAUX ===
+"yaourt grec au miel": {cal:130, prot:5, lip:7, gluc:12, label:"Yaourt grec au miel"},
+"yaourt bulgare": {cal:70, prot:4, lip:3.5, gluc:6, label:"Yaourt bulgare"},
+"yaourt au soja": {cal:50, prot:3, lip:2, gluc:5, label:"Yaourt au soja nature"},
+"yaourt coco": {cal:80, prot:1, lip:5, gluc:7, label:"Yaourt à la noix de coco"},
+"yaourt aromatisé citron": {cal:90, prot:3, lip:2.5, gluc:14, label:"Yaourt citron"},
+"yaourt aromatisé fruits rouges": {cal:90, prot:3, lip:2.5, gluc:14, label:"Yaourt fruits rouges"},
+
+// === FROMAGES FRAIS (SUITE) ===
+"faisselle": {cal:80, prot:6, lip:5, gluc:3, label:"Faisselle"},
+"brocciu": {cal:150, prot:11, lip:10, gluc:4, label:"Brocciu (corse)"},
+"brousse": {cal:100, prot:7, lip:7, gluc:3, label:"Brousse"},
+"fromage de brebis frais": {cal:200, prot:14, lip:15, gluc:2, label:"Fromage de brebis frais"},
+
+// === BOISSONS ÉNERGISANTES ===
+"red bull": {cal:45, prot:0, lip:0, gluc:11, label:"Red Bull (250ml)"},
+"monster": {cal:50, prot:0, lip:0, gluc:12, label:"Monster Energy"},
+"burn": {cal:45, prot:0, lip:0, gluc:11, label:"Burn"},
+"toréador": {cal:45, prot:0, lip:0, gluc:11, label:"Toréador"},
+"euphoria": {cal:45, prot:0, lip:0, gluc:11, label:"Euphoria"},// === POISSONS EN CONSERVE (VARIÉS) ===
+"maquereau filet à l'huile": {cal:250, prot:20, lip:19, gluc:0, label:"Filet de maquereau à l'huile"},
+"maquereau sauce moutarde": {cal:220, prot:18, lip:16, gluc:1, label:"Maquereau sauce moutarde"},
+"maquereau vin blanc": {cal:205, prot:19, lip:14, gluc:0, label:"Maquereau au vin blanc"},
+"sardines sauce tomate": {cal:210, prot:23, lip:11, gluc:2, label:"Sardines sauce tomate"},
+"sardines grillées": {cal:230, prot:25, lip:13, gluc:0, label:"Sardines grillées"},
+"anchois à l'huile": {cal:210, prot:22, lip:13, gluc:0, label:"Anchois à l'huile"},
+"thon albacore": {cal:116, prot:26, lip:1, gluc:0, label:"Thon albacore (nature)"},
+"thon germon": {cal:116, prot:26, lip:1, gluc:0, label:"Thon germon"},
+"thon listao": {cal:116, prot:26, lip:1, gluc:0, label:"Thon listao (skipjack)"},
+"thon rouge en conserve": {cal:158, prot:24, lip:6, gluc:0, label:"Thon rouge en conserve"},
+
+// === CONSERVES DE LÉGUMES (SUITE) ===
+"conserves d'asperges": {cal:20, prot:2.2, lip:0.2, gluc:3.4, label:"Asperges en conserve"},
+"conserves de coeurs d'artichaut": {cal:47, prot:3.3, lip:0.2, gluc:10.5, label:"Cœurs d'artichaut conserve"},
+"conserves de poivrons rouges": {cal:31, prot:1, lip:0.3, gluc:6, label:"Poivrons rouges conserve"},
+"conserves de champignons émincés": {cal:22, prot:3.1, lip:0.3, gluc:3.3, label:"Champignons émincés conserve"},
+"conserves de carottes rondelles": {cal:30, prot:0.8, lip:0.3, gluc:5, label:"Carottes rondelles conserve"},
+"conserves de betteraves": {cal:43, prot:1.6, lip:0.2, gluc:10, label:"Betteraves en conserve"},
+"conserves de maïs extra doux": {cal:96, prot:3.2, lip:1.5, gluc:19, label:"Maïs extra doux conserve"},
+"conserves de haricots beurre": {cal:32, prot:2, lip:0.2, gluc:6, label:"Haricots beurre conserve"},
+
+// === FRUITS AU SIROP (CONSERVE) ===
+"pêches au sirop": {cal:70, prot:0.5, lip:0.1, gluc:18, label:"Pêches au sirop (égouttées)"},
+"abricots au sirop": {cal:65, prot:0.6, lip:0.2, gluc:17, label:"Abricots au sirop"},
+"poires au sirop": {cal:65, prot:0.4, lip:0.1, gluc:17, label:"Poires au sirop"},
+"litchis au sirop": {cal:80, prot:0.5, lip:0.2, gluc:20, label:"Litchis au sirop"},
+"ananas au sirop": {cal:70, prot:0.5, lip:0.1, gluc:18, label:"Ananas au sirop"},
+"mandarines au sirop": {cal:60, prot:0.6, lip:0.2, gluc:15, label:"Mandarines au sirop"},
+
+// === PLATS ASIATIQUES (COMPLÉMENT) ===
+"ramen au porc": {cal:140, prot:8, lip:6, gluc:16, label:"Ramen au porc (bol)"},
+"ramen au poulet": {cal:130, prot:9, lip:5, gluc:15, label:"Ramen au poulet"},
+"udon sauté": {cal:160, prot:5, lip:7, gluc:20, label:"Udon sauté"},
+"soba au sarrasin": {cal:110, prot:5, lip:0.5, gluc:23, label:"Soba (nouilles sarrasin)"},
+"pho boeuf": {cal:80, prot:6, lip:2.5, gluc:9, label:"Phở bœuf"},
+"pho poulet": {cal:75, prot:6, lip:2, gluc:9, label:"Phở poulet"},
+"xôi (riz gluant)": {cal:180, prot:4, lip:1, gluc:40, label:"Xôi (riz gluant vietnamien)"},
+
+// === ÉPICES ET CONDIMENTS (SUITE) ===
+"piment d'Espelette": {cal:280, prot:10, lip:5, gluc:50, label:"Piment d'Espelette"},
+"poivre de Sichuan": {cal:250, prot:10, lip:3, gluc:64, label:"Poivre de Sichuan"},
+"clou de girofle": {cal:330, prot:6, lip:13, gluc:65, label:"Clou de girofle"},
+"badiane (anis étoilé)": {cal:340, prot:0, lip:0, gluc:80, label:"Anis étoilé"},
+"cannelle en bâton": {cal:250, prot:3.5, lip:1.2, gluc:70, label:"Cannelle bâton"},
+"grain de moutarde": {cal:120, prot:7, lip:7, gluc:8, label:"Graines de moutarde"},

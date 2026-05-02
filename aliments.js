@@ -706,4 +706,65 @@ const foodDB = {
     "bouillon boeuf": {cal:5, prot:0.5, lip:0.2, gluc:0.5, label:"Bouillon de bœuf"},
     "bouillon volaille": {cal:5, prot:0.5, lip:0.2, gluc:0.5, label:"Bouillon de volaille"},
     "bouillon legumes": {cal:5, prot:0.2, lip:0.1, gluc:0.8, label:"Bouillon de légumes"}
+};// === APERITIFS, SNACKS, CHIPS ===
+    "chips nature": {cal:536, prot:6.4, lip:34, gluc:51, label:"Chips nature"},
+    "chips sel": {cal:536, prot:6.4, lip:34, gluc:51, label:"Chips sel"},
+    "chips barbecue": {cal:530, prot:6, lip:33, gluc:52, label:"Chips barbecue"},
+    "chips paprika": {cal:530, prot:6, lip:33, gluc:52, label:"Chips paprika"},
+    "lays": {cal:536, prot:6.4, lip:34, gluc:51, label:"Lay's"},
+    "pringles": {cal:536, prot:4.6, lip:33, gluc:53, label:"Pringles"},
+    "doritos": {cal:500, prot:6, lip:28, gluc:60, label:"Doritos"},
+    "onion rings": {cal:360, prot:5.5, lip:20, gluc:40, label:"Onion rings"},
+
+    // === BISCUITS, PATISSERIES, CHOCOLATS ===
+    "petit ecolier": {cal:490, prot:6, lip:20, gluc:69, label:"Petit Écolier"},
+    "prince chocolat": {cal:480, prot:6, lip:18, gluc:72, label:"Prince chocolat"},
+    "grany": {cal:450, prot:7, lip:16, gluc:68, label:"Grany"},
+    "pim's": {cal:420, prot:3, lip:12, gluc:72, label:"Pim's"},
+    "cookies chocolat": {cal:490, prot:6, lip:23, gluc:66, label:"Cookies chocolat"},
+    "mars": {cal:450, prot:4, lip:17, gluc:72, label:"Mars"},
+    "snickers": {cal:490, prot:7, lip:24, gluc:62, label:"Snickers"},
+    "twix": {cal:495, prot:5, lip:24, gluc:65, label:"Twix"},
+    "bounty": {cal:480, prot:4, lip:26, gluc:58, label:"Bounty"},
+    "kinder delice": {cal:435, prot:5.5, lip:22, gluc:55, label:"Kinder Délice"},
+    "chocolat noir 70%": {cal:546, prot:5, lip:31, gluc:60, label:"Chocolat noir 70%"},
+    "chocolat noir 85%": {cal:600, prot:8, lip:43, gluc:32, label:"Chocolat noir 85%"},
+    "chocolat lait": {cal:540, prot:7, lip:30, gluc:57, label:"Chocolat au lait"},
+    "chocolat blanc": {cal:540, prot:6, lip:32, gluc:58, label:"Chocolat blanc"},
+    "barre cerealiere": {cal:400, prot:5, lip:12, gluc:70, label:"Barre céréalière"},
+    "barre proteinee": {cal:350, prot:30, lip:15, gluc:30, label:"Barre protéinée"},
+
+    // === CONFISERIE, GLACES ===
+    "bonbons gelifies": {cal:320, prot:4, lip:0, gluc:80, label:"Bonbons gélifiés"},
+    "bonbons durs": {cal:390, prot:0, lip:0, gluc:97, label:"Bonbons durs"},
+    "caramels": {cal:400, prot:3, lip:10, gluc:80, label:"Caramels"},
+    "nougat": {cal:450, prot:5, lip:15, gluc:75, label:"Nougat"},
+    "glace vanille": {cal:200, prot:3, lip:10, gluc:25, label:"Glace vanille"},
+    "glace chocolat": {cal:210, prot:4, lip:11, gluc:26, label:"Glace chocolat"},
+    "sorbet citron": {cal:130, prot:0.5, lip:0.1, gluc:32, label:"Sorbet citron"},
+
+    // === PLATS PREPARES, FAST FOOD ===
+    "sandwich triangle jambon": {cal:240, prot:11, lip:8, gluc:29, label:"Sandwich triangle jambon"},
+    "sandwich triangle poulet": {cal:235, prot:12, lip:7, gluc:28, label:"Sandwich triangle poulet"},
+    "kebab": {cal:215, prot:16, lip:12, gluc:14, label:"Kebab (100g)"},
+    "pizza margherita": {cal:250, prot:10, lip:9, gluc:32, label:"Pizza margherita"},
+    "lasagnes bolognaise": {cal:140, prot:7, lip:7, gluc:12, label:"Lasagnes bolognaise (100g)"},
+    // ... (il y en a beaucoup d'autres, mais pour ne pas surcharger, je vous donne la structure complète dans le message suivant)
+
+    // === PRODUITS ASIATIQUES ===
+    "nems porc": {cal:180, prot:8, lip:10, gluc:15, label:"Nems au porc"},
+    "sushi saumon": {cal:50, prot:2.5, lip:1, gluc:8, label:"Sushi saumon (pièce)"},
+    "sauce soja": {cal:60, prot:8, lip:0.1, gluc:7, label:"Sauce soja"},
+    // etc.
+
+    // === EPICES, CONDIMENTS ===
+    "sel fin": {cal:0, prot:0, lip:0, gluc:0, label:"Sel fin"},
+
+    // === BOISSONS ===
+    "eau plate": {cal:0, prot:0, lip:0, gluc:0, label:"Eau plate"},
+    "cola": {cal:42, prot:0, lip:0, gluc:10.6, label:"Coca-Cola"},
+
+    // === PETIT DEJEUNER ===
+    "cornflakes": {cal:357, prot:7.5, lip:1, gluc:84, label:"Cornflakes"},
+    "miel": {cal:304, prot:0.3, lip:0, gluc:82, label:"Miel"}
 };

@@ -1328,3 +1328,82 @@
 "samsa (chausson feuilleté)": {cal:280, prot:8, lip:16, gluc:28, label:"Samsa (chausson feuilleté)"},
 "lagman (nouilles)": {cal:160, prot:7, lip:7, gluc:20, label:"Lagman (nouilles ouzbek)"},
 "shashlik (brochette)": {cal:240, prot:26, lip:14, gluc:1, label:"Shashlik (brochette de viande)"},
+// === FRUITS EXOTIQUES (SUITE) ===
+"pitaya (fruit du dragon)": {cal:60, prot:1.1, lip:0.4, gluc:13, label:"Pitaya (fruit du dragon)"},
+"pitaya rouge": {cal:60, prot:1.1, lip:0.4, gluc:13, label:"Pitaya rouge (chair rose)"},
+"pitaya blanche": {cal:60, prot:1.1, lip:0.4, gluc:13, label:"Pitaya blanche"},
+"fruit du dragon jaune": {cal:60, prot:1, lip:0.4, gluc:13, label:"Fruit du dragon jaune"},
+"cacahuète fruit (anacarde)": {cal:46, prot:0.8, lip:0.4, gluc:11, label:"Pomme cajou (fruit de l'anacardier)"},
+"jaboticaba (fruit brésilien)": {cal:58, prot:0.6, lip:0.2, gluc:14, label:"Jaboticaba (fruit brésilien)"},
+
+// === LÉGUMES D'ASIE DU SUD-EST ===
+"concombre de mer (timun)": {cal:15, prot:0.7, lip:0.1, gluc:3.6, label:"Concombre de mer (timun laut)"},
+"légume amer (bitter melon)": {cal:17, prot:1, lip:0.2, gluc:4, label:"Bitter melon (margose)"},
+"courge cireuse (wax gourd)": {cal:14, prot:0.4, lip:0.1, gluc:3, label:"Courge cireuse (wax gourd)"},
+"chou kale asiatique (kai lan)": {cal:49, prot:4.3, lip:0.9, gluc:8.8, label:"Kai lan (chou kale chinois)"},
+"liseron d'eau (morning glory)": {cal:20, prot:2, lip:0.2, gluc:3, label:"Liseron d'eau (morning glory)"},
+
+// === PLATS CORSES (SUITE) ===
+"aziminu (soupe corse)": {cal:50, prot:4, lip:2, gluc:5, label:"Aziminu (soupe corse)"},
+"pulenda (polenta corse)": {cal:86, prot:2, lip:0.3, gluc:19, label:"Pulenda (polenta corse)"},
+"stufatu (ragoût corse)": {cal:140, prot:14, lip:8, gluc:4, label:"Stufatu (ragoût corse)"},
+"gâteau de navet": {cal:120, prot:3, lip:5, gluc:16, label:"Gâteau de navet corse"},
+
+// === BOISSONS TROPICALES ===
+"jus de corossol (graviola)": {cal:50, prot:0.5, lip:0.2, gluc:12, label:"Jus de corossol"},
+"jus de maracuja (fruit de la passion)": {cal:50, prot:0.5, lip:0.2, gluc:12, label:"Jus de maracuja"},
+"jus de carambole": {cal:30, prot:0.4, lip:0.1, gluc:7, label:"Jus de carambole"},
+"jus de mangoustan": {cal:50, prot:0.5, lip:0.2, gluc:12, label:"Jus de mangoustan"},
+"eau de coco": {cal:15, prot:0.1, lip:0.1, gluc:3.5, label:"Eau de coco"},// === POISSONS EXOTIQUES (SUITE) ===
+"poisson volant": {cal:100, prot:20, lip:1.5, gluc:0, label:"Poisson volant"},
+"poisson-ange (poisson)": {cal:100, prot:19, lip:1.5, gluc:0, label:"Poisson-ange"},
+"poisson-papillon": {cal:80, prot:17, lip:1, gluc:0, label:"Poisson-papillon"},
+"poisson-perroquet (poisson)": {cal:110, prot:20, lip:3, gluc:0, label:"Poisson-perroquet"},
+
+// === FRUITS DE MER RARES ===
+"balane (crustacé)": {cal:60, prot:10, lip:2, gluc:1, label:"Balane (crustacé)"},
+"cigale de mer (crustacé)": {cal:90, prot:19, lip:1.5, gluc:0, label:"Cigale de mer (squille)"},
+"holothurie (concombre de mer)": {cal:40, prot:5, lip:1, gluc:3, label:"Holothurie (bêche-de-mer)"},
+"oursin violet": {cal:70, prot:10, lip:2.5, gluc:2, label:"Oursin violet"},
+
+// === LÉGUMES ANTILLAIS ===
+"christophine (chayotte)": {cal:19, prot:0.8, lip:0.1, gluc:4.5, label:"Christophine (chayotte)"},
+"melongène (aubergine antillaise)": {cal:25, prot:1, lip:0.2, gluc:6, label:"Melongène (aubergine antillaise)"},
+"tayota (chayotte)": {cal:19, prot:0.8, lip:0.1, gluc:4.5, label:"Tayota (chayotte)"},
+"poivron antillais (caraïbe)": {cal:31, prot:1, lip:0.3, gluc:6, label:"Poivron antillais (caraïbe)"},
+"piment antillais (habanero)": {cal:40, prot:2, lip:1, gluc:8, label:"Piment antillais (habanero)"},
+
+// === PLATS RÉUNIONNAIS ===
+"rougail saucisses (réunionnais)": {cal:180, prot:12, lip:12, gluc:5, label:"Rougail saucisses (réunionnais)"},
+"cari poulet (réunionnais)": {cal:170, prot:18, lip:9, gluc:8, label:"Cari poulet réunionnais"},
+"cari zourite (poulpe)": {cal:120, prot:15, lip:5, gluc:4, label:"Cari zourite (poulpe)"},
+"achards de légumes": {cal:80, prot:1, lip:6, gluc:6, label:"Achards (légumes marinés)"},
+"bouchons (samoussas)": {cal:250, prot:5, lip:14, gluc:27, label:"Bouchons (samoussas réunionnais)"},
+"gâteau patate (douceur)": {cal:180, prot:2, lip:4, gluc:35, label:"Gâteau patate (douceur réunionnais)"},// === PRODUITS DE LA MER EXOTIQUES (SUITE) ===
+"crabe de palétuvier": {cal:80, prot:16, lip:1.2, gluc:0, label:"Crabe de palétuvier"},
+"crabe de cocotier": {cal:90, prot:17, lip:1.5, gluc:0, label:"Crabe de cocotier"},
+"langouste de récif": {cal:110, prot:22, lip:2, gluc:0, label:"Langouste de récif"},
+"homard épineux (langouste)": {cal:110, prot:22, lip:2, gluc:0, label:"Homard épineux"},
+"écrevisse d'eau douce exotique": {cal:70, prot:15, lip:1, gluc:0, label:"Écrevisse d'eau douce exotique"},
+
+// === LÉGUMES ANTILLAIS (SUITE) ===
+"papaye verte (légume)": {cal:30, prot:0.5, lip:0.1, gluc:7, label:"Papaye verte (légume)"},
+"banane plantain verte": {cal:120, prot:1.2, lip:0.3, gluc:28, label:"Banane plantain verte"},
+"banane plantain mûre": {cal:150, prot:1.5, lip:0.5, gluc:35, label:"Banane plantain mûre"},
+"igname douce (patate)": {cal:118, prot:1.5, lip:0.2, gluc:28, label:"Ignay doux (patate douce antillaise)"},
+"malanga (taro)": {cal:112, prot:1.5, lip:0.2, gluc:26, label:"Malanga (taro antillais)"},
+"dachine (chou chinois vert)": {cal:13, prot:1.5, lip:0.2, gluc:2.2, label:"Dachine (chou chinois antillais)"},
+
+// === FRUITS DE L'OCÉAN INDIEN ===
+"fruit du jacquier (jacque)": {cal:95, prot:1.7, lip:0.6, gluc:23, label:"Jacque (fruit du jacquier)"},
+"letchi (litchi)": {cal:66, prot:0.8, lip:0.4, gluc:17, label:"Letchi (litchi de la Réunion)"},
+"pomme-lait (caimite)": {cal:70, prot:0.5, lip:0.2, gluc:17, label:"Pomme-lait (caimite)"},
+"pomme-cannelle (corossol)": {cal:66, prot:1, lip:0.3, gluc:16, label:"Pomme-cannelle (corossol)"},
+"longane (œil de dragon)": {cal:60, prot:1, lip:0.2, gluc:15, label:"Longane (œil de dragon)"},
+
+// === PLATS CRÉOLES (SUITE) ===
+"rougail saucisses (créole)": {cal:180, prot:12, lip:12, gluc:5, label:"Rougail saucisses (créole réunionnaise)"},
+"cari poisson (créole)": {cal:100, prot:14, lip:4, gluc:3, label:"Cari poisson créole"},
+"cari crevettes": {cal:110, prot:16, lip:5, gluc:4, label:"Cari crevettes créole"},
+"cari lambi (conque)": {cal:120, prot:15, lip:5, gluc:4, label:"Cari lambi (cari de conque)"},
+"matoutou (crabe)": {cal:100, prot:12, lip:5, gluc:4, label:"Matoutou (cari de crabe antillais)"},

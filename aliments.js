@@ -1406,4 +1406,347 @@
 "cari poisson (créole)": {cal:100, prot:14, lip:4, gluc:3, label:"Cari poisson créole"},
 "cari crevettes": {cal:110, prot:16, lip:5, gluc:4, label:"Cari crevettes créole"},
 "cari lambi (conque)": {cal:120, prot:15, lip:5, gluc:4, label:"Cari lambi (cari de conque)"},
-"matoutou (crabe)": {cal:100, prot:12, lip:5, gluc:4, label:"Matoutou (cari de crabe antillais)"},
+"matoutou (crabe)": {cal:100, prot:12, lip:5, gluc:4, label:"Matoutou (cari de crabe antillais)"},// === FRUITS EXOTIQUES (SUITE) ===
+"cabeluda (fruit brésilien)": {cal:45, prot:0.5, lip:0.2, gluc:11, label:"Cabeluda (fruit brésilien)"},
+"grinalda (fruit brésilien)": {cal:45, prot:0.5, lip:0.2, gluc:11, label:"Grinalda (fruit brésilien)"},
+"cupuacu (fruit brésilien)": {cal:50, prot:1, lip:0.5, gluc:12, label:"Cupuaçu"},
+"bacupari (fruit brésilien)": {cal:50, prot:0.5, lip:0.2, gluc:12, label:"Bacupari"},
+"ingá (fruit brésilien)": {cal:45, prot:0.5, lip:0.2, gluc:11, label:"Ingá"},
+"jaboticaba (fruit brésilien)": {cal:58, prot:0.6, lip:0.2, gluc:14, label:"Jaboticaba"},
+
+// === LÉGUMES CRÉOLES (SUITE) ===
+"christophine (chayote)": {cal:19, prot:0.8, lip:0.1, gluc:4.5, label:"Christophine (chayote)"},
+"tayota (chayote)": {cal:19, prot:0.8, lip:0.1, gluc:4.5, label:"Tayota (chayote)"},
+"melongène (aubergine créole)": {cal:25, prot:1, lip:0.2, gluc:6, label:"Melongène (aubergine créole)"},
+"zombi (piment)": {cal:40, prot:2, lip:1, gluc:8, label:"Piment zombi (antillais)"},
+"cive (oignon vert)": {cal:30, prot:1.5, lip:0.2, gluc:5, label:"Cive (oignon vert antillais)"},
+
+// === POISSONS DE RÉCIF ===
+"poisson chirurgien": {cal:100, prot:19, lip:2, gluc:0, label:"Poisson chirurgien"},
+"poisson cloche (poisson)": {cal:90, prot:18, lip:1.5, gluc:0, label:"Poisson cloche"},
+"poisson tambour (poisson)": {cal:90, prot:18, lip:1.5, gluc:0, label:"Poisson tambour"},
+"vive tropicale": {cal:80, prot:17, lip:1, gluc:0, label:"Vive tropicale"},
+"rascasse tropicale": {cal:98, prot:20, lip:1.8, gluc:0, label:"Rascasse tropicale"},
+
+// === PLATS D'AFRIQUE DE L'OUEST (SUITE) ===
+"mafe (sauce arachide)": {cal:220, prot:12, lip:16, gluc:10, label:"Mafé (viande, sauce arachide)"},
+"tiep boulettes (poisson, riz)": {cal:180, prot:15, lip:8, gluc:18, label:"Tiep boulettes (riz au poisson sénégalais)"},
+"domoda (ragoût arachide)": {cal:200, prot:14, lip:14, gluc:12, label:"Domoda (ragoût arachide gambien)"},
+"foutou (banane plantain pilée)": {cal:120, prot:1, lip:0.2, gluc:30, label:"Foutou (banane plantain pilée)"},
+"attiéké (semoule de manioc)": {cal:110, prot:1, lip:0.2, gluc:27, label:"Attiéké (semoule de manioc)"},// === POISSONS D'EAU DOUCE D'AFRIQUE ===
+"tilapia (poisson)": {cal:96, prot:20, lip:1.7, gluc:0, label:"Tilapia (frais)"},
+"poisson-chat (silure)": {cal:100, prot:17, lip:3, gluc:0, label:"Poisson-chat (silure d'Afrique)"},
+"capitaine (poisson)": {cal:120, prot:19, lip:5, gluc:0, label:"Capitaine (poisson d'Afrique)"},
+"mâchoiron (poisson)": {cal:90, prot:18, lip:1.5, gluc:0, label:"Mâchoiron (poisson d'Afrique)"},
+"poisson éléphant (ou poisson trompette)": {cal:90, prot:18, lip:1.5, gluc:0, label:"Poisson éléphant"},
+
+// === FRUITS EXOTIQUES (SUITE) ===
+"marula (fruit)": {cal:60, prot:0.8, lip:0.5, gluc:14, label:"Marula (fruit d'Afrique)"},
+"baie de goji (fruit)": {cal:350, prot:14, lip:0.4, gluc:77, label:"Baie de goji (séchée)"},
+"camu-camu (fruit)": {cal:50, prot:0.8, lip:0.2, gluc:12, label:"Camu-camu (fruit amazonien)"},
+"açaï (fruit)": {cal:70, prot:1, lip:5, gluc:6, label:"Baie d'açaï (pulpe)"},
+"bacuri (fruit)": {cal:50, prot:0.5, lip:0.5, gluc:12, label:"Bacuri (fruit brésilien)"},
+
+// === LÉGUMES D'ASIE (SUITE) ===
+"chou chinois de Pékin (pe-tsai)": {cal:13, prot:1.5, lip:0.2, gluc:2.2, label:"Chou de Pékin (pe-tsai)"},
+"chou chinois de Shanghai (bok choy)": {cal:13, prot:1.5, lip:0.2, gluc:2.2, label:"Bok choy (chou de Shanghai)"},
+"kale asiatique (chou frisé)": {cal:49, prot:4.3, lip:0.9, gluc:8.8, label:"Chou frisé asiatique (kai lan)"},
+"liseron d'eau (morning glory)": {cal:20, prot:2, lip:0.2, gluc:3, label:"Liseron d'eau (morning glory)"},
+"courge cireuse (wax gourd)": {cal:14, prot:0.4, lip:0.1, gluc:3, label:"Courge cireuse (wax gourd)"},
+
+// === PLATS D'EUROPE DE L'EST ===
+"bortsch (soupe ukrainienne)": {cal:50, prot:2, lip:1, gluc:8, label:"Bortsch (soupe de betteraves)"},
+"pelmeni (raviolis russes)": {cal:250, prot:12, lip:14, gluc:20, label:"Pelmeni (raviolis russes)"},
+"blinchik (crêpe russe)": {cal:200, prot:8, lip:10, gluc:22, label:"Blinchik (crêpe russe)"},
+"golubtsy (rouleaux de chou)": {cal:130, prot:7, lip:6, gluc:12, label:"Golubtsy (rouleaux de chou farcis)"},
+"kotlety (steak haché)": {cal:240, prot:20, lip:16, gluc:6, label:"Kotlety (steak haché à la russe)"},// === POISSONS DES MERS FROIDES ===
+"saumon atlantique": {cal:208, prot:20, lip:13, gluc:0, label:"Saumon atlantique"},
+"truite de mer": {cal:150, prot:20, lip:7, gluc:0, label:"Truite de mer (flet)"},
+"omble chevalier arctique": {cal:150, prot:18, lip:8, gluc:0, label:"Omble chevalier arctique"},
+"cabillaud de l'Atlantique": {cal:82, prot:18, lip:0.7, gluc:0, label:"Cabillaud de l'Atlantique"},
+"lieu d'Alaska": {cal:90, prot:19, lip:1.2, gluc:0, label:"Lieu d'Alaska (colin d'Alaska)"},
+"églefin de Norvège": {cal:71, prot:17, lip:0.5, gluc:0, label:"Églefin de Norvège"},
+
+// === FRUITS NORDIQUES ===
+"cloudberry (baie)": {cal:55, prot:0.7, lip:0.5, gluc:13, label:"Cloudberry (baie des marais)"},
+"lingonberry (airelle rouge)": {cal:55, prot:0.5, lip:0.2, gluc:13, label:"Lingonberry (airelle rouge)"},
+"myrtille des forêts": {cal:57, prot:0.7, lip:0.3, gluc:14, label:"Myrtille des forêts (nordique)"},
+"baie d'argousier": {cal:70, prot:1.2, lip:0.8, gluc:15, label:"Baie d'argousier"},
+"pomme d'amour (fruit)": {cal:45, prot:0.5, lip:0.2, gluc:11, label:"Pomme d'amour (fruit du grand nord)"},
+
+// === LÉGUMES D'EUROPE DE L'EST ===
+"chou-rave (kohlrabi)": {cal:27, prot:1.7, lip:0.1, gluc:6.2, label:"Chou-rave (kohlrabi)"},
+"topinambour (artichaut de Jérusalem)": {cal:73, prot:2, lip:0.2, gluc:17.4, label:"Topinambour"},
+"panais (pastinaca)": {cal:75, prot:1.2, lip:0.3, gluc:18, label:"Panais (pastinaca)"},
+"betterave jaune": {cal:43, prot:1.6, lip:0.2, gluc:10, label:"Betterave jaune (golden beet)"},
+"navet noir": {cal:28, prot:0.9, lip:0.1, gluc:6.4, label:"Navet noir"},
+
+// === PLATS BALTES ===
+"kürtőskalács (gâteau tzigane)": {cal:400, prot:6, lip:15, gluc:62, label:"Kürtőskalács (gâteau de cheminée)"},
+"šaltibarščiai (soupe betterave)": {cal:50, prot:2, lip:1, gluc:8, label:"Šaltibarščiai (soupe froide lituanienne)"},
+"cepelinai (quenelles)": {cal:200, prot:6, lip:8, gluc:28, label:"Cepelinai (quenelles lituaniennes)"},
+"kama (bouillie d'orge)": {cal:100, prot:3, lip:1, gluc:20, label:"Kama (bouillie d'orge lettone)"},
+"rosol (aspic)": {cal:80, prot:8, lip:5, gluc:2, label:"Rosol (aspic polonais)"},// === POISSONS D'EAU DOUCE D'EUROPE (SUITE) ===
+"ombre (Thymallus thymallus)": {cal:100, prot:18, lip:3, gluc:0, label:"Ombre commun (poisson)"},
+"vandoise (Leuciscus leuciscus)": {cal:90, prot:17, lip:2, gluc:0, label:"Vandoise"},
+"hotu (chevesne)": {cal:90, prot:17, lip:2, gluc:0, label:"Hotu (chevesne)"},
+"barbeau fluviatile": {cal:100, prot:18, lip:2.5, gluc:0, label:"Barbeau (poisson)"},
+"goujon (Gobio gobio)": {cal:80, prot:16, lip:1.5, gluc:0, label:"Goujon"},
+
+// === FRUITS DES ALPES ===
+"myrtille alpine": {cal:57, prot:0.7, lip:0.3, gluc:14, label:"Myrtille alpine"},
+"airelle rouge des montagnes": {cal:55, prot:0.5, lip:0.2, gluc:13, label:"Airelle rouge des montagnes"},
+"framboise des bois": {cal:52, prot:1.2, lip:0.7, gluc:12, label:"Framboise des bois (sauvage)"},
+"mûre des rochers": {cal:43, prot:1.4, lip:0.5, gluc:10, label:"Mûre des rochers (sauvage)"},
+"groseille alpine": {cal:56, prot:1.4, lip:0.2, gluc:14, label:"Groseille alpine (sauvage)"},
+
+// === LÉGUMES MÉDITERRANÉENS (SUITE) ===
+"artichaut violet de Provence": {cal:47, prot:3.3, lip:0.2, gluc:10.5, label:"Artichaut violet de Provence"},
+"aubergine ronde de Valence": {cal:25, prot:1, lip:0.2, gluc:6, label:"Aubergine ronde de Valence"},
+"tomate cœur de pigeon": {cal:18, prot:0.9, lip:0.2, gluc:3.9, label:"Tomate cœur de pigeon"},
+"poivron doux de Grèce": {cal:31, prot:1, lip:0.3, gluc:6, label:"Poivron doux de Grèce"},
+
+// === PLATS DU MAGHREB ===
+"couscous royal (semoule)": {cal:111, prot:6.7, lip:4.9, gluc:9.8, label:"Couscous royal (semoule + légumes)"},
+"tajine d'agneau aux pruneaux": {cal:150, prot:17, lip:6, gluc:6, label:"Tajine d'agneau aux pruneaux"},
+"tajine de poulet aux olives": {cal:127, prot:20, lip:4, gluc:4, label:"Tajine de poulet aux olives"},
+"pastilla (tourte)": {cal:300, prot:15, lip:18, gluc:24, label:"Pastilla (tourte marocaine)"},
+"harira (soupe)": {cal:80, prot:5, lip:3, gluc:10, label:"Harira (soupe marocaine)"},
+"zaalouk (caviar d'aubergine)": {cal:80, prot:2, lip:6, gluc:6, label:"Zaalouk (caviar d'aubergine marocain)"},// === FRUITS MÉDITERRANÉENS (SUITE) ===
+"melon de Provence (Cavaillon)": {cal:34, prot:0.8, lip:0.2, gluc:8, label:"Melon de Cavaillon"},
+"abricot de Roussillon": {cal:48, prot:1.4, lip:0.4, gluc:11, label:"Abricot de Roussillon"},
+"figue de Solliès": {cal:74, prot:0.8, lip:0.3, gluc:19, label:"Figue de Solliès"},
+"prune d'Ente (pruneau)": {cal:46, prot:0.7, lip:0.3, gluc:11, label:"Prune d'Ente (pruneau)"},
+"pêche de vigne": {cal:39, prot:0.9, lip:0.3, gluc:10, label:"Pêche de vigne (pêche sanguine)"},
+
+// === LÉGUMES DU MOYEN-ORIENT ===
+"laitue romaine (Moyen-Orient)": {cal:15, prot:1.4, lip:0.2, gluc:2.8, label:"Laitue romaine (type cos)"},
+"concombre libanais (petit)": {cal:15, prot:0.7, lip:0.1, gluc:3.6, label:"Concombre libanais"},
+"aubergine blanche (moyen-orientale)": {cal:25, prot:1, lip:0.2, gluc:6, label:"Aubergine blanche (moyen-orientale)"},
+"gombos (okra)": {cal:33, prot:2, lip:0.2, gluc:7, label:"Gombos (okra moyen-oriental)"},
+"feuilles de vigne (farci)": {cal:50, prot:1.5, lip:2, gluc:7, label:"Feuilles de vigne (dolmades)"},
+
+// === PLATS TURCS ===
+"kebab doner (viande)": {cal:215, prot:16, lip:12, gluc:14, label:"Kebab doner (viande d'agneau)"},
+"lahmacun (pizza turque)": {cal:240, prot:12, lip:10, gluc:30, label:"Lahmacun (pizza turque)"},
+"pide (pain turc)": {cal:280, prot:9, lip:8, gluc:44, label:"Pide (pain turc garni)"},
+"gözleme (crêpe turque)": {cal:230, prot:7, lip:12, gluc:28, label:"Gözleme (crêpe turque farcie)"},
+"börek (feuilleté)": {cal:300, prot:8, lip:18, gluc:30, label:"Börek (feuilleté turc)"},
+"künefe (dessert)": {cal:400, prot:6, lip:22, gluc:48, label:"Künefe (dessert turc)"},
+
+// === BOISSONS ORIENTALES ===
+"ayran (lait fermenté salé)": {cal:30, prot:1.5, lip:1.5, gluc:2.5, label:"Ayran (lait fermenté turc)"},
+"salep (boisson chaude)": {cal:80, prot:2, lip:1, gluc:16, label:"Salep (boisson à base d'orchidée)"},
+"jallab (sirop)": {cal:60, prot:0, lip:0, gluc:15, label:"Jallab (sirop de datte)"},
+"tamarinade (jus de tamarin)": {cal:40, prot:0.5, lip:0, gluc:10, label:"Tamarind (jus de tamarin)"},// === POISSONS D'EAU DOUCE D'AFRIQUE ===
+"tilapia (poisson)": {cal:96, prot:20, lip:1.7, gluc:0, label:"Tilapia (frais)"},
+"poisson-chat (silure)": {cal:100, prot:17, lip:3, gluc:0, label:"Poisson-chat (silure d'Afrique)"},
+"capitaine (poisson)": {cal:120, prot:19, lip:5, gluc:0, label:"Capitaine (poisson d'Afrique)"},
+"mâchoiron (poisson)": {cal:90, prot:18, lip:1.5, gluc:0, label:"Mâchoiron (poisson d'Afrique)"},
+"poisson éléphant (ou poisson trompette)": {cal:90, prot:18, lip:1.5, gluc:0, label:"Poisson éléphant"},
+
+// === FRUITS EXOTIQUES (SUITE) ===
+"marula (fruit)": {cal:60, prot:0.8, lip:0.5, gluc:14, label:"Marula (fruit d'Afrique)"},
+"baie de goji (fruit)": {cal:350, prot:14, lip:0.4, gluc:77, label:"Baie de goji (séchée)"},
+"camu-camu (fruit)": {cal:50, prot:0.8, lip:0.2, gluc:12, label:"Camu-camu (fruit amazonien)"},
+"açaï (fruit)": {cal:70, prot:1, lip:5, gluc:6, label:"Baie d'açaï (pulpe)"},
+"bacuri (fruit)": {cal:50, prot:0.5, lip:0.5, gluc:12, label:"Bacuri (fruit brésilien)"},
+
+// === LÉGUMES D'ASIE (SUITE) ===
+"chou chinois de Pékin (pe-tsai)": {cal:13, prot:1.5, lip:0.2, gluc:2.2, label:"Chou de Pékin (pe-tsai)"},
+"chou chinois de Shanghai (bok choy)": {cal:13, prot:1.5, lip:0.2, gluc:2.2, label:"Bok choy (chou de Shanghai)"},
+"kale asiatique (chou frisé)": {cal:49, prot:4.3, lip:0.9, gluc:8.8, label:"Chou frisé asiatique (kai lan)"},
+"liseron d'eau (morning glory)": {cal:20, prot:2, lip:0.2, gluc:3, label:"Liseron d'eau (morning glory)"},
+"courge cireuse (wax gourd)": {cal:14, prot:0.4, lip:0.1, gluc:3, label:"Courge cireuse (wax gourd)"},
+
+// === PLATS D'EUROPE DE L'EST ===
+"bortsch (soupe ukrainienne)": {cal:50, prot:2, lip:1, gluc:8, label:"Bortsch (soupe de betteraves)"},
+"pelmeni (raviolis russes)": {cal:250, prot:12, lip:14, gluc:20, label:"Pelmeni (raviolis russes)"},
+"blinchik (crêpe russe)": {cal:200, prot:8, lip:10, gluc:22, label:"Blinchik (crêpe russe)"},
+"golubtsy (rouleaux de chou)": {cal:130, prot:7, lip:6, gluc:12, label:"Golubtsy (rouleaux de chou farcis)"},
+"kotlety (steak haché)": {cal:240, prot:20, lip:16, gluc:6, label:"Kotlety (steak haché à la russe)"},// === POISSONS DES CARAÏBES ===
+"thon albacore (caraïbe)": {cal:116, prot:26, lip:1, gluc:0, label:"Thon albacore (caraïbe)"},
+"thon rouge des Caraïbes": {cal:158, prot:24, lip:6, gluc:0, label:"Thon rouge des Caraïbes"},
+"mahi-mahi (poisson)": {cal:85, prot:18, lip:0.8, gluc:0, label:"Mahi-mahi (poisson tropical)"},
+"vivaneau des Caraïbes": {cal:100, prot:20, lip:1.5, gluc:0, label:"Vivaneau des Caraïbes"},
+"merlan des Caraïbes": {cal:90, prot:18, lip:1.5, gluc:0, label:"Merlan des Caraïbes"},
+
+// === FRUITS D'AMÉRIQUE CENTRALE ===
+"mamey (fruit)": {cal:70, prot:1, lip:0.5, gluc:16, label:"Mamey (fruit d'Amérique centrale)"},
+"sapote noire (fruit)": {cal:80, prot:1.5, lip:0.4, gluc:20, label:"Sapote noire (fruit)"},
+"sapote blanche (fruit)": {cal:70, prot:1, lip:0.5, gluc:17, label:"Sapote blanche (fruit)"},
+"nance (fruit)": {cal:60, prot:0.8, lip:0.2, gluc:15, label:"Nance (fruit d'Amérique centrale)"},
+"cainito (fruit étoilé)": {cal:70, prot:0.8, lip:0.2, gluc:17, label:"Cainito (fruit étoilé)"},
+
+// === LÉGUMES ANDINS ===
+"oca (oxalis tuberosa)": {cal:60, prot:1, lip:0.5, gluc:13, label:"Oca (légume andin)"},
+"ulluco (ullucus tuberosus)": {cal:50, prot:1, lip:0.2, gluc:11, label:"Ulluco (légume andin)"},
+"mashua (tropaeolum tuberosum)": {cal:50, prot:1, lip:0.2, gluc:11, label:"Mashua (légume andin)"},
+"achira (canna edulis)": {cal:80, prot:1, lip:0.2, gluc:18, label:"Achira (légume andin)"},
+"mauka (Mirabilis expansa)": {cal:70, prot:1, lip:0.2, gluc:16, label:"Mauka (légume andin)"},
+
+// === PLATS MEXICAINS ===
+"taco (maïs, viande)": {cal:260, prot:15, lip:12, gluc:25, label:"Taco (mexicain, 100g)"},
+"burrito (riz, viande)": {cal:280, prot:12, lip:14, gluc:30, label:"Burrito (mexicain, 100g)"},
+"enchilada (tortilla, sauce)": {cal:200, prot:8, lip:12, gluc:20, label:"Enchilada (mexicaine, 100g)"},
+"quesadilla (fromage)": {cal:300, prot:15, lip:18, gluc:24, label:"Quesadilla (mexicaine, 100g)"},
+"chiles rellenos (piments farcis)": {cal:150, prot:6, lip:9, gluc:12, label:"Chiles rellenos (piments farcis)"},
+"pozole (soupe)": {cal:120, prot:10, lip:5, gluc:10, label:"Pozole (soupe mexicaine)"},// === POISSONS D'ASIE DU SUD-EST ===
+"poisson chat d'Asie (pangasius)": {cal:90, prot:17, lip:2, gluc:0, label:"Pangasius (poisson chat d'Asie)"},
+"poisson tigre (datnioides)": {cal:100, prot:19, lip:2, gluc:0, label:"Poisson tigre (asiatique)"},
+"poisson arc-en-ciel (asiatique)": {cal:90, prot:18, lip:1.5, gluc:0, label:"Poisson arc-en-ciel (asiatique)"},
+"poisson clown (asiatique)": {cal:80, prot:16, lip:1.2, gluc:0, label:"Poisson clown (asiatique comestible)"},
+"poisson licorne (asiatique)": {cal:80, prot:16, lip:1, gluc:0, label:"Poisson licorne (asiatique)"},
+
+// === FRUITS D'INDONÉSIE ===
+"salak (fruit serpent)": {cal:80, prot:1, lip:0.5, gluc:20, label:"Salak (fruit serpent indonésien)"},
+"cempedak (fruit)": {cal:100, prot:1.5, lip:0.8, gluc:25, label:"Cempedak (fruit indonésien)"},
+"durian (fruit)": {cal:147, prot:1.5, lip:5.3, gluc:27, label:"Durian (fruit indonésien)"},
+"ramboutan (fruit)": {cal:82, prot:0.7, lip:0.2, gluc:20, label:"Ramboutan (fruit indonésien)"},
+"mangoustan (fruit)": {cal:73, prot:0.5, lip:0.5, gluc:17, label:"Mangoustan (fruit indonésien)"},
+
+// === LÉGUMES THAÏLANDAIS ===
+"basilic sacré (thaï)": {cal:45, prot:3, lip:0.5, gluc:7, label:"Basilic sacré (thaïlandais)"},
+"menthe thaïlandaise": {cal:44, prot:3.8, lip:0.9, gluc:8, label:"Menthe thaïlandaise"},
+"coriandre thaïlandaise": {cal:23, prot:2.1, lip:0.5, gluc:3.7, label:"Coriandre thaïlandaise"},
+"gingembre thaï (galanga)": {cal:80, prot:1.8, lip:1, gluc:18, label:"Galanga (gingembre thaï)"},
+"citronnelle (thaï)": {cal:30, prot:1, lip:0.2, gluc:6, label:"Citronnelle (thaïlandaise)"},// === FRUITS OCÉANIENS ===
+"pomme cannelle (océanie)": {cal:100, prot:2, lip:0.5, gluc:25, label:"Pomme cannelle (océanienne)"},
+"fruit de l'arbre à pain (océanie)": {cal:100, prot:1.5, lip:0.3, gluc:24, label:"Fruit à pain (océanien)"},
+"pomme de cajou (anacarde, océanie)": {cal:46, prot:0.8, lip:0.4, gluc:11, label:"Pomme de cajou (océanienne)"},
+"mûre des îles (océanie)": {cal:50, prot:0.8, lip:0.5, gluc:12, label:"Mûre des îles (océanienne)"},
+"jujube océanien (ziziphus)": {cal:79, prot:1.2, lip:0.2, gluc:20, label:"Jujube océanien"},
+
+// === LÉGUMES POLYNÉSIENS ===
+"taro polynésien (cuit)": {cal:112, prot:1.5, lip:0.2, gluc:26, label:"Taro polynésien (cuit)"},
+"igname océanien (yam)": {cal:118, prot:1.5, lip:0.2, gluc:28, label:"Ignay océanien (yam)"},
+"fougère comestible (pako)": {cal:30, prot:2, lip:0.2, gluc:5, label:"Fougère comestible (polynésienne)"},
+"aubergine à balle (solanum)": {cal:25, prot:1, lip:0.2, gluc:6, label:"Aubergine balle (polynésienne)"},
+
+// === PLATS MÉDITERRANÉENS COMPLÉMENTAIRES ===
+"pissaladière (tarte niçoise)": {cal:210, prot:6, lip:10, gluc:24, label:"Pissaladière (tarte niçoise)"},
+"pan bagnat (sandwich niçois)": {cal:250, prot:11, lip:13, gluc:26, label:"Pan bagnat (sandwich niçois)"},
+"poichichade (purée de pois chiches)": {cal:180, prot:6, lip:12, gluc:14, label:"Poichichade (purée de pois chiches niçoise)"},
+"tapenade niçoise": {cal:350, prot:2, lip:35, gluc:5, label:"Tapenade niçoise (olives, câpres)"},
+"socca (galette de pois chiches)": {cal:200, prot:7, lip:8, gluc:24, label:"Socca (galette niçoise)"},// === POISSONS DE L'OCÉAN INDIEN ===
+"thazard (poisson)": {cal:120, prot:21, lip:3.5, gluc:0, label:"Thazard (poisson tropical)"},
+"coryphène (mahi-mahi)": {cal:85, prot:18, lip:0.8, gluc:0, label:"Coryphène (mahi-mahi)"},
+"barracuda (poisson)": {cal:100, prot:20, lip:2, gluc:0, label:"Barracuda (poisson océan Indien)"},
+"bonite (poisson)": {cal:110, prot:22, lip:2, gluc:0, label:"Bonite (poisson thazard)"},
+"poisson trompette (océan Indien)": {cal:90, prot:18, lip:1.5, gluc:0, label:"Poisson trompette (océan Indien)"},
+
+// === FRUITS DE MADAGASCAR ===
+"baobab fruit (poudre)": {cal:250, prot:2, lip:0.5, gluc:60, label:"Baobab fruit (poudre séchée)"},
+"litchi de Madagascar": {cal:66, prot:0.8, lip:0.4, gluc:17, label:"Litchi de Madagascar"},
+"letchi (litchi)": {cal:66, prot:0.8, lip:0.4, gluc:17, label:"Letchi (litchi malgache)"},
+"cabosse (cacao frais)": {cal:200, prot:4, lip:20, gluc:15, label:"Cabosse (fruit du cacaoyer)"},
+"vanille (gousse)": {cal:288, prot:1.5, lip:0.5, gluc:65, label:"Vanille (gousse, pour aromatiser)"},
+
+// === LÉGUMES D'AFRIQUE AUSTRALE ===
+"morogo (légume sauvage)": {cal:30, prot:2.5, lip:0.5, gluc:5, label:"Morogo (légume sauvage africain)"},
+"feuilles de patate douce (Afrique)": {cal:33, prot:2.3, lip:0.3, gluc:7, label:"Feuilles de patate douce (Afrique australe)"},
+"feuilles d'amarante (Afrique)": {cal:25, prot:2.5, lip:0.3, gluc:4, label:"Feuilles d'amarante (Afrique australe)"},
+"courge africaine (Telfairia)": {cal:20, prot:1, lip:0.2, gluc:4, label:"Courge africaine (Telfairia)"},
+"okra africain (gombo)": {cal:33, prot:2, lip:0.2, gluc:7, label:"Okra (gombo africain)"},// === FRUITS DE L'AMAZONIE ===
+"açaï (fruit)": {cal:70, prot:1, lip:5, gluc:6, label:"Açaï (pulpe de fruit amazonien)"},
+"cupuacu (fruit)": {cal:50, prot:1, lip:0.5, gluc:12, label:"Cupuaçu (fruit amazonien)"},
+"bacuri (fruit)": {cal:50, prot:0.5, lip:0.2, gluc:12, label:"Bacuri (fruit amazonien)"},
+"graviola (corossol)": {cal:66, prot:1, lip:0.3, gluc:16, label:"Graviola (corossol, fruit amazonien)"},
+"camu-camu (fruit)": {cal:50, prot:0.8, lip:0.2, gluc:12, label:"Camu-camu (fruit amazonien riche en vitamine C)"},
+
+// === LÉGUMES AMAZONIENS ===
+"manioc amer (cassava)": {cal:160, prot:1, lip:0.3, gluc:38, label:"Manioc (cassava) amer (préparé)"},
+"manioc doux (cassava)": {cal:160, prot:1, lip:0.3, gluc:38, label:"Manioc doux (cassava)"},
+"feuilles de manioc (saka saka)": {cal:50, prot:3, lip:1, gluc:8, label:"Feuilles de manioc (préparées)"},
+"palmier cœur (palmito)": {cal:30, prot:2, lip:0.3, gluc:5, label:"Palmito (cœur de palmier)"},
+"chou caribéen (Xanthosoma)": {cal:30, prot:1, lip:0.2, gluc:6, label:"Chou caribéen (Xanthosoma)"},
+
+// === PLATS SUD-AMÉRICAINS COMPLÉMENTAIRES ===
+"feijoada (brésilienne)": {cal:150, prot:12, lip:7, gluc:10, label:"Feijoada (ragoût de haricots, viande)"},
+"moqueca (poisson)": {cal:120, prot:15, lip:6, gluc:4, label:"Moqueca (mijoté de poisson brésilien)"},
+"coxinha (croquette)": {cal:250, prot:10, lip:15, gluc:20, label:"Coxinha (croquette brésilienne)"},
+"pão de queijo (pain fromage)": {cal:300, prot:8, lip:18, gluc:28, label:"Pão de queijo (pain au fromage brésilien)"},
+"arepa (galette de maïs)": {cal:200, prot:5, lip:6, gluc:32, label:"Arepa (galette de maïs vénézuélienne)"},// === POISSONS D'EAU DOUCE D'ASIE ===
+"poisson serpent (Channa)": {cal:100, prot:19, lip:2, gluc:0, label:"Poisson serpent (asiatique)"},
+"poisson clown loach (Botia)": {cal:80, prot:16, lip:1.5, gluc:0, label:"Clown loach (asiatique comestible)"},
+"poisson combattant (Betta)": {cal:80, prot:16, lip:1.2, gluc:0, label:"Poisson combattant (asiatique comestible)"},
+"poisson gourami (Osphronemus)": {cal:90, prot:17, lip:2, gluc:0, label:"Gourami (poisson asiatique)"},
+"poisson tigre asiatique (Datnioides)": {cal:100, prot:19, lip:2, gluc:0, label:"Poisson tigre asiatique"},
+
+// === FRUITS D'OCÉANIE (SUITE) ===
+"fruit du jacquier (jackfruit)": {cal:95, prot:1.7, lip:0.6, gluc:23, label:"Jacquier (fruit d'Océanie)"},
+"fruit de l'arbre à pain (artocarpus)": {cal:100, prot:1.5, lip:0.3, gluc:24, label:"Fruit à pain (océanien)"},
+"pomme étoile (cainito)": {cal:70, prot:0.8, lip:0.2, gluc:17, label:"Pomme étoile (cainito océanien)"},
+"mangue de Nouvelle-Guinée": {cal:60, prot:0.8, lip:0.4, gluc:15, label:"Mangue de Nouvelle-Guinée"},
+"noix de macadamia (Australie)": {cal:718, prot:8, lip:76, gluc:14, label:"Noix de macadamia (australienne)"},
+
+// === LÉGUMES D'AMAZONIE (SUITE) ===
+"palmier pêche (peach palm fruit)": {cal:60, prot:1.2, lip:0.5, gluc:14, label:"Pupunha (pêche de palmier amazonien)"},
+"cacahuète de la jungle (Arachis)": {cal:560, prot:25, lip:48, gluc:18, label:"Cacahuète sauvage (amazonienne)"},
+"tubercule de arrowroot (Maranta)": {cal:65, prot:0.3, lip:0.1, gluc:16, label:"Arrowroot (tubercule amazonien)"},
+"légume de la vigne sauvage": {cal:30, prot:1.5, lip:0.2, gluc:6, label:"Légume grimpant amazonien"},
+"fleur de courge amazonienne": {cal:15, prot:1.2, lip:0.2, gluc:2.5, label:"Fleur de courge (amazonienne)"},// === FRUITS D'AFRIQUE DE L'OUEST ===
+"fruit du baobab (pain de singe)": {cal:250, prot:2, lip:0.5, gluc:60, label:"Baobab (poudre de fruit)"},
+"colatier (noix de cola)": {cal:150, prot:2, lip:0.5, gluc:35, label:"Noix de cola (fruit)"},
+"fruit de calebasse (Lagenaria)": {cal:20, prot:0.5, lip:0.1, gluc:5, label:"Calebasse (fruit légume)"},
+"fruit de l'haman (Aframomum)": {cal:80, prot:1, lip:1, gluc:18, label:"Maniguette (graines)"},
+"prune africaine (Vitex)": {cal:60, prot:0.8, lip:0.3, gluc:14, label:"Prune africaine"},
+
+// === LÉGUMES D'ASIE CENTRALE ===
+"radis noir d'Ouzbékistan": {cal:21, prot:1.1, lip:0.2, gluc:4.2, label:"Radis noir ouzbek"},
+"carotte jaune d'Asie centrale": {cal:41, prot:0.9, lip:0.2, gluc:9.6, label:"Carotte jaune (d'Asie centrale)"},
+"navet doux (Brassica)": {cal:28, prot:0.9, lip:0.1, gluc:6.4, label:"Navet doux asiatique"},
+"chou frisé d'Asie centrale": {cal:30, prot:2, lip:0.2, gluc:6, label:"Chou frisé (d'Asie centrale)"},
+"piment vert d'Asie centrale": {cal:40, prot:2, lip:1, gluc:8, label:"Piment vert (d'Asie centrale)"},
+
+// === PLATS D'OCÉANIE ===
+"kokoda (poisson mariné)": {cal:120, prot:15, lip:6, gluc:5, label:"Kokoda (poisson mariné au lait de coco)"},
+"hangi (festin souterrain)": {cal:250, prot:20, lip:15, gluc:10, label:"Hangi (viandes, légumes cuits sous terre)"},
+"lovo (fidjien)": {cal:200, prot:18, lip:12, gluc:8, label:"Lovo (plat cuisiné traditionnel océanien)"},
+"laulau (feuilles de taro)": {cal:150, prot:6, lip:10, gluc:12, label:"Laulau (feuilles de taro farcies)"},
+"palu sami (feuilles de taro)": {cal:130, prot:5, lip:9, gluc:10, label:"Palu sami (plat santal)"},// === POISSONS D'ESTUAIRE ===
+"mulet (mugil)": {cal:120, prot:20, lip:4, gluc:0, label:"Mulet (poisson d'estuaire)"},
+"bar européen (loup)": {cal:90, prot:18, lip:1.5, gluc:0, label:"Bar (loup d'estuaire)"},
+"dorade grise (estuaire)": {cal:77, prot:17, lip:1.2, gluc:0, label:"Dorade grise d'estuaire"},
+"anguille d'estuaire": {cal:250, prot:15, lip:21, gluc:0, label:"Anguille d'estuaire"},
+"carrelet (poisson plat)": {cal:65, prot:15, lip:0.8, gluc:0, label:"Carrelet (poisson plat d'estuaire)"},
+
+// === FRUITS DE MANGROVE ===
+"pomme de mangrove (Sonneratia)": {cal:40, prot:0.5, lip:0.1, gluc:10, label:"Pomme de mangrove (fruit)"},
+"fruit de palétuvier (Rhizophora)": {cal:50, prot:0.8, lip:0.2, gluc:12, label:"Fruit de palétuvier"},
+"noix de mangrove (Bruguiera)": {cal:60, prot:1.2, lip:0.5, gluc:14, label:"Noix de mangrove"},
+"fruit de l'herbier (Nypa)": {cal:70, prot:0.5, lip:0.5, gluc:17, label:"Fruit de palmier nipa"},
+"fleuri de mangrove (Acrostichum)": {cal:30, prot:1.5, lip:0.3, gluc:6, label:"Fougère de mangrove"},
+
+// === LÉGUMES DES ZONES HUMIDES ===
+"cresson d'eau (cresson de fontaine)": {cal:15, prot:1.5, lip:0.2, gluc:2, label:"Cresson d'eau (zone humide)"},
+"liseron d'eau (kangkung)": {cal:20, prot:2, lip:0.2, gluc:3, label:"Liseron d'eau (zone humide)"},
+"chou d'eau (Hydrilla)": {cal:20, prot:1.5, lip:0.2, gluc:4, label:"Chou d'eau (zone humide)"},
+"pousse de lotus (Nelumbo)": {cal:50, prot:2, lip:0.1, gluc:10, label:"Pousse de lotus (zone humide)"},
+"racine de lotus (lotus)": {cal:70, prot:2, lip:0.2, gluc:16, label:"Racine de lotus (zone humide)"},// === FROMAGES DU MONDE ===
+"feta grecque AOP": {cal:264, prot:14, lip:21, gluc:4, label:"Feta grecque AOP"},
+"halloumi chypriote": {cal:330, prot:25, lip:24, gluc:2, label:"Halloumi (fromage chypriote)"},
+"paneer indien": {cal:300, prot:18, lip:25, gluc:2, label:"Paneer (fromage indien)"},
+"queso fresco (mexicain)": {cal:280, prot:18, lip:22, gluc:3, label:"Queso fresco (fromage mexicain)"},
+"raclette suisse": {cal:350, prot:25, lip:27, gluc:1, label:"Raclette suisse (fromage)"},
+
+// === CHARCUTERIES IBÉRIQUES ===
+"jambon ibérique de bellota": {cal:230, prot:29, lip:13, gluc:0, label:"Jambon ibérique de bellota"},
+"paleta ibérique": {cal:220, prot:28, lip:12, gluc:0, label:"Paleta ibérique (jambon)"},
+"lomo ibérique": {cal:250, prot:28, lip:15, gluc:1, label:"Lomo ibérique (filet de porc)"},
+"salchichón ibérique": {cal:380, prot:22, lip:32, gluc:2, label:"Salchichón ibérique"},
+"chorizo ibérique (pimentón)": {cal:450, prot:24, lip:38, gluc:3, label:"Chorizo ibérique"},
+
+// === PLATS IBÉRIQUES ===
+"paella valenciana": {cal:166, prot:10, lip:6.4, gluc:17.6, label:"Paella valencienne (riz, poulet, lapin)"},
+"caldo verde (soupe portugaise)": {cal:80, prot:4, lip:5, gluc:6, label:"Caldo verde (soupe portugaise)"},
+"bacalhau à brás (morue)": {cal:180, prot:18, lip:10, gluc:12, label:"Bacalhau à brás (morue portugaise)"},
+"fabada asturienne (haricots)": {cal:160, prot:12, lip:8, gluc:14, label:"Fabada asturienne (haricots, chorizo)"},
+"gazpacho andalou": {cal:30, prot:0.8, lip:1, gluc:4, label:"Gazpacho (soupe froide andalouse)"},
+
+// === DESSERTS MÉDITERRANÉENS ===
+"crème catalane": {cal:230, prot:4, lip:15, gluc:20, label:"Crème catalane (dessert)"},
+"ensaimada (brioche)": {cal:400, prot:7, lip:20, gluc:48, label:"Ensaimada (brioche des Baléares)"},
+"tarta de Santiago (amande)": {cal:380, prot:8, lip:18, gluc:48, label:"Tarta de Santiago (gâteau à l'amande)"},
+"pestiños (beignets)": {cal:350, prot:5, lip:15, gluc:50, label:"Pestiños (beignets au miel)"},
+"torrijas (pain perdu)": {cal:280, prot:7, lip:12, gluc:36, label:"Torrijas (pain perdu espagnol)"},

@@ -1987,7 +1987,7 @@ const foodDB = {"poulet": {cal:165, prot:31, lip:3.6, gluc:0, label:"Poulet (bla
 "sirop d'érable": {cal:260, prot:0.1, lip:0.1, gluc:67, label:"Sirop d'érable"},
 "miel d'acacia": {cal:304, prot:0.3, lip:0, gluc:82, label:"Miel d'acacia"},
 "miel de forêt": {cal:304, prot:0.3, lip:0, gluc:82, label:"Miel de forêt"},
-"miel de lavande": {cal:304, prot:0.3, lip:0, gluc:82, label:"Miel de lavande"}
+"miel de lavande": {cal:304, prot:0.3, lip:0, gluc:82, label:"Miel de lavande"},
 // === LÉGUMES EN CONSERVE (MANQUANTS) ===
 "légumes pour couscous en conserve": {cal:50, prot:1.5, lip:0.5, gluc:8, label:"Légumes pour couscous en conserve"},
 "macédoine de légumes en boîte": {cal:50, prot:2, lip:0.5, gluc:9, label:"Macédoine de légumes en boîte"},

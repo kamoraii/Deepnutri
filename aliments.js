@@ -2064,4 +2064,4 @@ const foodDB = {"poulet": {cal:165, prot:31, lip:3.6, gluc:0, label:"Poulet (bla
 "steak haché surgelé": {cal:270, prot:24, lip:18, gluc:0, label:"Steak haché surgelé"},
 "légumes à la provençale surgelés": {cal:50, prot:1.5, lip:2, gluc:6, label:"Légumes à la provençale surgelés"},
 "ratatouille surgelée": {cal:45, prot:1.2, lip:2.5, gluc:4.5, label:"Ratatouille surgelée"}
-};
+}; 

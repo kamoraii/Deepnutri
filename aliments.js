@@ -1988,4 +1988,80 @@ const foodDB = {"poulet": {cal:165, prot:31, lip:3.6, gluc:0, label:"Poulet (bla
 "miel d'acacia": {cal:304, prot:0.3, lip:0, gluc:82, label:"Miel d'acacia"},
 "miel de forêt": {cal:304, prot:0.3, lip:0, gluc:82, label:"Miel de forêt"},
 "miel de lavande": {cal:304, prot:0.3, lip:0, gluc:82, label:"Miel de lavande"}
+// === LÉGUMES EN CONSERVE (MANQUANTS) ===
+"légumes pour couscous en conserve": {cal:50, prot:1.5, lip:0.5, gluc:8, label:"Légumes pour couscous en conserve"},
+"macédoine de légumes en boîte": {cal:50, prot:2, lip:0.5, gluc:9, label:"Macédoine de légumes en boîte"},
+"petits pois carottes en conserve": {cal:60, prot:3, lip:0.5, gluc:9, label:"Petits pois carottes en conserve"},
+"haricots verts extra fins en boîte": {cal:35, prot:2, lip:0.1, gluc:7.9, label:"Haricots verts extra fins en boîte"},
+"flageolets en boîte": {cal:87, prot:5.5, lip:0.7, gluc:12, label:"Flageolets verts en boîte"},
+"lentilles en boîte": {cal:116, prot:9, lip:0.4, gluc:20, label:"Lentilles cuites en boîte"},
+"maïs en boîte": {cal:96, prot:3.2, lip:1.5, gluc:19, label:"Maïs doux en boîte"},
+"champignons de Paris en bocal": {cal:22, prot:3.1, lip:0.3, gluc:3.3, label:"Champignons de Paris en bocal"},
+"coeurs d'artichaut en conserve": {cal:47, prot:3.3, lip:0.2, gluc:10.5, label:"Cœurs d'artichaut en conserve"},
+
+// === LÉGUMINEUSES EN CONSERVE (MANQUANTES) ===
+"pois chiches en boîte": {cal:139, prot:7, lip:2.6, gluc:20, label:"Pois chiches en boîte"},
+"haricots rouges en boîte": {cal:127, prot:8.7, lip:0.5, gluc:22, label:"Haricots rouges en boîte"},
+"haricots blancs en boîte": {cal:140, prot:8.7, lip:0.5, gluc:25, label:"Haricots blancs en boîte"},
+"fèves en boîte": {cal:88, prot:7.6, lip:0.4, gluc:15, label:"Fèves en boîte"},
+"pois cassés en boîte": {cal:118, prot:8.3, lip:0.4, gluc:21, label:"Pois cassés en boîte"},
+
+// === PLATS PRÉPARÉS EN CONSERVE (MANQUANTS) ===
+"raviolis en boîte": {cal:86, prot:2.4, lip:2.2, gluc:13, label:"Raviolis en conserve"},
+"chili con carne en boîte": {cal:114, prot:9.3, lip:3.3, gluc:11.9, label:"Chili con carne en conserve"},
+"cassoulet en boîte": {cal:136, prot:8.6, lip:6.8, gluc:8.4, label:"Cassoulet en conserve"},
+"lentilles saucisses en boîte": {cal:106, prot:6.8, lip:4.7, gluc:7.9, label:"Lentilles saucisses en conserve"},
+"petit salé aux lentilles en boîte": {cal:120, prot:8, lip:6, gluc:8, label:"Petit salé aux lentilles en conserve"},
+"bœuf bourguignon en boîte": {cal:140, prot:14, lip:7, gluc:4, label:"Bœuf bourguignon en conserve"},
+"blanquette de veau en boîte": {cal:130, prot:13, lip:6, gluc:4, label:"Blanquette de veau en conserve"},
+"navarin d'agneau en boîte": {cal:120, prot:12, lip:6, gluc:3, label:"Navarin d'agneau en conserve"},
+"pot-au-feu en boîte": {cal:125, prot:14, lip:6, gluc:2, label:"Pot-au-feu en conserve"},
+
+// === POISSONS EN CONSERVE (MANQUANTS) ===
+"thon naturel en boîte": {cal:116, prot:26, lip:1, gluc:0, label:"Thon au naturel en conserve"},
+"thon à l'huile en boîte": {cal:280, prot:24, lip:20, gluc:0, label:"Thon à l'huile en conserve"},
+"sardines à l'huile en boîte": {cal:250, prot:24, lip:17, gluc:0, label:"Sardines à l'huile en conserve"},
+"sardines à la tomate en boîte": {cal:210, prot:23, lip:11, gluc:2, label:"Sardines à la tomate en conserve"},
+"maquereaux à la moutarde en boîte": {cal:220, prot:18, lip:16, gluc:1, label:"Maquereaux à la moutarde en conserve"},
+"maquereaux au vin blanc en boîte": {cal:205, prot:19, lip:14, gluc:0, label:"Maquereaux au vin blanc en conserve"},
+
+// === FRUITS EN CONSERVE (MANQUANTS) ===
+"pêches au sirop en boîte": {cal:70, prot:0.5, lip:0.1, gluc:18, label:"Pêches au sirop en conserve"},
+"abricots au sirop en boîte": {cal:65, prot:0.6, lip:0.2, gluc:17, label:"Abricots au sirop en conserve"},
+"poires au sirop en boîte": {cal:65, prot:0.4, lip:0.1, gluc:17, label:"Poires au sirop en conserve"},
+"ananas au sirop en boîte": {cal:70, prot:0.5, lip:0.1, gluc:18, label:"Ananas au sirop en conserve"},
+"compote de pommes sans sucre": {cal:80, prot:0.3, lip:0.2, gluc:19, label:"Compote de pommes sans sucre"},
+"compote de pommes sucrée": {cal:110, prot:0.3, lip:0.2, gluc:27, label:"Compote de pommes sucrée"},
+
+// === SAUCES ET CONDIMENTS EN BOCAL (MANQUANTS) ===
+"cornichons en bocal": {cal:20, prot:1.2, lip:0.2, gluc:3, label:"Cornichons en bocal"},
+"oignons au vinaigre": {cal:30, prot:0.8, lip:0.1, gluc:6, label:"Oignons au vinaigre"},
+"câpres en bocal": {cal:23, prot:2.4, lip:0.9, gluc:4.9, label:"Câpres en bocal"},
+"piments marinés": {cal:40, prot:2, lip:1, gluc:8, label:"Piments marinés"},
+
+// === ADDITIFS ET INGRÉDIENTS DE BASE (MANQUANTS) ===
+"farine de blé": {cal:364, prot:10, lip:1, gluc:76, label:"Farine de blé (T55)"},
+"farine complète": {cal:340, prot:12, lip:2, gluc:70, label:"Farine complète (T150)"},
+"fécule de maïs (Maïzena)": {cal:357, prot:0.5, lip:0.1, gluc:88, label:"Maïzena (fécule de maïs)"},
+"levure boulangère fraîche": {cal:100, prot:10, lip:2, gluc:15, label:"Levure boulangère fraîche"},
+"levure chimique": {cal:100, prot:0, lip:0, gluc:24, label:"Levure chimique (poudre)"},
+"bicarbonate de soude": {cal:0, prot:0, lip:0, gluc:0, label:"Bicarbonate de soude"},
+"sucre vanillé": {cal:380, prot:0, lip:0, gluc:95, label:"Sucre vanillé"},
+"cacao en poudre non sucré": {cal:228, prot:20, lip:14, gluc:58, label:"Cacao en poudre non sucré"},
+"chocolat à pâtisser": {cal:520, prot:5, lip:30, gluc:60, label:"Chocolat à pâtisser (noir)"},
+"pâte feuilletée (étalée)": {cal:350, prot:5, lip:22, gluc:35, label:"Pâte feuilletée (pur beurre)"},
+"pâte brisée": {cal:340, prot:5, lip:20, gluc:38, label:"Pâte brisée"},
+"pâte sablée": {cal:390, prot:5, lip:22, gluc:44, label:"Pâte sablée"},
+"lait concentré non sucré": {cal:140, prot:9, lip:8, gluc:10, label:"Lait concentré non sucré"},
+
+// === PRODUITS SURGELÉS SIMPLES ===
+"légumes pour wok surgelés": {cal:40, prot:1.5, lip:0.5, gluc:7, label:"Légumes wok surgelés"},
+"poêlée de légumes surgelée": {cal:50, prot:2, lip:1, gluc:8, label:"Poêlée de légumes surgelée"},
+"frites surgelées": {cal:312, prot:3.4, lip:15, gluc:41, label:"Frites surgelées"},
+"pommes noisettes surgelées": {cal:250, prot:2.5, lip:12, gluc:32, label:"Pommes noisettes surgelées"},
+"poisson pané surgelé": {cal:230, prot:13, lip:11, gluc:20, label:"Poisson pané surgelé"},
+"bâtonnets de poisson surgelés": {cal:230, prot:12, lip:11, gluc:20, label:"Bâtonnets de poisson surgelés"},
+"steak haché surgelé": {cal:270, prot:24, lip:18, gluc:0, label:"Steak haché surgelé"},
+"légumes à la provençale surgelés": {cal:50, prot:1.5, lip:2, gluc:6, label:"Légumes à la provençale surgelés"},
+"ratatouille surgelée": {cal:45, prot:1.2, lip:2.5, gluc:4.5, label:"Ratatouille surgelée"}
 };

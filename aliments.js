@@ -1,4 +1,4 @@
-"poulet": {cal:165, prot:31, lip:3.6, gluc:0, label:"Poulet (blanc)"},
+const foodDB = {"poulet": {cal:165, prot:31, lip:3.6, gluc:0, label:"Poulet (blanc)"},
 "dinde": {cal:135, prot:30, lip:1, gluc:0, label:"Dinde"},
 "escalope dinde": {cal:135, prot:30, lip:1, gluc:0, label:"Escalope de dinde"},
 "boeuf": {cal:250, prot:26, lip:15, gluc:0, label:"Bœuf (steak)"},

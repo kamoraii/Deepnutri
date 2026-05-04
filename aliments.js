@@ -1987,5 +1987,5 @@
 "sirop d'érable": {cal:260, prot:0.1, lip:0.1, gluc:67, label:"Sirop d'érable"},
 "miel d'acacia": {cal:304, prot:0.3, lip:0, gluc:82, label:"Miel d'acacia"},
 "miel de forêt": {cal:304, prot:0.3, lip:0, gluc:82, label:"Miel de forêt"},
-"miel de lavande": {cal:304, prot:0.3, lip:0, gluc:82, label:"Miel de lavande"},
-}
+"miel de lavande": {cal:304, prot:0.3, lip:0, gluc:82, label:"Miel de lavande"}
+};
